@@ -1,0 +1,672 @@
+[
+  {
+    "code": "0278-142",
+    "price": 30000,
+    "file": "3490-0278-142.png"
+  },
+  {
+    "code": "B-40",
+    "price": 45000,
+    "file": "8558_B-40_edited.png"
+  },
+  {
+    "code": "B-41",
+    "price": 55000,
+    "file": "8557_B-41_edited.png"
+  },
+  {
+    "code": "B-42",
+    "price": 50000,
+    "file": "8556_B-42_edited.png"
+  },
+  {
+    "code": "B-43",
+    "price": 75000,
+    "file": "8555-1_B-43_edited.png"
+  },
+  {
+    "code": "B-44-1",
+    "price": 75000,
+    "file": "8554-1_B-44_edited.png"
+  },
+  {
+    "code": "B-44-2",
+    "price": 75000,
+    "file": "8554-2_B-44_edited.png"
+  },
+  {
+    "code": "B-5-green",
+    "price": 55000,
+    "file": "6458-3_B-5_green_edited.png"
+  },
+  {
+    "code": "B-5-red",
+    "price": 75000,
+    "file": "6458-1_B-5_green_edited.png"
+  },
+  {
+    "code": "B-5-white",
+    "price": 75000,
+    "file": "6458-2_B-5_green_edited.png"
+  },
+  {
+    "code": "DH-118-PAPROTNIK",
+    "price": 80000,
+    "file": "4165_DH-118_Paprotnik_edited.png"
+  },
+  {
+    "code": "Dh-126-1",
+    "price": 25000,
+    "file": "6084-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-126-2",
+    "price": 25000,
+    "file": "6084-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-127-1",
+    "price": 25000,
+    "file": "6085-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-127-2",
+    "price": 25000,
+    "file": "6085-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-128-1",
+    "price": 25000,
+    "file": "6086-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-128-2",
+    "price": 25000,
+    "file": "6086-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-129-1",
+    "price": 25000,
+    "file": "6087-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-129-2",
+    "price": 25000,
+    "file": "6087-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-129-3",
+    "price": 25000,
+    "file": "6087-3_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-129-4",
+    "price": 25000,
+    "file": "6087-4_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-130-1",
+    "price": 25000,
+    "file": "6088-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-130-2",
+    "price": 25000,
+    "file": "6088-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-131-1",
+    "price": 25000,
+    "file": "6089-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-131-2",
+    "price": 25000,
+    "file": "6089-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-132-1",
+    "price": 30000,
+    "file": "6090-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-132-2",
+    "price": 30000,
+    "file": "6090-2_Zelen_edited.png"
+  },
+  {
+    "code": "DH-133",
+    "price": 32000,
+    "file": "7599_DH-133_edited.png"
+  },
+  {
+    "code": "Dh-134-1",
+    "price": 30000,
+    "file": "6091-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-134-2",
+    "price": 30000,
+    "file": "6091-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-135-1",
+    "price": 30000,
+    "file": "6092-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-135-2",
+    "price": 30000,
+    "file": "6092-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-135-3",
+    "price": 30000,
+    "file": "6092-3_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-136-1",
+    "price": 30000,
+    "file": "6093-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-136-2",
+    "price": 30000,
+    "file": "6093-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-136-3",
+    "price": 30000,
+    "file": "6093-3_Zelen_edited.png"
+  },
+  {
+    "code": "DH-137-1",
+    "price": 60000,
+    "file": "4190-DH-137-2.png"
+  },
+  {
+    "code": "DH-137-2",
+    "price": 60000,
+    "file": "4190-DH-137-1.png"
+  },
+  {
+    "code": "DH-138",
+    "price": 85000,
+    "file": "7601_DH-138_edited.png"
+  },
+  {
+    "code": "DH-139",
+    "price": 85000,
+    "file": "7603_DH-139_edited.png"
+  },
+  {
+    "code": "DH-140",
+    "price": 75000,
+    "file": "7605_DH-140_edited.png"
+  },
+  {
+    "code": "DH-141-1",
+    "price": 75000,
+    "file": "7607-1_DH-141_edited.png"
+  },
+  {
+    "code": "DH-141-2",
+    "price": 75000,
+    "file": "7607-2_DH-141_edited.png"
+  },
+  {
+    "code": "DH-142",
+    "price": 75000,
+    "file": "7609_DH-142_edited.png"
+  },
+  {
+    "code": "DH-143",
+    "price": 75000,
+    "file": "7611_DH-143_edited.png"
+  },
+  {
+    "code": "DH-144",
+    "price": 15000,
+    "file": "7613_DH-144_edited.png"
+  },
+  {
+    "code": "DH-145",
+    "price": 15000,
+    "file": "7615_DH-145_edited.png"
+  },
+  {
+    "code": "Dh-146-1",
+    "price": 20000,
+    "file": "6095-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-146-2",
+    "price": 20000,
+    "file": "6095-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-146-3",
+    "price": 20000,
+    "file": "6095-3_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-146-4",
+    "price": 20000,
+    "file": "6095-4_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-147-1",
+    "price": 20000,
+    "file": "6096-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-147-2",
+    "price": 20000,
+    "file": "6096-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-147-3",
+    "price": 20000,
+    "file": "6096-3_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-148-1",
+    "price": 20000,
+    "file": "6097-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-148-2",
+    "price": 20000,
+    "file": "6097-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-148-3",
+    "price": 20000,
+    "file": "6097-3_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-149-1",
+    "price": 20000,
+    "file": "6098-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-149-2",
+    "price": 20000,
+    "file": "6098-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-150-1",
+    "price": 20000,
+    "file": "6099-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-150-2",
+    "price": 20000,
+    "file": "6099-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-150-3",
+    "price": 20000,
+    "file": "6099-3_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-150-4",
+    "price": 20000,
+    "file": "6099-4_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-151-1",
+    "price": 25000,
+    "file": "6100-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-151-2",
+    "price": 25000,
+    "file": "6100-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-151-3",
+    "price": 25000,
+    "file": "6100-3_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-152-1",
+    "price": 20000,
+    "file": "6101-1_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-152-2",
+    "price": 20000,
+    "file": "6101-2_Zelen_edited.png"
+  },
+  {
+    "code": "Dh-152-3",
+    "price": 20000,
+    "file": "6101-3_Zelen_edited.png"
+  },
+  {
+    "code": "DH-153",
+    "price": 32000,
+    "file": "7617_DH-153_edited.png"
+  },
+  {
+    "code": "DH-154",
+    "price": 42000,
+    "file": "7619_DH-154_edited.png"
+  },
+  {
+    "code": "DH-155",
+    "price": 52000,
+    "file": "7621_DH-155_edited.png"
+  },
+  {
+    "code": "K-112-PAPROTNIK",
+    "price": 35000,
+    "file": "3741_K-112_Paprotnik_edited.png"
+  },
+  {
+    "code": "S-21-1",
+    "price": 30000,
+    "file": "7247-1_S-21_edited.png"
+  },
+  {
+    "code": "S-21-2",
+    "price": 30000,
+    "file": "7247-2_S-21_edited.png"
+  },
+  {
+    "code": "S-21-3",
+    "price": 30000,
+    "file": "7247-3_S-21_edited.png"
+  },
+  {
+    "code": "S-21-4",
+    "price": 30000,
+    "file": "7247-4_S-21_edited.png"
+  },
+  {
+    "code": "S-22-1",
+    "price": 30000,
+    "file": "7249-1_S-22_edited.png"
+  },
+  {
+    "code": "S-22-2",
+    "price": 30000,
+    "file": "7249-2_S-22_edited.png"
+  },
+  {
+    "code": "S-22-3",
+    "price": 30000,
+    "file": "7249-3_S-22_edited.png"
+  },
+  {
+    "code": "S-22-4",
+    "price": 30000,
+    "file": "7249-4_S-22_edited.png"
+  },
+  {
+    "code": "S-22-5",
+    "price": 30000,
+    "file": "7249-5_S-22_edited.png"
+  },
+  {
+    "code": "W-1-2",
+    "price": 120000,
+    "file": "6712_W-1-2_edited.png"
+  },
+  {
+    "code": "W-10",
+    "price": 7000,
+    "file": "6721_W-10_edited.png"
+  },
+  {
+    "code": "W-11",
+    "price": 11000,
+    "file": "6722_W-11_edited.png"
+  },
+  {
+    "code": "W-12",
+    "price": 11000,
+    "file": "6723_W-12_edited.png"
+  },
+  {
+    "code": "W-13-1",
+    "price": 10000,
+    "file": "6724-1_W-13_edited.png"
+  },
+  {
+    "code": "W-13-2",
+    "price": 10000,
+    "file": "6724-2_W-13_edited.png"
+  },
+  {
+    "code": "W-13-3",
+    "price": 10000,
+    "file": "6724-3_W-13_edited.png"
+  },
+  {
+    "code": "W-13-4",
+    "price": 10000,
+    "file": "6724-4_W-13_edited.png"
+  },
+  {
+    "code": "W-14",
+    "price": 25000,
+    "file": "6725_Dekorativnaya_tsvetochnaya_vetka_W-14_edited.png"
+  },
+  {
+    "code": "W-15",
+    "price": 25000,
+    "file": "6726_Dekorativnaya_tsvetochnaya_vetka_W-15_edited.png"
+  },
+  {
+    "code": "W-16",
+    "price": 20000,
+    "file": "6727_W-16_edited.png"
+  },
+  {
+    "code": "W-17",
+    "price": 20000,
+    "file": "6728_W-17_edited.png"
+  },
+  {
+    "code": "W-18",
+    "price": 32000,
+    "file": "6729_Dekorativnaya_tsvetochnaya_vetka_W-18_edited.png"
+  },
+  {
+    "code": "W-19",
+    "price": 32000,
+    "file": "6730_Dekorativnaya_tsvetochnaya_vetka_W-19_edited.png"
+  },
+  {
+    "code": "W-2",
+    "price": 120000,
+    "file": "6713_Dekorativnaya_tsvetochnaya_vetka_W-2_edited.png"
+  },
+  {
+    "code": "W-20",
+    "price": 25000,
+    "file": "6731_W-20_edited.png"
+  },
+  {
+    "code": "W-21",
+    "price": 25000,
+    "file": "6732_W-21_edited.png"
+  },
+  {
+    "code": "W-22",
+    "price": 22000,
+    "file": "6733_W-22_edited.png"
+  },
+  {
+    "code": "W-23",
+    "price": 40000,
+    "file": "6734_W-23_edited.png"
+  },
+  {
+    "code": "W-24",
+    "price": 40000,
+    "file": "6735_W-24_edited.png"
+  },
+  {
+    "code": "W-26",
+    "price": 40000,
+    "file": "6740_W-26_edited.png"
+  },
+  {
+    "code": "W-27",
+    "price": 30000,
+    "file": "6741_Dekorativnaya_tsvetochnaya_vetka_W-27_edited.png"
+  },
+  {
+    "code": "W-3",
+    "price": 16000,
+    "file": "6714_Dekorativnaya_tsvetochnaya_vetka_W-3_edited.png"
+  },
+  {
+    "code": "W-4",
+    "price": 16000,
+    "file": "6715_Dekorativnaya_tsvetochnaya_vetka_W-4_edited.png"
+  },
+  {
+    "code": "W-5-1",
+    "price": 15000,
+    "file": "6716-1_W-5_edited.png"
+  },
+  {
+    "code": "W-5-2",
+    "price": 18000,
+    "file": "6716-2_W-5_edited.png"
+  },
+  {
+    "code": "W-5-3",
+    "price": 18000,
+    "file": "6716-3_W-5_edited.png"
+  },
+  {
+    "code": "Z-10-1",
+    "price": 7000,
+    "file": "4243-1_Zelen_edited.png"
+  },
+  {
+    "code": "Z-10-2",
+    "price": 7000,
+    "file": "4243-2_Zelen_edited.png"
+  },
+  {
+    "code": "Z-13",
+    "price": 15000,
+    "file": "4249_Zelen__edited.png"
+  },
+  {
+    "code": "Z-14",
+    "price": 25000,
+    "file": "4251_Zelen__edited.png"
+  },
+  {
+    "code": "Z-16-1",
+    "price": 8000,
+    "file": "4255-Z-16-1.png"
+  },
+  {
+    "code": "Z-16-2",
+    "price": 8000,
+    "file": "4255-Z-16-2.png"
+  },
+  {
+    "code": "Z-16-3",
+    "price": 8000,
+    "file": "4255-Z-16-3.png"
+  },
+  {
+    "code": "Z-16-4",
+    "price": 8000,
+    "file": "4255-Z-16-4.png"
+  },
+  {
+    "code": "Z-30-1",
+    "price": 18000,
+    "file": "5610-1_Zelen_edited.png"
+  },
+  {
+    "code": "Z-30-2",
+    "price": 18000,
+    "file": "5610-2_Zelen_edited.png"
+  },
+  {
+    "code": "Z-30-3",
+    "price": 18000,
+    "file": "5610-3_Zelen_edited.png"
+  },
+  {
+    "code": "Z-30-4",
+    "price": 18000,
+    "file": "5610-4_Zelen_edited.png"
+  },
+  {
+    "code": "Z-30-5",
+    "price": 18000,
+    "file": "5610-5_Zelen_edited.png"
+  },
+  {
+    "code": "Z-34",
+    "price": 22000,
+    "file": "5932_Zelen__edited.png"
+  },
+  {
+    "code": "Z-5",
+    "price": 13000,
+    "file": "4233_Zelen__edited.png"
+  },
+  {
+    "code": "Z-8-1",
+    "price": 50000,
+    "file": "10491_Z-8-1_edited.png"
+  },
+  {
+    "code": "Z-8-blue",
+    "price": 25000,
+    "file": "6480_Z-8-blue_edited.png"
+  },
+  {
+    "code": "Z-8-DEFAULT",
+    "price": 24000,
+    "file": "4239_Z-8_Default_edited.png"
+  },
+  {
+    "code": "Z-8-red",
+    "price": 25000,
+    "file": "6476_Z-8-red_edited.png"
+  },
+  {
+    "code": "Z-8-white",
+    "price": 25000,
+    "file": "6478_Z-8-white_edited.png"
+  },
+  {
+    "code": "Z-82",
+    "price": 65000,
+    "file": "10493_Z-82_edited.png"
+  },
+  {
+    "code": "Z-83",
+    "price": 65000,
+    "file": "10495_Z-83_edited.png"
+  },
+  {
+    "code": "Z-84",
+    "price": 50000,
+    "file": "10497_Z-84_edited.png"
+  },
+  {
+    "code": "Z-85",
+    "price": 65000,
+    "file": "10499_Z-85_edited.png"
+  },
+  {
+    "code": "Z-86",
+    "price": 65000,
+    "file": "10501_Z-86_edited.png"
+  }
+]

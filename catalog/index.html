@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<!--
+  DEKOR MARKET — каталог ZELEN (Декоративные зелёные ветки)
+  ==========================================================
+  Всё что можно менять — сверху в блоке <script id="config">.
+  Стили — в <style> ниже (переменные :root это цвета бренда).
+  Список товаров — в отдельном файле products.json (рядом).
+  Лого — в файле logo.png (рядом).
+
+  Как посмотреть: открой этот файл двойным кликом (или в браузере).
+  Как сохранить PDF: Ctrl+P → «Сохранить в PDF» → A4 Landscape, без полей.
+  Как сгенерить PDF из терминала: см. build-pdf.py + README.md
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEKOR MARKET — Каталог ZELEN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..800;1,400..600&family=Lato:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ============================================================
+     ЦВЕТА ФИРМЕННОЙ ПАЛИТРЫ (можно менять)
+     ============================================================ */
+  :root{
+    --forest:    #1B4332;   /* тёмно-зелёный — заголовки, рамки */
+    --emerald:   #2D6A4F;   /* изумрудный */
+    --sage:      #40916C;   /* шалфей */
+    --mint:      #52B788;   /* мята */
+    --olive:     #7C8B6F;
+    --terracotta:#C67C4E;   /* терракота — цены, акценты */
+    --cream:     #FFFCF5;
+    --ivory:     #FAF8F3;
+    --sand:      #F0EBE3;
+    --charcoal:  #2C2C2C;   /* основной текст */
+    --med-gray:  #6b6b6b;
+    --taupe:     #a89985;
+
+    /* Размеры логотипов (менять здесь) */
+    --logo-cover: 150px;    /* лого на титульной странице */
+    --logo-head:  55px;     /* лого в шапке каждой страницы */
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ font-optical-sizing:auto; }
+  body{
+    font-family:"Lato","Nunito", system-ui, sans-serif;
+    color:var(--charcoal); background:#ffffff;
+    line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{ font-family:"Playfair Display", Georgia, serif; text-wrap:balance; }
+
+  .page{
+    width:297mm; height:210mm;
+    margin:20px auto; background:#ffffff;
+    position:relative; overflow:hidden;
+    box-shadow:0 8px 40px rgba(27,67,50,0.14);
+    display:flex; flex-direction:column;
+  }
+
+  /* ============= COVER (титульная страница) ============= */
+  .cover .cover-inner{
+    position:absolute; inset:12mm;
+    border:1.5px solid var(--sage);
+    display:flex; flex-direction:column; align-items:center;
+    padding:16mm 18mm; z-index:2;
+  }
+  .cover-logo{ height:var(--logo-cover); margin-top:0; }
+  .cover-logo img{ height:100%; object-fit:contain; }
+  .cover-kicker{
+    margin-top:auto; font-size:0.82rem; letter-spacing:0.34em;
+    text-transform:uppercase; color:var(--sage);
+    font-family:"Lato",sans-serif; font-weight:700;
+  }
+  .cover h1{
+    margin-top:16px; font-size:4.8rem; line-height:0.98; font-weight:500;
+    letter-spacing:-0.02em; color:var(--forest); text-align:center;
+  }
+  .cover h1 em{ font-style:italic; color:var(--sage); font-weight:400; }
+  .cover-dates{
+    margin-top:24px; font-family:"Playfair Display",serif; font-size:1.05rem; font-weight:500;
+    letter-spacing:0.44em; text-transform:uppercase; color:var(--terracotta); padding-left:0.44em;
+  }
+  .cover-sep{ margin-top:24px; width:64px; height:2px; background:var(--terracotta); }
+  .cover-contacts{
+    margin-top:auto; display:flex; align-items:center; gap:30px;
+    font-size:0.98rem; color:var(--forest);
+    font-family:"Nunito",sans-serif; font-weight:600;
+  }
+  .cover-contacts a, .cover-contacts span{
+    display:inline-flex; align-items:center; gap:9px;
+    color:var(--forest); text-decoration:none;
+  }
+  .cover-contacts svg{ width:20px; height:20px; }
+  .cover-branch{ position:absolute; color:var(--mint); opacity:0.42; pointer-events:none; z-index:1; }
+  .cover-branch.tr{ right:16mm; top:14mm; width:150px; transform:rotate(150deg); }
+  .cover-branch.bl{ left:16mm; bottom:30mm; width:130px; transform:rotate(-30deg); }
+
+  /* ============= CATALOG PAGE (страница с товарами) ============= */
+  .phead{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:8mm 14mm 6px; flex:none; position:relative; z-index:2;
+  }
+  .phead .brand{ height:var(--logo-head); }
+  .phead .brand img{ height:100%; object-fit:contain; }
+  .phead .cat{ display:flex; align-items:baseline; gap:11px; }
+  .phead .cat h2{ font-size:1.2rem; font-weight:500; color:var(--forest); }
+  .phead .cat span{
+    font-size:0.66rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--terracotta); font-weight:700; font-family:"Lato",sans-serif;
+  }
+  .prule{ height:1.5px; background:var(--forest); margin:0 14mm; flex:none; position:relative; z-index:2; }
+  .body{
+    flex:1 1 0; min-height:0; display:flex;
+    padding:6mm 14mm 8mm; position:relative; z-index:2;
+  }
+
+  /* ЕДИНАЯ СЕТКА (все ячейки одинаковые) */
+  .grid{ flex:1 1 0; min-height:0; width:100%; display:grid; gap:6mm; }
+  .grid.n3{ grid-template-columns:repeat(3,1fr); grid-template-rows:1fr; }
+  .grid.n4{ grid-template-columns:repeat(2,1fr); grid-template-rows:repeat(2,1fr); }
+  .grid.n5{ grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(2,1fr); }
+  .grid.n5 .item:nth-child(4){ grid-column:1/2; grid-row:2/3; }
+  .grid.n5 .item:nth-child(5){ grid-column:2/3; grid-row:2/3; }
+  .grid.n6{ grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(2,1fr); }
+
+  .item{ min-width:0; min-height:0; display:flex; flex-direction:column; align-items:stretch; }
+  .shot{
+    flex:1 1 0; min-height:0; width:100%;
+    display:flex; align-items:center; justify-content:center; overflow:hidden;
+  }
+  .shot img{
+    max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain;
+  }
+  .cap{ flex:none; text-align:center; padding-top:6px; }
+  .cap .nm{
+    font-weight:600; color:var(--forest); font-size:0.92rem;
+    letter-spacing:0.01em; font-family:"Nunito",sans-serif;
+  }
+  .cap .sub{
+    font-size:0.63rem; color:var(--med-gray); margin-top:1px;
+    font-family:"Lato",sans-serif; letter-spacing:0.06em; text-transform:uppercase;
+  }
+  .cap .pr{
+    font-weight:700; color:var(--terracotta); font-size:0.9rem;
+    margin-top:4px; font-variant-numeric:tabular-nums; font-family:"Nunito",sans-serif;
+  }
+  .pfoot{
+    position:absolute; right:14mm; bottom:4mm; font-size:0.62rem;
+    color:var(--taupe); letter-spacing:0.08em; z-index:2;
+    font-family:"Lato",sans-serif;
+  }
+
+  @page{ size:A4 landscape; margin:0; }
+  @media print{
+    body{ background:#fff; }
+    .page{ margin:0; box-shadow:none; break-after:page; }
+    .page:last-child{ break-after:auto; }
+    -webkit-print-color-adjust:exact; print-color-adjust:exact;
+  }
+</style>
+</head>
+<body>
+
+<div id="doc">Загрузка…</div>
+
+<!-- ============================================================
+     КОНФИГ — что показывать (можно менять)
+     ============================================================ -->
+<script id="config">
+  window.CONFIG = {
+    // Название категории для водяной строки в шапке
+    categoryTitle:    "Зелёные ветки",
+    categoryCode:     "ZELEN",
+
+    // Титул
+    coverKicker:      "Категория · ZELEN",
+    coverTitleLine1: "Декоративные",
+    coverTitleLine2Prefix: "",         // например "изысканные"
+    coverTitleLine2Italic: "зелёные",  // курсивная часть
+    coverTitleLine2Suffix: " ветки",
+    coverDates:       "ИЮНЬ — ИЮЛЬ 2026",
+
+    // Контакты внизу титула
+    telegram:         "@DekorHouseAdmin",
+    telegramUrl:      "https://t.me/DekorHouseAdmin",
+    phone:            "+998 (99) 368-11-00",
+
+    // Данные
+    productsFile:     "products.json",  // список товаров
+    logoFile:         "logo.png",
+    imagesBase:       "https://yjfyvedavmrdifmepvkh.supabase.co/storage/v1/object/public/products/edited/",
+
+    // Подпись под кодом товара в карточке
+    productSublabel:  "Зелёная ветка",
+    priceSuffix:      "сўм",
+
+    // Раскладка страниц: сколько ставим в одну (уже жёстко 3-6 в CSS)
+    // Правило: минимум 3 товара на странице
+    maxPerPage:       6,
+  };
+</script>
+
+<script>
+  const C = window.CONFIG;
+
+  const tg = `<svg viewBox="0 0 24 24" fill="none"><path d="M21.9 4.3 18.6 20c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.2-8.3c.4-.4-.1-.6-.6-.2L6.6 13.2 1.7 11.7c-1.1-.3-1.1-1 .2-1.5L20.5 3c.9-.3 1.7.2 1.4 1.3Z" fill="#1B4332"/></svg>`;
+  const ph = `<svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.7.6.6 0 1 .5 1 1V20c0 .6-.5 1-1 1A17 17 0 0 1 3 4c0-.6.5-1 1-1h3.5c.6 0 1 .5 1 1 0 1.3.2 2.5.6 3.7.1.4 0 .8-.3 1l-2.2 2.1Z" fill="#1B4332"/></svg>`;
+  const branch = `<svg viewBox="0 0 120 200" fill="none"><path d="M60 200 V16" stroke="currentColor" stroke-width="2.4"/><g fill="currentColor"><ellipse cx="42" cy="150" rx="12" ry="6" transform="rotate(-30 42 150)"/><ellipse cx="78" cy="150" rx="12" ry="6" transform="rotate(30 78 150)"/><ellipse cx="44" cy="112" rx="11" ry="5.5" transform="rotate(-30 44 112)"/><ellipse cx="76" cy="112" rx="11" ry="5.5" transform="rotate(30 76 112)"/><ellipse cx="47" cy="74" rx="10" ry="5" transform="rotate(-30 47 74)"/><ellipse cx="73" cy="74" rx="10" ry="5" transform="rotate(30 73 74)"/><ellipse cx="52" cy="40" rx="9" ry="4.5" transform="rotate(-30 52 40)"/><ellipse cx="68" cy="40" rx="9" ry="4.5" transform="rotate(30 68 40)"/></g></svg>`;
+
+  const fmt = n => (n || 0).toLocaleString('ru-RU').replace(/,/g,' ');
+
+  // Определяем "серию" по коду (Z-16-1 → Z-16, Dh-146-3 → Dh-146)
+  function seriesKey(code){
+    const m = code.match(/^([A-Za-z]+-\d+)-.+$/);
+    return (m ? m[1] : code).toUpperCase();
+  }
+
+  function planPages(products){
+    const order = [], map = {};
+    for(const d of products){
+      if(!d.file) continue;
+      const k = seriesKey(d.code);
+      if(map[k]===undefined){ map[k]={key:k, items:[]}; order.push(k); }
+      map[k].items.push(d);
+    }
+    const singles = [], bigGroups = [];
+    for(const k of order){
+      if(map[k].items.length >= 3) bigGroups.push(map[k]);
+      else for(const it of map[k].items) singles.push(it);
+    }
+    const pages = [];
+    // Большие серии, но со страницами по 3-6 карточек
+    for(const g of bigGroups){
+      const n = g.items.length; let s = 0;
+      while(s < n){
+        const rem = n - s;
+        let sz = rem >= 6 ? 6 : (rem === 5 ? 5 : (rem === 4 ? 4 : rem));
+        const after = rem - sz;
+        if(after === 1 || after === 2){
+          if(sz + after <= 6) sz = sz + after;
+          else sz = Math.floor(rem/2) + rem % 2;
+        }
+        pages.push({ key:g.key, items:g.items.slice(s, s+sz), series:true });
+        s += sz;
+      }
+    }
+    // Синглы — по 6, следим за минимумом 3
+    let i = 0;
+    while(i < singles.length){
+      const rem = singles.length - i;
+      let sz;
+      if(rem >= 6) sz = 6;
+      else if(rem === 4 || rem === 5) sz = rem;
+      else if(rem === 3) sz = 3;
+      else {
+        const prev = pages[pages.length-1];
+        if(prev && !prev.series && prev.items.length + rem <= 6){
+          for(let j=i; j<singles.length; j++) prev.items.push(singles[j]);
+          i = singles.length; break;
+        }
+        sz = rem;
+      }
+      pages.push({ key:"ассортимент", items:singles.slice(i, i+sz), series:false });
+      i += sz;
+    }
+    return pages;
+  }
+
+  function cellInner(d){
+    return `<div class="shot"><img src="${C.imagesBase}${encodeURIComponent(d.file)}" alt="${d.code}" loading="lazy" onerror="this.style.visibility='hidden'"></div>
+      <div class="cap"><div class="nm">${d.code}</div><div class="sub">${C.productSublabel}</div><div class="pr">${fmt(d.price)} ${C.priceSuffix}</div></div>`;
+  }
+  const itm = d => `<div class="item">${cellInner(d)}</div>`;
+  const buildBody = items => `<div class="grid n${items.length}">${items.map(itm).join('')}</div>`;
+
+  fetch(C.productsFile)
+    .then(r => r.json())
+    .then(products => {
+      const pages = planPages(products);
+      const total = pages.length + 1;
+      let html = `
+      <section class="page cover">
+        <div class="cover-branch tr">${branch}</div>
+        <div class="cover-branch bl">${branch}</div>
+        <div class="cover-inner">
+          <div class="cover-logo"><img src="${C.logoFile}" alt="Dekor Market"></div>
+          <div class="cover-kicker">${C.coverKicker}</div>
+          <h1>${C.coverTitleLine1}<br>${C.coverTitleLine2Prefix}<em>${C.coverTitleLine2Italic}</em>${C.coverTitleLine2Suffix}</h1>
+          <div class="cover-dates">${C.coverDates}</div>
+          <div class="cover-sep"></div>
+          <div class="cover-contacts">
+            <a href="${C.telegramUrl}">${tg}${C.telegram}</a>
+            <span>${ph}${C.phone}</span>
+          </div>
+        </div>
+      </section>`;
+      pages.forEach((p,idx) => {
+        const label = p.series ? `${C.categoryCode} · серия ${p.key}` : `${C.categoryCode} · ассортимент`;
+        html += `
+        <section class="page">
+          <div class="phead">
+            <div class="brand"><img src="${C.logoFile}" alt="Dekor Market"></div>
+            <div class="cat"><h2>${C.categoryTitle}</h2><span>${label}</span></div>
+          </div>
+          <div class="prule"></div>
+          <div class="body">${buildBody(p.items)}</div>
+          <div class="pfoot">${String(idx+2).padStart(2,'0')} / ${String(total).padStart(2,'0')}</div>
+        </section>`;
+      });
+      document.getElementById('doc').innerHTML = html;
+    })
+    .catch(err => {
+      document.getElementById('doc').innerHTML =
+        `<div style="padding:40px;font-family:sans-serif">
+          <h2 style="color:#C67C4E">Ошибка загрузки products.json</h2>
+          <p>${err.message}</p>
+          <p style="margin-top:20px;color:#666">
+            Если открываешь <code>index.html</code> двойным кликом — браузер может не давать fetch() локальных файлов.
+            Запусти локальный сервер:<br>
+            <code style="background:#f0f0f0;padding:4px 8px">python3 -m http.server 8000</code><br>
+            и открой <a href="http://localhost:8000">http://localhost:8000</a>
+          </p>
+        </div>`;
+    });
+</script>
+</body>
+</html>
