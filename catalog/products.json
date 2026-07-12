@@ -5,11 +5,6 @@
     "file": "3490-0278-142.png"
   },
   {
-    "code": "B-40",
-    "price": 45000,
-    "file": "8558_B-40_edited.png"
-  },
-  {
     "code": "B-41",
     "price": 55000,
     "file": "8557_B-41_edited.png"
@@ -28,11 +23,6 @@
     "code": "B-44-1",
     "price": 75000,
     "file": "8554-1_B-44_edited.png"
-  },
-  {
-    "code": "B-44-2",
-    "price": 75000,
-    "file": "8554-2_B-44_edited.png"
   },
   {
     "code": "B-5-green",
@@ -60,19 +50,9 @@
     "file": "6084-1_Zelen_edited.png"
   },
   {
-    "code": "Dh-126-2",
-    "price": 25000,
-    "file": "6084-2_Zelen_edited.png"
-  },
-  {
     "code": "Dh-127-1",
     "price": 25000,
     "file": "6085-1_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-127-2",
-    "price": 25000,
-    "file": "6085-2_Zelen_edited.png"
   },
   {
     "code": "Dh-128-1",
@@ -80,29 +60,9 @@
     "file": "6086-1_Zelen_edited.png"
   },
   {
-    "code": "Dh-128-2",
-    "price": 25000,
-    "file": "6086-2_Zelen_edited.png"
-  },
-  {
     "code": "Dh-129-1",
     "price": 25000,
     "file": "6087-1_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-129-2",
-    "price": 25000,
-    "file": "6087-2_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-129-3",
-    "price": 25000,
-    "file": "6087-3_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-129-4",
-    "price": 25000,
-    "file": "6087-4_Zelen_edited.png"
   },
   {
     "code": "Dh-130-1",
@@ -110,29 +70,14 @@
     "file": "6088-1_Zelen_edited.png"
   },
   {
-    "code": "Dh-130-2",
-    "price": 25000,
-    "file": "6088-2_Zelen_edited.png"
-  },
-  {
     "code": "Dh-131-1",
     "price": 25000,
     "file": "6089-1_Zelen_edited.png"
   },
   {
-    "code": "Dh-131-2",
-    "price": 25000,
-    "file": "6089-2_Zelen_edited.png"
-  },
-  {
     "code": "Dh-132-1",
     "price": 30000,
     "file": "6090-1_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-132-2",
-    "price": 30000,
-    "file": "6090-2_Zelen_edited.png"
   },
   {
     "code": "DH-133",
@@ -145,39 +90,14 @@
     "file": "6091-1_Zelen_edited.png"
   },
   {
-    "code": "Dh-134-2",
-    "price": 30000,
-    "file": "6091-2_Zelen_edited.png"
-  },
-  {
     "code": "Dh-135-1",
     "price": 30000,
     "file": "6092-1_Zelen_edited.png"
   },
   {
-    "code": "Dh-135-2",
-    "price": 30000,
-    "file": "6092-2_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-135-3",
-    "price": 30000,
-    "file": "6092-3_Zelen_edited.png"
-  },
-  {
     "code": "Dh-136-1",
     "price": 30000,
     "file": "6093-1_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-136-2",
-    "price": 30000,
-    "file": "6093-2_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-136-3",
-    "price": 30000,
-    "file": "6093-3_Zelen_edited.png"
   },
   {
     "code": "DH-137-1",
@@ -190,29 +110,14 @@
     "file": "4190-DH-137-1.png"
   },
   {
-    "code": "DH-138",
-    "price": 85000,
-    "file": "7601_DH-138_edited.png"
-  },
-  {
     "code": "DH-139",
     "price": 85000,
     "file": "7603_DH-139_edited.png"
   },
   {
-    "code": "DH-140",
-    "price": 75000,
-    "file": "7605_DH-140_edited.png"
-  },
-  {
     "code": "DH-141-1",
     "price": 75000,
     "file": "7607-1_DH-141_edited.png"
-  },
-  {
-    "code": "DH-141-2",
-    "price": 75000,
-    "file": "7607-2_DH-141_edited.png"
   },
   {
     "code": "DH-142",
@@ -240,49 +145,9 @@
     "file": "6095-1_Zelen_edited.png"
   },
   {
-    "code": "Dh-146-2",
-    "price": 20000,
-    "file": "6095-2_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-146-3",
-    "price": 20000,
-    "file": "6095-3_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-146-4",
-    "price": 20000,
-    "file": "6095-4_Zelen_edited.png"
-  },
-  {
     "code": "Dh-147-1",
     "price": 20000,
     "file": "6096-1_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-147-2",
-    "price": 20000,
-    "file": "6096-2_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-147-3",
-    "price": 20000,
-    "file": "6096-3_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-148-1",
-    "price": 20000,
-    "file": "6097-1_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-148-2",
-    "price": 20000,
-    "file": "6097-2_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-148-3",
-    "price": 20000,
-    "file": "6097-3_Zelen_edited.png"
   },
   {
     "code": "Dh-149-1",
@@ -290,29 +155,9 @@
     "file": "6098-1_Zelen_edited.png"
   },
   {
-    "code": "Dh-149-2",
-    "price": 20000,
-    "file": "6098-2_Zelen_edited.png"
-  },
-  {
     "code": "Dh-150-1",
     "price": 20000,
     "file": "6099-1_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-150-2",
-    "price": 20000,
-    "file": "6099-2_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-150-3",
-    "price": 20000,
-    "file": "6099-3_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-150-4",
-    "price": 20000,
-    "file": "6099-4_Zelen_edited.png"
   },
   {
     "code": "Dh-151-1",
@@ -320,29 +165,9 @@
     "file": "6100-1_Zelen_edited.png"
   },
   {
-    "code": "Dh-151-2",
-    "price": 25000,
-    "file": "6100-2_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-151-3",
-    "price": 25000,
-    "file": "6100-3_Zelen_edited.png"
-  },
-  {
     "code": "Dh-152-1",
     "price": 20000,
     "file": "6101-1_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-152-2",
-    "price": 20000,
-    "file": "6101-2_Zelen_edited.png"
-  },
-  {
-    "code": "Dh-152-3",
-    "price": 20000,
-    "file": "6101-3_Zelen_edited.png"
   },
   {
     "code": "DH-153",
@@ -360,54 +185,14 @@
     "file": "7621_DH-155_edited.png"
   },
   {
-    "code": "K-112-PAPROTNIK",
-    "price": 35000,
-    "file": "3741_K-112_Paprotnik_edited.png"
-  },
-  {
     "code": "S-21-1",
     "price": 30000,
     "file": "7247-1_S-21_edited.png"
   },
   {
-    "code": "S-21-2",
-    "price": 30000,
-    "file": "7247-2_S-21_edited.png"
-  },
-  {
-    "code": "S-21-3",
-    "price": 30000,
-    "file": "7247-3_S-21_edited.png"
-  },
-  {
-    "code": "S-21-4",
-    "price": 30000,
-    "file": "7247-4_S-21_edited.png"
-  },
-  {
     "code": "S-22-1",
     "price": 30000,
     "file": "7249-1_S-22_edited.png"
-  },
-  {
-    "code": "S-22-2",
-    "price": 30000,
-    "file": "7249-2_S-22_edited.png"
-  },
-  {
-    "code": "S-22-3",
-    "price": 30000,
-    "file": "7249-3_S-22_edited.png"
-  },
-  {
-    "code": "S-22-4",
-    "price": 30000,
-    "file": "7249-4_S-22_edited.png"
-  },
-  {
-    "code": "S-22-5",
-    "price": 30000,
-    "file": "7249-5_S-22_edited.png"
   },
   {
     "code": "W-1-2",
@@ -433,21 +218,6 @@
     "code": "W-13-1",
     "price": 10000,
     "file": "6724-1_W-13_edited.png"
-  },
-  {
-    "code": "W-13-2",
-    "price": 10000,
-    "file": "6724-2_W-13_edited.png"
-  },
-  {
-    "code": "W-13-3",
-    "price": 10000,
-    "file": "6724-3_W-13_edited.png"
-  },
-  {
-    "code": "W-13-4",
-    "price": 10000,
-    "file": "6724-4_W-13_edited.png"
   },
   {
     "code": "W-14",
@@ -535,14 +305,9 @@
     "file": "6716-1_W-5_edited.png"
   },
   {
-    "code": "W-5-2",
-    "price": 18000,
-    "file": "6716-2_W-5_edited.png"
-  },
-  {
-    "code": "W-5-3",
-    "price": 18000,
-    "file": "6716-3_W-5_edited.png"
+    "code": "Z",
+    "price": 7000,
+    "file": "4251_Zelen_edited.png"
   },
   {
     "code": "Z-10-1",
@@ -550,74 +315,14 @@
     "file": "4243-1_Zelen_edited.png"
   },
   {
-    "code": "Z-10-2",
-    "price": 7000,
-    "file": "4243-2_Zelen_edited.png"
-  },
-  {
-    "code": "Z-13",
-    "price": 15000,
-    "file": "4249_Zelen__edited.png"
-  },
-  {
-    "code": "Z-14",
-    "price": 25000,
-    "file": "4251_Zelen__edited.png"
-  },
-  {
     "code": "Z-16-1",
     "price": 8000,
     "file": "4255-Z-16-1.png"
   },
   {
-    "code": "Z-16-2",
-    "price": 8000,
-    "file": "4255-Z-16-2.png"
-  },
-  {
-    "code": "Z-16-3",
-    "price": 8000,
-    "file": "4255-Z-16-3.png"
-  },
-  {
-    "code": "Z-16-4",
-    "price": 8000,
-    "file": "4255-Z-16-4.png"
-  },
-  {
     "code": "Z-30-1",
     "price": 18000,
     "file": "5610-1_Zelen_edited.png"
-  },
-  {
-    "code": "Z-30-2",
-    "price": 18000,
-    "file": "5610-2_Zelen_edited.png"
-  },
-  {
-    "code": "Z-30-3",
-    "price": 18000,
-    "file": "5610-3_Zelen_edited.png"
-  },
-  {
-    "code": "Z-30-4",
-    "price": 18000,
-    "file": "5610-4_Zelen_edited.png"
-  },
-  {
-    "code": "Z-30-5",
-    "price": 18000,
-    "file": "5610-5_Zelen_edited.png"
-  },
-  {
-    "code": "Z-34",
-    "price": 22000,
-    "file": "5932_Zelen__edited.png"
-  },
-  {
-    "code": "Z-5",
-    "price": 13000,
-    "file": "4233_Zelen__edited.png"
   },
   {
     "code": "Z-8-1",
