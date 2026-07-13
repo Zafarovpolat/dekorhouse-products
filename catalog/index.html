@@ -291,6 +291,8 @@
 
   // Определяем "серию" по коду (Z-16-1 → Z-16, Dh-146-3 → Dh-146)
   function seriesKey(code){
+    // Z-81..Z-86 должны идти одной страницей, чтобы Z-86 не оставался один на последней странице
+    if(/^Z-8[1-6]$/i.test(code)) return 'Z-8X';
     const m = code.match(/^([A-Za-z]+-\d+)-.+$/);
     return (m ? m[1] : code).toUpperCase();
   }
@@ -329,7 +331,9 @@
     while(i < singles.length){
       const rem = singles.length - i;
       let sz;
-      if(rem >= 6) sz = 6;
+      if(rem === 7) sz = 4;        // чтобы не оставалась последняя страница с 1 товаром
+      else if(rem === 8) sz = 5;   // чтобы остаток был минимум 3
+      else if(rem >= 6) sz = 6;
       else if(rem === 4 || rem === 5) sz = rem;
       else if(rem === 3) sz = 3;
       else {
