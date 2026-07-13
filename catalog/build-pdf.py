@@ -29,10 +29,11 @@ OUT_DEFAULT = "catalog.pdf"
 PORT = 8123
 CHUNK = 8   # страниц за один запуск браузера (~200 МБ ОЗУ на chunk)
 HERE = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(HERE)
 
 def start_server():
     """Отдаём файлы из папки со скриптом."""
-    Handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=HERE)
+    Handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=REPO_ROOT)
     httpd = socketserver.TCPServer(("127.0.0.1", PORT), Handler)
     t = threading.Thread(target=httpd.serve_forever, daemon=True)
     t.start()
@@ -43,7 +44,7 @@ async def render_chunk(pw, first, last, out_path):
     ctx = await browser.new_context(viewport={"width": 1600, "height": 1131})
     page = await ctx.new_page()
 
-    await page.goto(f"http://127.0.0.1:{PORT}/index.html", wait_until="domcontentloaded", timeout=60_000)
+    await page.goto(f"http://127.0.0.1:{PORT}/catalog/index.html", wait_until="domcontentloaded", timeout=60_000)
     await page.wait_for_function("document.querySelectorAll('.page').length > 1", timeout=30_000)
 
     await page.add_style_tag(content=f"""
@@ -91,7 +92,7 @@ async def main(out_path):
         async with async_playwright() as pw:
             b = await pw.chromium.launch(args=["--disable-dev-shm-usage","--no-sandbox"])
             p = await b.new_page()
-            await p.goto(f"http://127.0.0.1:{PORT}/index.html", wait_until="domcontentloaded", timeout=60_000)
+            await p.goto(f"http://127.0.0.1:{PORT}/catalog/index.html", wait_until="domcontentloaded", timeout=60_000)
             await p.wait_for_function("document.querySelectorAll('.page').length > 1", timeout=30_000)
             total = await p.evaluate("document.querySelectorAll('.page').length")
             await b.close()

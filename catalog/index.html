@@ -267,6 +267,8 @@
     productsFile:     "products.json",  // список товаров
     logoFile:         "logo.png",
     imagesBase:       "https://yjfyvedavmrdifmepvkh.supabase.co/storage/v1/object/public/products/edited/",
+    // fallback для новых файлов, которые уже есть в репо, но ещё не залиты в Supabase/CDN
+    assetsFallbackBase: "/assets/edited/",
 
     // Подпись под кодом товара в карточке
     productSublabel:  "Зелёная ветка",
@@ -345,7 +347,7 @@
   }
 
   function cellInner(d){
-    return `<div class="shot"><img src="${C.imagesBase}${encodeURIComponent(d.file)}" alt="${d.code}" decoding="async" onerror="this.style.visibility='hidden'"></div>
+    return `<div class="shot"><img src="${C.imagesBase}${encodeURIComponent(d.file)}" alt="${d.code}" decoding="async" onerror="if(!this.dataset.fallback){this.dataset.fallback='1';this.src=C.assetsFallbackBase+encodeURIComponent('${d.file}')}else{this.style.visibility='hidden'}"></div>
       <div class="cap"><div class="nm">${d.code}</div><div class="sub">${C.productSublabel}</div><div class="pr">${fmt(d.price)} ${C.priceSuffix}</div></div>`;
   }
   const itm = d => `<div class="item">${cellInner(d)}</div>`;
