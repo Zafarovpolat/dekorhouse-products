@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>ZELEN — сравнение фото: до / после</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#1B4332; --sage:#40916C; --terracotta:#C67C4E;
+    --sand:#F0EBE3; --charcoal:#2C2C2C; --gray:#6b6b6b;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{
+    font-family:"Lato",system-ui,sans-serif;
+    color:var(--charcoal); background:var(--sand);
+    line-height:1.5; padding:20px;
+  }
+  h1{ font-family:"Playfair Display",serif; color:var(--forest); font-size:1.8rem; margin-bottom:8px; text-align:center; }
+  .sub{ text-align:center; color:var(--gray); font-size:0.9rem; margin-bottom:32px; }
+  .row{
+    background:#fff; border-radius:12px; padding:16px 20px;
+    margin-bottom:20px; box-shadow:0 2px 8px rgba(27,67,50,0.06);
+    max-width:1400px; margin-left:auto; margin-right:auto;
+  }
+  .row-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding-bottom:12px; margin-bottom:16px; border-bottom:1px solid #eae2d0;
+  }
+  .code{
+    font-family:"Playfair Display",serif; font-size:1.4rem; font-weight:600;
+    color:var(--forest);
+  }
+  .meta{ font-size:0.75rem; color:var(--gray); letter-spacing:0.08em; text-transform:uppercase; }
+  .pair{
+    display:grid; grid-template-columns:1fr 1fr; gap:16px;
+  }
+  .cell{
+    display:flex; flex-direction:column; align-items:stretch;
+    border:2px solid transparent; border-radius:8px; overflow:hidden;
+  }
+  .cell.before{ border-color:#eab; }
+  .cell.after{ border-color:#8b5; }
+  .label{
+    padding:6px 12px; font-size:0.7rem; font-weight:700;
+    letter-spacing:0.15em; text-transform:uppercase; text-align:center;
+  }
+  .before .label{ background:#fce8ec; color:#a44; }
+  .after  .label{ background:#e8f5e0; color:#385; }
+  .imgbox{
+    background:#fff; padding:8px;
+    display:flex; align-items:center; justify-content:center;
+    min-height:400px;
+  }
+  .imgbox img{
+    max-width:100%; max-height:520px; width:auto; height:auto;
+    object-fit:contain; cursor:zoom-in;
+  }
+  @media (max-width:700px){
+    .pair{ grid-template-columns:1fr; }
+    .imgbox{ min-height:280px; }
+    .imgbox img{ max-height:340px; }
+    h1{ font-size:1.3rem; }
+  }
+  #zoom{
+    display:none; position:fixed; inset:0; z-index:100;
+    background:rgba(0,0,0,0.9); align-items:center; justify-content:center;
+    cursor:zoom-out;
+  }
+  #zoom.open{ display:flex; }
+  #zoom img{ max-width:96vw; max-height:96vh; object-fit:contain; }
+  footer{ text-align:center; padding:24px; color:var(--gray); font-size:0.75rem; }
+</style>
+</head>
+<body>
+
+<h1>ZELEN — сравнение фото: до / после</h1>
+<div class="sub">10 товаров, для которых были перегенерированы фотографии</div>
+
+<div id="grid"></div>
+
+<div id="zoom" onclick="this.classList.remove('open')"><img></div>
+
+<footer>DEKOR MARKET — категория ZELEN — сравнение версий из GitHub-репозитория</footer>
+
+<script>
+// Список пар file → предыдущий коммит
+const ITEMS = [
+  {code:"Z-8-1",     file:"10491_Z-8-1_edited.png",    prev:"a7dad3f", note:"Z-8-1 — рука снизу, растение вверх"},
+  {code:"Z-82",      file:"10493_Z-82_edited.png",     prev:"1f7568f", note:"перевёрнут, рука снизу-слева"},
+  {code:"Z-83",      file:"10495_Z-83_edited.png",     prev:"1f7568f", note:"перевёрнут, рука снизу-слева"},
+  {code:"Z-84",      file:"10497_Z-84_edited.png",     prev:"bf109d3", note:"рука у самого основания стебля"},
+  {code:"Z-85",      file:"10499_Z-85_edited.png",     prev:"1f7568f", note:"перевёрнут, рука снизу-слева"},
+  {code:"Z-86",      file:"10501_Z-86_edited.png",     prev:"5901192", note:"убрано искривление стебля, рука у основания"},
+  {code:"DH-139",    file:"7603_DH-139_edited.png",    prev:"a7dad3f", note:"сохранена оригинальная вертикальная форма буксуса"},
+  {code:"DH-141-1",  file:"7607-1_DH-141_edited.png",  prev:"a7dad3f", note:"фон убран, рука снизу-слева"},
+  {code:"DH-153",    file:"7617_DH-153_edited.png",    prev:"a7dad3f", note:"фон убран, рука снизу-слева"},
+  {code:"DH-155",    file:"7621_DH-155_edited.png",    prev:"a7dad3f", note:"5-листовой веер сансевиерии сохранён"},
+];
+
+function html(item){
+  return `<div class="row">
+    <div class="row-head">
+      <div class="code">${item.code}</div>
+      <div class="meta">${item.note}</div>
+    </div>
+    <div class="pair">
+      <div class="cell before">
+        <div class="label">🅱️ БЫЛО — ${item.prev}</div>
+        <div class="imgbox">
+          <img src="before/${item.file}" alt="before ${item.code}" onclick="zoom(this.src)">
+        </div>
+      </div>
+      <div class="cell after">
+        <div class="label">🅰️ СТАЛО — финал</div>
+        <div class="imgbox">
+          <img src="after/${item.file}" alt="after ${item.code}" onclick="zoom(this.src)">
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+document.getElementById('grid').innerHTML = ITEMS.map(html).join('');
+
+function zoom(src){
+  document.querySelector('#zoom img').src = src;
+  document.getElementById('zoom').classList.add('open');
+}
+</script>
+</body>
+</html>
