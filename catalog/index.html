@@ -15,6 +15,9 @@
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>DEKOR MARKET — Каталог ZELEN</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -342,7 +345,7 @@
   }
 
   function cellInner(d){
-    return `<div class="shot"><img src="${C.imagesBase}${encodeURIComponent(d.file)}" alt="${d.code}" loading="lazy" onerror="this.style.visibility='hidden'"></div>
+    return `<div class="shot"><img src="${C.imagesBase}${encodeURIComponent(d.file)}" alt="${d.code}" decoding="async" onerror="this.style.visibility='hidden'"></div>
       <div class="cap"><div class="nm">${d.code}</div><div class="sub">${C.productSublabel}</div><div class="pr">${fmt(d.price)} ${C.priceSuffix}</div></div>`;
   }
   const itm = d => `<div class="item">${cellInner(d)}</div>`;
