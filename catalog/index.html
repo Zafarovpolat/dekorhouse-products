@@ -164,6 +164,74 @@
     .page:last-child{ break-after:auto; }
     -webkit-print-color-adjust:exact; print-color-adjust:exact;
   }
+
+  /* ============= МОБИЛЬНАЯ ВЕРСИЯ (просмотр в браузере на телефоне) ============= */
+  @media (max-width: 900px){
+    /* страницу масштабируем под ширину экрана */
+    body{ background:#f3ede3; padding:8px 0; }
+    .page{
+      width: 100%;
+      height: auto;
+      min-height: auto;
+      margin: 8px 0;
+      display: block;      /* убираем flex, чтоб контент влез */
+    }
+    /* Титул: убираем абсолютное позиционирование inset:12mm */
+    .cover .cover-inner{
+      position: static;
+      inset: auto;
+      padding: 20px 16px;
+      margin: 0;
+    }
+    .cover-logo{ height: 90px; }
+    .cover h1{ font-size: 2rem; margin-top: 12px; }
+    .cover-kicker{ margin-top: 12px; font-size: 0.72rem; }
+    .cover-dates{ margin-top: 14px; font-size: 0.85rem; letter-spacing:0.3em; }
+    .cover-sep{ margin-top: 14px; }
+    .cover-contacts{
+      margin-top: 20px; flex-direction: column; gap: 10px;
+      font-size: 0.85rem; text-align: center;
+    }
+    .cover-branch.tr, .cover-branch.bl{ display: none; }
+
+    /* Обычные страницы каталога */
+    .phead{ padding: 10px 14px 4px; flex-wrap: wrap; gap: 6px; }
+    .phead .brand{ height: 34px; }
+    .phead .cat{ gap: 6px; }
+    .phead .cat h2{ font-size: 0.95rem; }
+    .phead .cat span{ font-size: 0.55rem; letter-spacing: 0.14em; }
+    .prule{ margin: 0 14px; }
+    .body{
+      padding: 12px 12px 40px;
+      display: block;      /* убираем flex — grid снаружи не растянется */
+    }
+
+    /* Единая мобильная сетка: 1 колонка, минимальная высота */
+    .grid, .grid.n3, .grid.n4, .grid.n5, .grid.n6{
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      grid-template-rows: none !important;
+      gap: 14px !important;
+      min-height: 0 !important;
+    }
+    /* сбрасываем ручные размещения n5 */
+    .grid.n5 .item{
+      grid-column: auto !important; grid-row: auto !important;
+    }
+    .item{
+      min-height: 320px;
+      background: #fff;
+      border: 1px solid #eae2d0;
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .shot{ min-height: 260px; }
+    .shot img{ max-height: 260px; }
+    .cap{ padding-top: 10px; }
+    .cap .nm{ font-size: 1rem; }
+    .cap .pr{ font-size: 1rem; margin-top: 6px; }
+    .pfoot{ position: static; text-align: right; padding: 8px 14px 0; }
+  }
 </style>
 </head>
 <body>
