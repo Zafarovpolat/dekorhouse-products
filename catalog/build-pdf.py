@@ -10,11 +10,16 @@
     pip install playwright pypdf
     python3 -m playwright install chromium
     python3 -m playwright install-deps chromium   # linux
+    apt-get install ghostscript                   # опционально, для чистки ICC-профилей
 
-Как работает:
-    Запускает локальный HTTP-сервер на порту 8123 (иначе fetch() не работает),
-    рендерит страницы порциями по 8 (иначе браузер жрёт всю память на 30+ страниц),
-    склеивает PDF через pypdf, чистит временные файлы.
+Что делает:
+    1. Поднимает локальный HTTP-сервер на порту 8123 (нужно для fetch())
+    2. Рендерит PDF порциями по 8 страниц (иначе браузер жрёт всю память на 30+ страниц)
+    3. Склеивает через pypdf
+    4. Если найден ghostscript — пересобирает PDF со чисткой ICC-профилей.
+       Это важно: без этого шага картинки могут не отображаться в мобильных
+       PDF-viewer'ах (Adobe Reader Android, некоторые iOS-браузеры), потому
+       что Chromium embed'ит малформированные ICC.
 """
 import asyncio, os, sys, http.server, socketserver, threading, functools, glob
 from playwright.async_api import async_playwright
@@ -107,9 +112,41 @@ async def main(out_path):
             for p in PdfReader(c).pages: writer.add_page(p)
         with open(out_path, "wb") as f: writer.write(f)
         for c in chunks: os.remove(c)
-        size = os.path.getsize(out_path) // 1024
-        print(f"\n✅ Готово: {out_path} ({size} KB)", flush=True)
-        print(f"\nЧтобы сжать до ~2 MB: gs -sDEVICE=pdfwrite -dPDFSETTINGS=/ebook -o small.pdf {out_path}", flush=True)
+        raw_size = os.path.getsize(out_path) // 1024
+        print(f"\n📦 Собран сырой PDF: {out_path} ({raw_size} KB)", flush=True)
+
+        # Пост-обработка через ghostscript: чистка битых ICC-профилей + сжатие.
+        # Без этого шага картинки могут не отображаться в мобильных viewer'ах.
+        import shutil, subprocess
+        gs = shutil.which("gs")
+        if gs:
+            tmp = out_path + ".gs_tmp.pdf"
+            print("🎨 Чищу ICC-профили через ghostscript...", flush=True)
+            r = subprocess.run([
+                gs, "-sDEVICE=pdfwrite",
+                "-dCompatibilityLevel=1.5",
+                "-dPDFSETTINGS=/printer",
+                "-dNOPAUSE", "-dQUIET", "-dBATCH",
+                "-dColorConversionStrategy=/sRGB",
+                "-dProcessColorModel=/DeviceRGB",
+                "-dConvertCMYKImagesToRGB=true",
+                "-dEmbedAllFonts=true",
+                f"-sOutputFile={tmp}",
+                out_path
+            ])
+            if r.returncode == 0 and os.path.exists(tmp):
+                os.replace(tmp, out_path)
+                fixed_size = os.path.getsize(out_path) // 1024
+                print(f"\n✅ Готово: {out_path} ({fixed_size} KB, было {raw_size} KB)", flush=True)
+            else:
+                print(f"⚠ ghostscript failed, PDF без чистки ICC. Мобильные viewer'ы могут не показать картинки.", flush=True)
+        else:
+            print(f"\n✅ Готово: {out_path} ({raw_size} KB)", flush=True)
+            print("⚠ ghostscript не найден. Установи для авточистки ICC (apt-get install ghostscript)", flush=True)
+            print(f"   Без него мобильные PDF-viewer'ы могут не показать картинки.", flush=True)
+            print(f"\n   Ручная команда: gs -sDEVICE=pdfwrite -dPDFSETTINGS=/printer \\", flush=True)
+            print(f"     -dColorConversionStrategy=/sRGB -dNOPAUSE -dQUIET -dBATCH \\", flush=True)
+            print(f"     -sOutputFile=fixed.pdf {out_path}", flush=True)
     finally:
         httpd.shutdown()
 
