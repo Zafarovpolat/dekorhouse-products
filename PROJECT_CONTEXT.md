@@ -30,11 +30,17 @@ This file is the handoff for another developer or AI agent. Read it before chang
 3. `.env.local` is ignored by Git.
 4. Scripts redact credentials and do not print them.
 
-Required variables:
+Required upload variables:
 
 - `BITO_API_KEY` — Integration API read/update key.
 - `BITO_JWT` — Bito back-office token used by the upload service. JWTs expire.
 - `SUPABASE_SERVICE_ROLE` — required for Storage and database writes.
+
+Optional workflow variables:
+
+- `OPENAI_API_KEY` — only for approved image generation/editing.
+- `OPENAI_IMAGE_MODEL=gpt-image-2` — model used for the final B-5 image workflow.
+- `GITHUB_TOKEN` — only for authenticated push; prefer a fine-grained token limited to this repository.
 
 The real keys are intentionally **not** stored in GitHub. An agent must request fresh keys from the owner when missing or expired.
 
