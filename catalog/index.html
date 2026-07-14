@@ -40,6 +40,7 @@
     --charcoal:  #2C2C2C;   /* основной текст */
     --med-gray:  #6b6b6b;
     --taupe:     #a89985;
+    --paper:     #fafafa;    /* единый фон документа и фотографий */
 
     /* Размеры логотипов (менять здесь) */
     --logo-cover: 150px;    /* лого на титульной странице */
@@ -50,14 +51,14 @@
   html{ font-optical-sizing:auto; }
   body{
     font-family:"Lato","Nunito", system-ui, sans-serif;
-    color:var(--charcoal); background:#ffffff;
+    color:var(--charcoal); background:var(--paper);
     line-height:1.5; -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3,.serif{ font-family:"Playfair Display", Georgia, serif; text-wrap:balance; }
 
   .page{
     width:297mm; height:210mm;
-    margin:20px auto; background:#ffffff;
+    margin:20px auto; background:var(--paper);
     position:relative; overflow:hidden;
     box-shadow:0 8px 40px rgba(27,67,50,0.14);
     display:flex; flex-direction:column;
@@ -140,6 +141,7 @@
   }
   .shot img{
     max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain;
+    background:var(--paper);
   }
   .cap{ flex:none; text-align:center; padding-top:6px; }
   .cap .nm{
@@ -162,7 +164,7 @@
 
   @page{ size:A4 landscape; margin:0; }
   @media print{
-    body{ background:#fff; }
+    body{ background:var(--paper); }
     .page{ margin:0; box-shadow:none; break-after:page; }
     .page:last-child{ break-after:auto; }
     -webkit-print-color-adjust:exact; print-color-adjust:exact;
@@ -223,7 +225,7 @@
     }
     .item{
       min-height: 320px;
-      background: #fff;
+      background: var(--paper);
       border: 1px solid #eae2d0;
       border-radius: 8px;
       padding: 14px;
