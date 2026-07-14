@@ -1,0 +1,23 @@
+{
+  "name": "ZELEN final 17 edited images",
+  "verifiedAt": "2026-07-15",
+  "items": [
+    { "sku": "6458", "code": "B-5-green", "productCode": "B-5-green", "file": "6458-3_B-5_green_originalcolor_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "6460", "code": "B-5-red", "productCode": "B-5-red", "file": "6458-1_B-5_red_gpt2_enlarged_nocut_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "7603", "code": "DH-139", "productCode": "DH-139", "file": "7603_DH-139_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "7607", "code": "DH-141-1", "productCode": "DH-141-1", "file": "7607-1_DH-141_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "6101", "code": "Dh-152-1", "productCode": "Dh-152-1", "file": "6101-1_Zelen_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "7617", "code": "DH-153", "productCode": "DH-153", "file": "7617_DH-153_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "7621", "code": "DH-155", "productCode": "DH-155", "file": "7621_DH-155_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "6712", "code": "W-1-2", "productCode": "W-1-2", "file": "6712_W-1-2_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "10491", "code": "Z-81", "productCode": "Z-81", "file": "10491_Z-8-1_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "6480", "code": "Z-8-blue", "productCode": "Z-8-blue", "file": "6480_Z-8-blue_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "6476", "code": "Z-8-red", "productCode": "Z-8-red", "file": "6476_Z-8-red_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "6478", "code": "Z-8-white", "productCode": "Z-8-white", "file": "6478_Z-8-white_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "10493", "code": "Z-82", "productCode": "Z-82", "file": "10493_Z-82_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "10495", "code": "Z-83", "productCode": "Z-83", "file": "10495_Z-83_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "10497", "code": "Z-84", "productCode": "Z-84", "file": "10497_Z-84_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "10499", "code": "Z-85", "productCode": "Z-85", "file": "10499_Z-85_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "10501", "code": "Z-86", "productCode": "Z-86", "file": "10501_Z-86_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" }
+  ]
+}

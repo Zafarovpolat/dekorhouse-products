@@ -1,0 +1,14 @@
+{
+  "name": "Seven in-stock ZELEN products added to the PDF catalog",
+  "verifiedAt": "2026-07-15",
+  "note": "Dry-run before use. These edited images were used in the catalog; this manifest does not mean they have all been uploaded to Bito/Supabase under these new product records.",
+  "items": [
+    { "sku": "7605", "code": "DH-140", "productCode": "DH-140", "file": "7605_DH-140_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "12686", "code": "W-5-light-green", "productCode": "W-5-light-green", "file": "6716-2_W-5_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "12682", "code": "W-5-red", "productCode": "W-5-red", "file": "6716-3_W-5_edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "4229", "code": "Z-3", "productCode": "Z-3", "file": "4229_Зелень__edited.png", "storagePath": "edited/4229_Zelen__edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "4233", "code": "Z-5", "productCode": "Z-5", "file": "4233_Зелень__edited.png", "storagePath": "edited/4233_Zelen__edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "4249", "code": "Z-13", "productCode": "Z-13", "file": "4249_Зелень__edited.png", "storagePath": "edited/4249_Zelen__edited.png", "bitoMode": "replace", "supabaseMode": "update-main" },
+    { "sku": "4251", "code": "Z-14", "productCode": "Z-14", "file": "4251_Зелень__edited.png", "storagePath": "edited/4251_Zelen__edited.png", "bitoMode": "replace", "supabaseMode": "update-main" }
+  ]
+}

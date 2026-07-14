@@ -1,0 +1,13 @@
+# Local secrets — NEVER commit
+.env
+.env.*
+!.env.example
+
+# Generated reports and backups
+reports/
+*.backup.json
+
+# Local tooling/cache
+node_modules/
+__pycache__/
+.DS_Store
