@@ -115,6 +115,11 @@
     "file": "7603_DH-139_edited.png"
   },
   {
+    "code": "DH-140",
+    "price": 75000,
+    "file": "7605_DH-140_edited.png"
+  },
+  {
     "code": "DH-141-1",
     "price": 75000,
     "file": "7607-1_DH-141_edited.png"
@@ -305,6 +310,16 @@
     "file": "6716-1_W-5_edited.png"
   },
   {
+    "code": "W-5-light-green",
+    "price": 15000,
+    "file": "6716-2_W-5_edited.png"
+  },
+  {
+    "code": "W-5-red",
+    "price": 15000,
+    "file": "6716-3_W-5_edited.png"
+  },
+  {
     "code": "Z-10-1",
     "price": 7000,
     "file": "4243-1_Zelen_edited.png"
@@ -368,5 +383,25 @@
     "code": "Z-86",
     "price": 65000,
     "file": "10501_Z-86_edited.png"
+  },
+  {
+    "code": "Z-3",
+    "price": 7000,
+    "file": "4229_Zelen__edited.png"
+  },
+  {
+    "code": "Z-5",
+    "price": 13000,
+    "file": "4233_Zelen__edited.png"
+  },
+  {
+    "code": "Z-13",
+    "price": 15000,
+    "file": "4249_Zelen__edited.png"
+  },
+  {
+    "code": "Z-14",
+    "price": 25000,
+    "file": "4251_Zelen__edited.png"
   }
 ]
