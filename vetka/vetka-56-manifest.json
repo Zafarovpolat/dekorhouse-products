@@ -1,0 +1,1575 @@
+[
+  {
+    "photo_number": 474,
+    "source_file": "photo_474@22-07-2026_11-58-57.jpg",
+    "caption_exact": "D-1 mix rose",
+    "message_id": "message362840",
+    "series": "D-1",
+    "representative_photo": 474,
+    "generated_file": "474_d-1-mix-rose_edited.png",
+    "is_generated_variant": true,
+    "bito": {
+      "_id": "6a4c94c0300202ca289c5bbf",
+      "name": "D-1 mix rose",
+      "sku": "12781",
+      "image": "/uploads/file-e21375d8ff5aa81f8650310a535f24e2.jpeg",
+      "images": [
+        "/uploads/file-e21375d8ff5aa81f8650310a535f24e2.jpeg"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cccv3t6pqc5d4gckep16vxes7",
+      "code": "D-1 mix rose",
+      "nameRu": "D-1 mix rose",
+      "bitoSku": "12781",
+      "bitoProductId": "6a4c94c0300202ca289c5bbf",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "cncey1r6hfxr02imal9dewfkd",
+        "url": "https://cdn.bito.uz/uploads/file-e21375d8ff5aa81f8650310a535f24e2.jpeg",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "12781_cncey1r6hf.jpeg"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 475,
+    "source_file": "photo_475@22-07-2026_11-59-04.jpg",
+    "caption_exact": "D-1 violet",
+    "message_id": "message362841",
+    "series": "D-1",
+    "representative_photo": 474,
+    "generated_file": "474_d-1-mix-rose_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c945c3900e2b6cd64be8e",
+      "name": "D-1 violet",
+      "sku": "12773",
+      "image": "/uploads/file-a6410c5966f2dbf6fcaabc0b4c6257c8.jpeg",
+      "images": [
+        "/uploads/file-a6410c5966f2dbf6fcaabc0b4c6257c8.jpeg"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "crbyv2wndzyh4coc0kfyuxfzs",
+      "code": "D-1 violet",
+      "nameRu": "D-1 violet",
+      "bitoSku": "12773",
+      "bitoProductId": "6a4c945c3900e2b6cd64be8e",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "c9dxebrnt15w2jlrdj85sdx7u",
+        "url": "https://cdn.bito.uz/uploads/file-a6410c5966f2dbf6fcaabc0b4c6257c8.jpeg",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "12773_c9dxebrnt1.jpeg"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 476,
+    "source_file": "photo_476@22-07-2026_11-59-11.jpg",
+    "caption_exact": "D-1 green",
+    "message_id": "message362842",
+    "series": "D-1",
+    "representative_photo": 474,
+    "generated_file": "474_d-1-mix-rose_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c948a3900e2b6cd64faef",
+      "name": "D-1 green",
+      "sku": "12777",
+      "image": "/uploads/file-9fc5c5d26363e4ff3c5c85359ef6949a.jpeg",
+      "images": [
+        "/uploads/file-9fc5c5d26363e4ff3c5c85359ef6949a.jpeg"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cifmgcuf0vzbly0rzzn4e70bm",
+      "code": "D-1 green",
+      "nameRu": "D-1 green",
+      "bitoSku": "12777",
+      "bitoProductId": "6a4c948a3900e2b6cd64faef",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "c0cp382jqhh2n5n8hrtj8d2dl",
+        "url": "https://cdn.bito.uz/uploads/file-9fc5c5d26363e4ff3c5c85359ef6949a.jpeg",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "12777_c0cp382jqh.jpeg"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 477,
+    "source_file": "photo_477@22-07-2026_11-59-18.jpg",
+    "caption_exact": "D-1 blue",
+    "message_id": "message362843",
+    "series": "D-1",
+    "representative_photo": 474,
+    "generated_file": "474_d-1-mix-rose_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c94abd7007e257a687edc",
+      "name": "D-1 blue",
+      "sku": "12779",
+      "image": "/uploads/file-224d9a0d19d46aa95ff33e9c70acbaa2.jpeg",
+      "images": [
+        "/uploads/file-224d9a0d19d46aa95ff33e9c70acbaa2.jpeg"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cfk5sz5t8vjgkqrnopnfntodb",
+      "code": "D-1 blue",
+      "nameRu": "D-1 blue",
+      "bitoSku": "12779",
+      "bitoProductId": "6a4c94abd7007e257a687edc",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "cg3mpwbr7hk13zmag9999v9v6",
+        "url": "https://cdn.bito.uz/uploads/file-224d9a0d19d46aa95ff33e9c70acbaa2.jpeg",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "12779_cg3mpwbr7h.jpeg"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 478,
+    "source_file": "photo_478@22-07-2026_12-00-00.jpg",
+    "caption_exact": "Z-21 red",
+    "message_id": "message362844",
+    "series": "Z-21",
+    "representative_photo": 478,
+    "generated_file": "478_z-21-red_edited.png",
+    "is_generated_variant": true,
+    "bito": {
+      "_id": "682c4710bbcda8261ee0cdcc",
+      "name": "Z-21 red",
+      "sku": "4577",
+      "image": "/uploads/file-93f4d8cfadec4fc84554e7a2cfb4b687.png",
+      "images": [
+        "/uploads/file-93f4d8cfadec4fc84554e7a2cfb4b687.png"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cacc46c8fced3f7fcde69ac35",
+      "code": "Z-21-red",
+      "nameRu": "Цветочная ветка «Z-21-red»",
+      "bitoSku": "4577",
+      "bitoProductId": "682c4710bbcda8261ee0cdcc",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "c19e353127af8ecb21cec7918efa5620fb4f",
+        "url": "https://zafarovpolat.github.io/bito-cat/edited/4577-Z-21-red-1.png",
+        "isMain": true,
+        "sortOrder": 1,
+        "local_file": "4577_c19e353127.png"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 479,
+    "source_file": "photo_479@22-07-2026_12-00-06.jpg",
+    "caption_exact": "Z-21 white",
+    "message_id": "message362845",
+    "series": "Z-21",
+    "representative_photo": 478,
+    "generated_file": "478_z-21-red_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6829ede9640f9880e0b2292a",
+      "name": "Z-21 white",
+      "sku": "4271",
+      "image": "/uploads/file-5d3c123e6ec429605fb21d70cf56a8d4.png",
+      "images": [
+        "/uploads/file-5d3c123e6ec429605fb21d70cf56a8d4.png"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "c90baa239da244ac58294aca6",
+      "code": "Z-21-white",
+      "nameRu": "Цветочная ветка «Z-21-white»",
+      "bitoSku": "4271",
+      "bitoProductId": "6829ede9640f9880e0b2292a",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "c19e353126d3b03cbd1e102692c00ac0baef",
+        "url": "https://zafarovpolat.github.io/bito-cat/edited/4271-Z-21-white-1.png",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "4271_c19e353126.png"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 480,
+    "source_file": "photo_480@22-07-2026_12-01-29.jpg",
+    "caption_exact": "Z-82 dark",
+    "message_id": "message362846",
+    "series": "Z-82",
+    "representative_photo": 480,
+    "generated_file": "480_z-82-dark_edited.png",
+    "is_generated_variant": true,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-82 существует в Bito только в категории ZELEN, SKU 10493. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 481,
+    "source_file": "photo_481@22-07-2026_12-01-44.jpg",
+    "caption_exact": "Z-82 pink",
+    "message_id": "message362847",
+    "series": "Z-82",
+    "representative_photo": 480,
+    "generated_file": "480_z-82-dark_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-82 существует в Bito только в категории ZELEN, SKU 10493. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 482,
+    "source_file": "photo_482@22-07-2026_12-01-51.jpg",
+    "caption_exact": "Z-82 green",
+    "message_id": "message362848",
+    "series": "Z-82",
+    "representative_photo": 480,
+    "generated_file": "480_z-82-dark_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-82 существует в Bito только в категории ZELEN, SKU 10493. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 483,
+    "source_file": "photo_483@22-07-2026_12-01-59.jpg",
+    "caption_exact": "z-82 purple",
+    "message_id": "message362849",
+    "series": "Z-82",
+    "representative_photo": 480,
+    "generated_file": "480_z-82-dark_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-82 существует в Bito только в категории ZELEN, SKU 10493. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 484,
+    "source_file": "photo_484@22-07-2026_12-02-05.jpg",
+    "caption_exact": "z-82 yellow",
+    "message_id": "message362850",
+    "series": "Z-82",
+    "representative_photo": 480,
+    "generated_file": "480_z-82-dark_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-82 существует в Bito только в категории ZELEN, SKU 10493. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 485,
+    "source_file": "photo_485@22-07-2026_12-03-28.jpg",
+    "caption_exact": "Z-83 champagne",
+    "message_id": "message362851",
+    "series": "Z-83",
+    "representative_photo": 485,
+    "generated_file": "485_z-83-champagne_edited.png",
+    "is_generated_variant": true,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-83 существует в Bito только в категории ZELEN, SKU 10495. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 486,
+    "source_file": "photo_486@22-07-2026_12-03-36.jpg",
+    "caption_exact": "z-82 purple",
+    "message_id": "message362852",
+    "series": "Z-82",
+    "representative_photo": 480,
+    "generated_file": "480_z-82-dark_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-82 существует в Bito только в категории ZELEN, SKU 10493. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 487,
+    "source_file": "photo_487@22-07-2026_12-03-43.jpg",
+    "caption_exact": "z-83 pink",
+    "message_id": "message362853",
+    "series": "Z-83",
+    "representative_photo": 485,
+    "generated_file": "485_z-83-champagne_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-83 существует в Bito только в категории ZELEN, SKU 10495. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 488,
+    "source_file": "photo_488@22-07-2026_12-03-52.jpg",
+    "caption_exact": "z-83 white",
+    "message_id": "message362854",
+    "series": "Z-83",
+    "representative_photo": 485,
+    "generated_file": "485_z-83-champagne_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-83 существует в Bito только в категории ZELEN, SKU 10495. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 489,
+    "source_file": "photo_489@22-07-2026_12-04-01.jpg",
+    "caption_exact": "z-83 blue",
+    "message_id": "message362855",
+    "series": "Z-83",
+    "representative_photo": 485,
+    "generated_file": "485_z-83-champagne_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-83 существует в Bito только в категории ZELEN, SKU 10495. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 490,
+    "source_file": "photo_490@22-07-2026_12-04-34.jpg",
+    "caption_exact": "z-81 violet",
+    "message_id": "message362856",
+    "series": "Z-81",
+    "representative_photo": 490,
+    "generated_file": "490_z-81-violet_edited.png",
+    "is_generated_variant": true,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-81 существует в Bito только в категории ZELEN, SKU 10491. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 491,
+    "source_file": "photo_491@22-07-2026_12-04-43.jpg",
+    "caption_exact": "z-81 white",
+    "message_id": "message362857",
+    "series": "Z-81",
+    "representative_photo": 490,
+    "generated_file": "490_z-81-violet_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-81 существует в Bito только в категории ZELEN, SKU 10491. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 492,
+    "source_file": "photo_492@22-07-2026_12-07-32.jpg",
+    "caption_exact": "z-81 pink",
+    "message_id": "message362858",
+    "series": "Z-81",
+    "representative_photo": 490,
+    "generated_file": "490_z-81-violet_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-81 существует в Bito только в категории ZELEN, SKU 10491. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 493,
+    "source_file": "photo_493@22-07-2026_12-07-39.jpg",
+    "caption_exact": "z-81 blue",
+    "message_id": "message362859",
+    "series": "Z-81",
+    "representative_photo": 490,
+    "generated_file": "490_z-81-violet_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-81 существует в Bito только в категории ZELEN, SKU 10491. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 494,
+    "source_file": "photo_494@22-07-2026_12-09-25.jpg",
+    "caption_exact": "z-81 light blue",
+    "message_id": "message362861",
+    "series": "Z-81",
+    "representative_photo": 490,
+    "generated_file": "490_z-81-violet_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Код Z-81 существует в Bito только в категории ZELEN, SKU 10491. Его фото нельзя считать фото этой VETKA серии."
+    }
+  },
+  {
+    "photo_number": 495,
+    "source_file": "photo_495@22-07-2026_12-13-27.jpg",
+    "caption_exact": "b-10 white",
+    "message_id": "message362863",
+    "series": "B-10",
+    "representative_photo": 495,
+    "generated_file": "495_b-10-white_edited.png",
+    "is_generated_variant": true,
+    "bito": {
+      "_id": "69541c34254cc5b14856f528",
+      "name": "B-10 white",
+      "sku": "6496",
+      "image": "/uploads/file-134fae6260594e92c09dd178647e487c.png",
+      "images": [
+        "/uploads/file-134fae6260594e92c09dd178647e487c.png"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "c061fbd5a1bf449488352c6af",
+      "code": "B-10-white",
+      "nameRu": "Цветочная ветка «B-10-white»",
+      "bitoSku": "6496",
+      "bitoProductId": "69541c34254cc5b14856f528",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "c19e35314b069ee41a3a09d0c809867376ea",
+        "url": "https://zafarovpolat.github.io/bito-cat/edited/6496-B-10-white-1.png",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "6496_c19e35314b.png"
+      },
+      {
+        "id": "c40i0i_112gbueps",
+        "url": "https://zafarovpolat.github.io/bito-cat/edited/6496-B-10-white-1.png",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "6496_c19e35314b.png"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 496,
+    "source_file": "photo_496@22-07-2026_12-13-33.jpg",
+    "caption_exact": "b-10 blue",
+    "message_id": "message362864",
+    "series": "B-10",
+    "representative_photo": 495,
+    "generated_file": "495_b-10-white_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "69575949254cc5b1488da69e",
+      "name": "B-10 blue",
+      "sku": "6626",
+      "image": "/uploads/file-540a94c0a6c1ae541d214d4c84d5afad.png",
+      "images": [
+        "/uploads/file-540a94c0a6c1ae541d214d4c84d5afad.png"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cmkwqejio0032aa251ste0g4c",
+      "code": "B-10-blue",
+      "nameRu": "Цветочная ветка «B-10-blue»",
+      "bitoSku": "6626",
+      "bitoProductId": "69575949254cc5b1488da69e",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "cmkwqejio0033aa258vps8b9h",
+        "url": "https://zafarovpolat.github.io/bito-cat/edited/6626-B-10-blue-1.png",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "6626_cmkwqejio0.png"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 497,
+    "source_file": "photo_497@22-07-2026_12-13-40.jpg",
+    "caption_exact": "b-10 pink",
+    "message_id": "message362865",
+    "series": "B-10",
+    "representative_photo": 495,
+    "generated_file": "495_b-10-white_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6957593ab8932277280a06de",
+      "name": "B-10 pink",
+      "sku": "6624",
+      "image": "/uploads/file-b39bcb3d25ee678d2977af5189981c3e.png",
+      "images": [
+        "/uploads/file-b39bcb3d25ee678d2977af5189981c3e.png"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cda5364a57f7cb14e0aedec1b",
+      "code": "B-10-pink",
+      "nameRu": "Цветочная ветка «B-10-pink»",
+      "bitoSku": "6624",
+      "bitoProductId": "6957593ab8932277280a06de",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "c19e35314be3185ded3d7dae532825d1bf05",
+        "url": "https://zafarovpolat.github.io/bito-cat/edited/6624-B-10-pink-1.png",
+        "isMain": true,
+        "sortOrder": 1,
+        "local_file": "6624_c19e35314b.png"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 498,
+    "source_file": "photo_498@22-07-2026_12-14-16.jpg",
+    "caption_exact": "b-86 light red",
+    "message_id": "message362866",
+    "series": "B-86",
+    "representative_photo": 498,
+    "generated_file": "498_b-86-light-red_edited.png",
+    "is_generated_variant": true,
+    "bito": {
+      "_id": "6a4c93883900e2b6cd63d19e",
+      "name": "B-86 light red",
+      "sku": "12759",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "ck3iogdpj0kjz8mlxu72krj5j",
+      "code": "B-86 light red",
+      "nameRu": "B-86 light red",
+      "bitoSku": "12759",
+      "bitoProductId": "6a4c93883900e2b6cd63d19e",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 499,
+    "source_file": "photo_499@22-07-2026_12-14-29.jpg",
+    "caption_exact": "b-86 blue",
+    "message_id": "message362867",
+    "series": "B-86",
+    "representative_photo": 498,
+    "generated_file": "498_b-86-light-red_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c9358300202ca289af798",
+      "name": "B-86 blue",
+      "sku": "12755",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cmvs61668zbx9lo6uurx959sz",
+      "code": "B-86 blue",
+      "nameRu": "B-86 blue",
+      "bitoSku": "12755",
+      "bitoProductId": "6a4c9358300202ca289af798",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 500,
+    "source_file": "photo_500@22-07-2026_12-17-20.jpg",
+    "caption_exact": "b-86 violet",
+    "message_id": "message362868",
+    "series": "B-86",
+    "representative_photo": 498,
+    "generated_file": "498_b-86-light-red_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c933d300202ca289ae36b",
+      "name": "B-86 violet",
+      "sku": "12753",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cl8xtjhkbmatveliysjvb96cj",
+      "code": "B-86 violet",
+      "nameRu": "B-86 violet",
+      "bitoSku": "12753",
+      "bitoProductId": "6a4c933d300202ca289ae36b",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 501,
+    "source_file": "photo_501@22-07-2026_12-17-28.jpg",
+    "caption_exact": "b-86 purple",
+    "message_id": "message362869",
+    "series": "B-86",
+    "representative_photo": 498,
+    "generated_file": "498_b-86-light-red_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c931d300202ca289ac2bd",
+      "name": "B-86 purple",
+      "sku": "12751",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "co45wbs376r562y279lgkl8gy",
+      "code": "B-86 purple",
+      "nameRu": "B-86 purple",
+      "bitoSku": "12751",
+      "bitoProductId": "6a4c931d300202ca289ac2bd",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 502,
+    "source_file": "photo_502@22-07-2026_12-17-35.jpg",
+    "caption_exact": "b-86 yellow",
+    "message_id": "message362870",
+    "series": "B-86",
+    "representative_photo": 498,
+    "generated_file": "498_b-86-light-red_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c936f3900e2b6cd63bd6c",
+      "name": "B-86 yellow",
+      "sku": "12757",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cgmm7m2t6ug0ajkghxaojgc2f",
+      "code": "B-86 yellow",
+      "nameRu": "B-86 yellow",
+      "bitoSku": "12757",
+      "bitoProductId": "6a4c936f3900e2b6cd63bd6c",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 503,
+    "source_file": "photo_503@22-07-2026_12-18-30.jpg",
+    "caption_exact": "b-2 white",
+    "message_id": "message362871",
+    "series": "B-2",
+    "representative_photo": 503,
+    "generated_file": "503_b-2-white_edited.png",
+    "is_generated_variant": true,
+    "bito": {
+      "_id": "69541a65b893227728cf46d1",
+      "name": "B-2 white",
+      "sku": "6440",
+      "image": "/uploads/file-c369e19f9d5ffb310d1f09c5676fd23a.png",
+      "images": [
+        "/uploads/file-c369e19f9d5ffb310d1f09c5676fd23a.png"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "c0be1b0c8d0b84c379d860220",
+      "code": "B-2-white",
+      "nameRu": "Цветочная ветка «B-2-white»",
+      "bitoSku": "6440",
+      "bitoProductId": "69541a65b893227728cf46d1",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "c19e353133c1cbac8c48c46a0563a92be354",
+        "url": "https://zafarovpolat.github.io/bito-cat/edited/6440-B-2-white-1.png",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "6440_c19e353133.png"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 504,
+    "source_file": "photo_504@22-07-2026_12-18-39.jpg",
+    "caption_exact": "b-2 orange",
+    "message_id": "message362872",
+    "series": "B-2",
+    "representative_photo": 503,
+    "generated_file": "503_b-2-white_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c8c87d7007e257a606a38",
+      "name": "B-2 orange",
+      "sku": "12690",
+      "image": "/uploads/file-8f55cdd93ba47f0647bc3a31590f8178.jpeg",
+      "images": [
+        "/uploads/file-8f55cdd93ba47f0647bc3a31590f8178.jpeg"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cpikutn2sukpy5ikq6ru51o78",
+      "code": "B-2 orange",
+      "nameRu": "B-2 orange",
+      "bitoSku": "12690",
+      "bitoProductId": "6a4c8c87d7007e257a606a38",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "cb9agguv7j67k9ptg7ruf3xzs",
+        "url": "https://cdn.bito.uz/uploads/file-8f55cdd93ba47f0647bc3a31590f8178.jpeg",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "12690_cb9agguv7j.jpeg"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 505,
+    "source_file": "photo_505@22-07-2026_12-18-50.jpg",
+    "caption_exact": "b-2 green",
+    "message_id": "message362873",
+    "series": "B-2",
+    "representative_photo": 503,
+    "generated_file": "503_b-2-white_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c8cd2300202ca28946f3b",
+      "name": "B-2 green",
+      "sku": "12693",
+      "image": "/uploads/file-b9e3b7769ef4d3e0923639961ec7a1ce.jpeg",
+      "images": [
+        "/uploads/file-b9e3b7769ef4d3e0923639961ec7a1ce.jpeg"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "c49a2frgrkrh8vfrfaacli4a1",
+      "code": "B-2 green",
+      "nameRu": "B-2 green",
+      "bitoSku": "12693",
+      "bitoProductId": "6a4c8cd2300202ca28946f3b",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "c1wmp726fn59tutxv7udcr39u",
+        "url": "https://cdn.bito.uz/uploads/file-b9e3b7769ef4d3e0923639961ec7a1ce.jpeg",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "12693_c1wmp726fn.jpeg"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 506,
+    "source_file": "photo_506@22-07-2026_12-18-58.jpg",
+    "caption_exact": "b-2 rose pink",
+    "message_id": "message362874",
+    "series": "B-2",
+    "representative_photo": 503,
+    "generated_file": "503_b-2-white_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4e1159ee7b25a1d7a09530",
+      "name": "B-2 rosepink",
+      "sku": "12802",
+      "image": "/uploads/file-6cf07f5b205c8603f178e3ca8458787f.jpeg",
+      "images": [
+        "/uploads/file-6cf07f5b205c8603f178e3ca8458787f.jpeg"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "ccjnyj3qdve9enqmqawwwd4vc",
+      "code": "B-2 rosepink",
+      "nameRu": "B-2 rosepink",
+      "bitoSku": "12802",
+      "bitoProductId": "6a4e1159ee7b25a1d7a09530",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "cjhynmlbze5lloy6isroc57o7",
+        "url": "https://cdn.bito.uz/uploads/file-6cf07f5b205c8603f178e3ca8458787f.jpeg",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "12802_cjhynmlbze.jpeg"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 507,
+    "source_file": "photo_507@22-07-2026_12-19-21.jpg",
+    "caption_exact": "B-2 pink",
+    "message_id": "message362875",
+    "series": "B-2",
+    "representative_photo": 503,
+    "generated_file": "503_b-2-white_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "69541a73254cc5b14856c64a",
+      "name": "B-2 pink",
+      "sku": "6442",
+      "image": "/uploads/file-1cf76ac3c9cd1e35c0cfd1b517f69093.png",
+      "images": [
+        "/uploads/file-1cf76ac3c9cd1e35c0cfd1b517f69093.png"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cc57e01ac147448b5a4df12d5",
+      "code": "B-2-pink",
+      "nameRu": "Цветочная ветка «B-2-pink»",
+      "bitoSku": "6442",
+      "bitoProductId": "69541a73254cc5b14856c64a",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "c19e3531357a34a64ae372b277a2523fe84f",
+        "url": "https://zafarovpolat.github.io/bito-cat/edited/6442-B-2-pink-1.png",
+        "isMain": true,
+        "sortOrder": 2,
+        "local_file": "6442_c19e353135.png"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 508,
+    "source_file": "photo_508@22-07-2026_12-19-38.jpg",
+    "caption_exact": "B-2 blue",
+    "message_id": "message362876",
+    "series": "B-2",
+    "representative_photo": 503,
+    "generated_file": "503_b-2-white_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "69541a5a58f73642061dccf7",
+      "name": "B-2 blue",
+      "sku": "6438",
+      "image": "/uploads/file-b14b557406b31452bb18e1e1bb922d6b.png",
+      "images": [
+        "/uploads/file-b14b557406b31452bb18e1e1bb922d6b.png"
+      ],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cmkv07tkh002qlqt99yoajbk0",
+      "code": "B-2-blue",
+      "nameRu": "Цветочная ветка «B-2-blue»",
+      "bitoSku": "6438",
+      "bitoProductId": "69541a5a58f73642061dccf7",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [
+      {
+        "id": "cmkv07tkh002rlqt9i3gi5upi",
+        "url": "https://zafarovpolat.github.io/bito-cat/edited/6438-B-2-blue-1.png",
+        "isMain": true,
+        "sortOrder": 0,
+        "local_file": "6438_cmkv07tkh0.png"
+      }
+    ],
+    "conflict": null
+  },
+  {
+    "photo_number": 509,
+    "source_file": "photo_509@22-07-2026_12-20-23.jpg",
+    "caption_exact": "B-88 green",
+    "message_id": "message362877",
+    "series": "B-88",
+    "representative_photo": 509,
+    "generated_file": "509_b-88-green_edited.png",
+    "is_generated_variant": true,
+    "bito": {
+      "_id": "6a4c93c33900e2b6cd6416c8",
+      "name": "B-88 green",
+      "sku": "12763",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cpbohamd7hvs4nvmtohicnh2l",
+      "code": "B-88 green",
+      "nameRu": "B-88 green",
+      "bitoSku": "12763",
+      "bitoProductId": "6a4c93c33900e2b6cd6416c8",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 510,
+    "source_file": "photo_510@22-07-2026_12-21-07.jpg",
+    "caption_exact": "B-88 red",
+    "message_id": "message362878",
+    "series": "B-88",
+    "representative_photo": 509,
+    "generated_file": "509_b-88-green_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c94293900e2b6cd64958d",
+      "name": "B-88 red",
+      "sku": "12771",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "c4w64cmbfyj6x9fw3el0thx0h",
+      "code": "B-88 red",
+      "nameRu": "B-88 red",
+      "bitoSku": "12771",
+      "bitoProductId": "6a4c94293900e2b6cd64958d",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 511,
+    "source_file": "photo_511@22-07-2026_12-21-19.jpg",
+    "caption_exact": "B-88 purple",
+    "message_id": "message362879",
+    "series": "B-88",
+    "representative_photo": 509,
+    "generated_file": "509_b-88-green_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c940b300202ca289b9ec1",
+      "name": "B-88 purple",
+      "sku": "12769",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "c4k93i3qenhvcbu76zpnmpcbu",
+      "code": "B-88 purple",
+      "nameRu": "B-88 purple",
+      "bitoSku": "12769",
+      "bitoProductId": "6a4c940b300202ca289b9ec1",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 512,
+    "source_file": "photo_512@22-07-2026_12-21-46.jpg",
+    "caption_exact": "B-88 white",
+    "message_id": "message362880",
+    "series": "B-88",
+    "representative_photo": 509,
+    "generated_file": "509_b-88-green_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c93d8d7007e257a67b199",
+      "name": "B-88 white",
+      "sku": "12765",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cisaz77kogi40d17htdhn22gb",
+      "code": "B-88 white",
+      "nameRu": "B-88 white",
+      "bitoSku": "12765",
+      "bitoProductId": "6a4c93d8d7007e257a67b199",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 513,
+    "source_file": "photo_513@22-07-2026_12-24-22.jpg",
+    "caption_exact": "b-80 white",
+    "message_id": "message362881",
+    "series": "B-80",
+    "representative_photo": 513,
+    "generated_file": "513_b-80-white_edited.png",
+    "is_generated_variant": true,
+    "bito": {
+      "_id": "6a4c8e6ed7007e257a624e8e",
+      "name": "B-80 white",
+      "sku": "12699",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "ck36l47gaifnio0sm5y8f0plw",
+      "code": "B-80 white",
+      "nameRu": "B-80 white",
+      "bitoSku": "12699",
+      "bitoProductId": "6a4c8e6ed7007e257a624e8e",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 514,
+    "source_file": "photo_514@22-07-2026_12-24-30.jpg",
+    "caption_exact": "b-80 purple",
+    "message_id": "message362882",
+    "series": "B-80",
+    "representative_photo": 513,
+    "generated_file": "513_b-80-white_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c8e913900e2b6cd5ec8cc",
+      "name": "B-80 purple",
+      "sku": "12701",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "ckxjutvwwuqzwoc2nlrdhkqbl",
+      "code": "B-80 purple",
+      "nameRu": "B-80 purple",
+      "bitoSku": "12701",
+      "bitoProductId": "6a4c8e913900e2b6cd5ec8cc",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 515,
+    "source_file": "photo_515@22-07-2026_12-24-38.jpg",
+    "caption_exact": "b-80 blue",
+    "message_id": "message362883",
+    "series": "B-80",
+    "representative_photo": 513,
+    "generated_file": "513_b-80-white_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c8e429ba897617a04c80f",
+      "name": "B-80 blue",
+      "sku": "12697",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "c6g5i90g0idw5qe2bozh0ct1w",
+      "code": "B-80 blue",
+      "nameRu": "B-80 blue",
+      "bitoSku": "12697",
+      "bitoProductId": "6a4c8e429ba897617a04c80f",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 516,
+    "source_file": "photo_516@22-07-2026_12-24-57.jpg",
+    "caption_exact": "b-80 violet",
+    "message_id": "message362884",
+    "series": "B-80",
+    "representative_photo": 513,
+    "generated_file": "513_b-80-white_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c8ee0300202ca28967521",
+      "name": "B-80 violet",
+      "sku": "12706",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "ckveuum9z98yqk8ubv1jzvdjp",
+      "code": "B-80 violet",
+      "nameRu": "B-80 violet",
+      "bitoSku": "12706",
+      "bitoProductId": "6a4c8ee0300202ca28967521",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 517,
+    "source_file": "photo_517@22-07-2026_12-25-21.jpg",
+    "caption_exact": "b-80 pink",
+    "message_id": "message362885",
+    "series": "B-80",
+    "representative_photo": 513,
+    "generated_file": "513_b-80-white_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c8ebe9ba897617a05455c",
+      "name": "B-80 pink",
+      "sku": "12703",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cl1kyuzyhw08z50xjianbtcaq",
+      "code": "B-80 pink",
+      "nameRu": "B-80 pink",
+      "bitoSku": "12703",
+      "bitoProductId": "6a4c8ebe9ba897617a05455c",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 518,
+    "source_file": "photo_518@22-07-2026_12-25-47.jpg",
+    "caption_exact": "B-85 red",
+    "message_id": "message362886",
+    "series": "B-85",
+    "representative_photo": 518,
+    "generated_file": "518_b-85-red_edited.png",
+    "is_generated_variant": true,
+    "bito": {
+      "_id": "6a4c9275300202ca289a0bb4",
+      "name": "B-85 red",
+      "sku": "12740",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "c42ms9d5d75ue4wvwgsy4w5u6",
+      "code": "B-85 red",
+      "nameRu": "B-85 red",
+      "bitoSku": "12740",
+      "bitoProductId": "6a4c9275300202ca289a0bb4",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 519,
+    "source_file": "photo_519@22-07-2026_12-28-41.jpg",
+    "caption_exact": "B-85 white",
+    "message_id": "message362887",
+    "series": "B-85",
+    "representative_photo": 518,
+    "generated_file": "518_b-85-red_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c92b59ba897617a0936d9",
+      "name": "B-85 white",
+      "sku": "12744",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cx6bii74dyfoggy9wn6rqqzrr",
+      "code": "B-85 white",
+      "nameRu": "B-85 white",
+      "bitoSku": "12744",
+      "bitoProductId": "6a4c92b59ba897617a0936d9",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 520,
+    "source_file": "photo_520@22-07-2026_12-38-43.jpg",
+    "caption_exact": "B-85 yellow",
+    "message_id": "message362888",
+    "series": "B-85",
+    "representative_photo": 518,
+    "generated_file": "518_b-85-red_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a4c92ced7007e257a66975b",
+      "name": "B-85 yellow",
+      "sku": "12746",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cqk7cfr708h5oz6txrzvwwf6k",
+      "code": "B-85 yellow",
+      "nameRu": "B-85 yellow",
+      "bitoSku": "12746",
+      "bitoProductId": "6a4c92ced7007e257a66975b",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 521,
+    "source_file": "photo_521@22-07-2026_12-39-07.jpg",
+    "caption_exact": "B-85 rose",
+    "message_id": "message362889",
+    "series": "B-85",
+    "representative_photo": 518,
+    "generated_file": "518_b-85-red_edited.png",
+    "is_generated_variant": false,
+    "bito": null,
+    "supabase_product": null,
+    "supabase_images": [],
+    "conflict": {
+      "message": "Точного B-85 rose в Bito нет. Есть B-85 orange, SKU 12749. Нужно подтверждение."
+    }
+  },
+  {
+    "photo_number": 522,
+    "source_file": "photo_522@22-07-2026_12-40-09.jpg",
+    "caption_exact": "C-11 red",
+    "message_id": "message362890",
+    "series": "C-11",
+    "representative_photo": 522,
+    "generated_file": "522_c-11-red_edited.png",
+    "is_generated_variant": true,
+    "bito": {
+      "_id": "6a58a7e881e169d86af224f5",
+      "name": "C-11 red",
+      "sku": "12909",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cvd8liyvy29s851id8finx9t6",
+      "code": "C-11 red",
+      "nameRu": "C-11 red",
+      "bitoSku": "12909",
+      "bitoProductId": "6a58a7e881e169d86af224f5",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 523,
+    "source_file": "photo_523@22-07-2026_12-40-25.jpg",
+    "caption_exact": "C-11 yellow",
+    "message_id": "message362891",
+    "series": "C-11",
+    "representative_photo": 522,
+    "generated_file": "522_c-11-red_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a58a817d0df0623132ea8f1",
+      "name": "C-11 yellow",
+      "sku": "12911",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cczvf3n7ubwdxit60mg7tqnk4",
+      "code": "C-11 yellow",
+      "nameRu": "C-11 yellow",
+      "bitoSku": "12911",
+      "bitoProductId": "6a58a817d0df0623132ea8f1",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 524,
+    "source_file": "photo_524@22-07-2026_12-40-43.jpg",
+    "caption_exact": "C-11 white",
+    "message_id": "message362892",
+    "series": "C-11",
+    "representative_photo": 522,
+    "generated_file": "522_c-11-red_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a58a83081e169d86af25d1b",
+      "name": "C-11 white",
+      "sku": "12915",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "c42ruc2x2krel0s56t10p3fm1",
+      "code": "C-11 white",
+      "nameRu": "C-11 white",
+      "bitoSku": "12915",
+      "bitoProductId": "6a58a83081e169d86af25d1b",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 525,
+    "source_file": "photo_525@22-07-2026_12-41-05.jpg",
+    "caption_exact": "C-11 pink",
+    "message_id": "message362893",
+    "series": "C-11",
+    "representative_photo": 522,
+    "generated_file": "522_c-11-red_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a58a82381e169d86af25103",
+      "name": "C-11 pink",
+      "sku": "12913",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cyvsno11yuw1d3i0ijpn7dzlu",
+      "code": "C-11 pink",
+      "nameRu": "C-11 pink",
+      "bitoSku": "12913",
+      "bitoProductId": "6a58a82381e169d86af25103",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 526,
+    "source_file": "photo_526@22-07-2026_12-41-26.jpg",
+    "caption_exact": "C-15 pink",
+    "message_id": "message362894",
+    "series": "C-15",
+    "representative_photo": 526,
+    "generated_file": "526_c-15-pink_edited.png",
+    "is_generated_variant": true,
+    "bito": {
+      "_id": "6a58a88d81e169d86af2a31e",
+      "name": "C-15 pink",
+      "sku": "12921",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "c26g40d7p6xuzpqmrvoaksouw",
+      "code": "C-15 pink",
+      "nameRu": "C-15 pink",
+      "bitoSku": "12921",
+      "bitoProductId": "6a58a88d81e169d86af2a31e",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 527,
+    "source_file": "photo_527@22-07-2026_12-41-43.jpg",
+    "caption_exact": "C-15 darkpink",
+    "message_id": "message362895",
+    "series": "C-15",
+    "representative_photo": 526,
+    "generated_file": "526_c-15-pink_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a58a880d0df0623132ef600",
+      "name": "C-15 darkpink",
+      "sku": "12919",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cnuua900bnd1eilqtdm0ypain",
+      "code": "C-15 darkpink",
+      "nameRu": "C-15 darkpink",
+      "bitoSku": "12919",
+      "bitoProductId": "6a58a880d0df0623132ef600",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 528,
+    "source_file": "photo_528@22-07-2026_12-42-01.jpg",
+    "caption_exact": "C-15 blue",
+    "message_id": "message362897",
+    "series": "C-15",
+    "representative_photo": 526,
+    "generated_file": "526_c-15-pink_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a58a8550cae2bbb83dfa3b8",
+      "name": "C-15 blue",
+      "sku": "12917",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "cdfn65mjwq9dgymdnh1jk0zen",
+      "code": "C-15 blue",
+      "nameRu": "C-15 blue",
+      "bitoSku": "12917",
+      "bitoProductId": "6a58a8550cae2bbb83dfa3b8",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  },
+  {
+    "photo_number": 529,
+    "source_file": "photo_529@22-07-2026_12-42-31.jpg",
+    "caption_exact": "C-15 white",
+    "message_id": "message362902",
+    "series": "C-15",
+    "representative_photo": 526,
+    "generated_file": "526_c-15-pink_edited.png",
+    "is_generated_variant": false,
+    "bito": {
+      "_id": "6a58a8a90cae2bbb83dfd6fd",
+      "name": "C-15 white",
+      "sku": "12924",
+      "image": null,
+      "images": [],
+      "category": "VETKA"
+    },
+    "supabase_product": {
+      "id": "clj7dpx4gusab44kznu63x49o",
+      "code": "C-15 white",
+      "nameRu": "C-15 white",
+      "bitoSku": "12924",
+      "bitoProductId": "6a58a8a90cae2bbb83dfd6fd",
+      "isActive": true,
+      "inStock": true
+    },
+    "supabase_images": [],
+    "conflict": null
+  }
+]
