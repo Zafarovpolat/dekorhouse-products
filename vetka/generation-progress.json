@@ -1,0 +1,8 @@
+{
+  "model": "gpt-image-2",
+  "quality": "medium",
+  "target_count": 56,
+  "generated_count": 40,
+  "status": "blocked_by_openai_billing_hard_limit",
+  "missing_photo_numbers": [510, 511, 512, 514, 515, 516, 517, 519, 520, 521, 523, 524, 525, 527, 528, 529]
+}
