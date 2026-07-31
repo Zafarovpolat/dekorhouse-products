@@ -88,23 +88,30 @@
     letter-spacing:0.44em; text-transform:uppercase; color:var(--terracotta); padding-left:0.44em;
   }
   .cover-sep{ margin-top:24px; width:64px; height:2px; background:var(--terracotta); }
-  /* Низ титула: розничные контакты + блок B2B/опт под ними */
-  .cover-foot{ margin-top:auto; display:flex; flex-direction:column; align-items:center; gap:16px; }
+  /* Низ титула: розничные контакты, ниже блок B2B/опт.
+     Подпись B2B оформлена как заголовок с волосяными линиями по бокам и жмётся
+     к своей строке контактов — иначе она читается как висящая между двумя
+     одинаковыми строками и непонятно, к какой относится. */
+  .cover-foot{ margin-top:auto; display:flex; flex-direction:column; align-items:center; }
   .cover-contacts{
     display:flex; align-items:center; gap:30px;
     font-size:0.98rem; color:var(--forest);
     font-family:"Nunito",sans-serif; font-weight:600;
   }
-  /* Блок B2B без рамки и подложки — просто подпись и контакты */
   .cover-b2b{
-    display:flex; flex-direction:column; align-items:center; gap:9px;
+    margin-top:26px;                /* большой отрыв сверху — граница групп */
+    display:flex; flex-direction:column; align-items:center;
+    gap:11px;                       /* малый отступ внутри — подпись + её контакты */
   }
   .b2b-label{
-    font-family:"Lato",sans-serif; font-weight:700; font-size:0.7rem;
-    letter-spacing:0.2em; text-transform:uppercase; color:var(--terracotta);
-    padding-left:0.2em;
+    display:flex; align-items:center; gap:15px;
+    font-family:"Lato",sans-serif; font-weight:700; font-size:0.66rem;
+    letter-spacing:0.17em; text-transform:uppercase; color:var(--terracotta);
   }
-  .cover-contacts.b2b-row{ font-size:0.93rem; gap:26px; }
+  .b2b-label::before, .b2b-label::after{
+    content:""; width:52px; height:1px; background:var(--terracotta); opacity:0.42;
+  }
+  .cover-contacts.b2b-row{ font-size:0.93rem; gap:26px; color:var(--emerald); }
   .cover-contacts a, .cover-contacts span{
     display:inline-flex; align-items:center; gap:9px;
     color:var(--forest); text-decoration:none;

@@ -121,7 +121,11 @@ def build(out, maxside=None, quality=None, label=""):
 
 
 if __name__ == '__main__':
+    # без аргументов — обе версии; "ebook" или "printer" — только одна
+    which = (sys.argv[1].lower() if len(sys.argv) > 1 else 'both')
     base = os.path.dirname(os.path.abspath(__file__)) + "/"
-    build(base + "catalog-vetka-printer.pdf", label="ПЕЧАТНАЯ (полное качество)")
-    build(base + "catalog-vetka-ebook.pdf", maxside=1000, quality=72,
-          label="EBOOK (для телефона и мессенджеров)")
+    if which in ('both', 'printer'):
+        build(base + "catalog-vetka-printer.pdf", label="ПЕЧАТНАЯ (полное качество)")
+    if which in ('both', 'ebook'):
+        build(base + "catalog-vetka-ebook.pdf", maxside=1000, quality=72,
+              label="EBOOK (для телефона и мессенджеров)")

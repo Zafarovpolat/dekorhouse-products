@@ -32,8 +32,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(HERE)
 
 def start_server():
-    """Отдаём файлы из папки со скриптом."""
+    """Отдаём файлы из папки со скриптом.
+    allow_reuse_address нужен, чтобы пересборка сразу после предыдущей не падала
+    с 'Address already in use' — порт ещё висит в TIME_WAIT."""
     Handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=REPO_ROOT)
+    socketserver.TCPServer.allow_reuse_address = True
     httpd = socketserver.TCPServer(("127.0.0.1", PORT), Handler)
     t = threading.Thread(target=httpd.serve_forever, daemon=True)
     t.start()
