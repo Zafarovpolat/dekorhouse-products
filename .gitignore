@@ -11,3 +11,4 @@ reports/
 node_modules/
 __pycache__/
 .DS_Store
+catalog-vetka/catalog-vetka.pdf
