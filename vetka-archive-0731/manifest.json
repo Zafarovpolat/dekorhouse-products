@@ -1,0 +1,2296 @@
+{
+ "generated_from": "ChatExport_2026-07-31.zip",
+ "category_id": "c5dbafbf74f984746b64e8644",
+ "note": "Привязки не подтверждены человеком. status=unmatched означает, что точного кода в базе нет; candidates — только предположения.",
+ "stats": {
+  "photos": 67,
+  "matched": 47,
+  "unmatched": 20,
+  "db_total": 250,
+  "covered": 47,
+  "problems": 26
+ },
+ "photos": [
+  {
+   "message_id": "message362840",
+   "photo_number": 474,
+   "file": "photo_474@22-07-2026_11-58-57.jpg",
+   "caption": "D-1 mix rose",
+   "caption_raw": "D-1 mix rose",
+   "caption_price": null,
+   "sent_at": "22.07.2026 11:58:57 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cccv3t6pqc5d4gckep16vxes7",
+    "code": "D-1 mix rose",
+    "price": 30000,
+    "bitoSku": "12781",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/f363b4595e47.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362841",
+   "photo_number": 475,
+   "file": "photo_475@22-07-2026_11-59-04.jpg",
+   "caption": "D-1 violet",
+   "caption_raw": "D-1 violet",
+   "caption_price": null,
+   "sent_at": "22.07.2026 11:59:04 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "crbyv2wndzyh4coc0kfyuxfzs",
+    "code": "D-1 violet",
+    "price": 30000,
+    "bitoSku": "12773",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/31386ef5c680.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362842",
+   "photo_number": 476,
+   "file": "photo_476@22-07-2026_11-59-11.jpg",
+   "caption": "D-1 green",
+   "caption_raw": "D-1 green",
+   "caption_price": null,
+   "sent_at": "22.07.2026 11:59:11 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cifmgcuf0vzbly0rzzn4e70bm",
+    "code": "D-1 green",
+    "price": 30000,
+    "bitoSku": "12777",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/2ab8311ba717.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362843",
+   "photo_number": 477,
+   "file": "photo_477@22-07-2026_11-59-18.jpg",
+   "caption": "D-1 blue",
+   "caption_raw": "D-1 blue",
+   "caption_price": null,
+   "sent_at": "22.07.2026 11:59:18 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cfk5sz5t8vjgkqrnopnfntodb",
+    "code": "D-1 blue",
+    "price": 30000,
+    "bitoSku": "12779",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/58f2264c19da.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362844",
+   "photo_number": 478,
+   "file": "photo_478@22-07-2026_12-00-00.jpg",
+   "caption": "Z-21 red",
+   "caption_raw": "Z-21 red",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:00:00 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cacc46c8fced3f7fcde69ac35",
+    "code": "Z-21-red",
+    "price": 15000,
+    "bitoSku": "4577",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://zafarovpolat.github.io/bito-cat/edited/4577-Z-21-red-1.png",
+    "img_state": "edited",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362845",
+   "photo_number": 479,
+   "file": "photo_479@22-07-2026_12-00-06.jpg",
+   "caption": "Z-21 white",
+   "caption_raw": "Z-21 white",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:00:06 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "c90baa239da244ac58294aca6",
+    "code": "Z-21-white",
+    "price": 15000,
+    "bitoSku": "4271",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://zafarovpolat.github.io/bito-cat/edited/4271-Z-21-white-1.png",
+    "img_state": "edited",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362846",
+   "photo_number": 480,
+   "file": "photo_480@22-07-2026_12-01-29.jpg",
+   "caption": "Z-82 dark",
+   "caption_raw": "Z-82 dark",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:01:29 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-82 dark",
+     "price": 28000,
+     "bitoSku": "12730",
+     "img": "ref/b938c3a642a1.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-82 green",
+     "price": 28000,
+     "bitoSku": "12726",
+     "img": "ref/d72d9c910374.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-82 pink",
+     "price": 28000,
+     "bitoSku": "12720",
+     "img": "ref/426fb53c4faa.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-82 purple",
+     "price": 28000,
+     "bitoSku": "12724",
+     "img": "ref/2047c6490a9d.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362847",
+   "photo_number": 481,
+   "file": "photo_481@22-07-2026_12-01-44.jpg",
+   "caption": "Z-82 pink",
+   "caption_raw": "Z-82 pink",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:01:44 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-82 pink",
+     "price": 28000,
+     "bitoSku": "12720",
+     "img": "ref/426fb53c4faa.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-82 dark",
+     "price": 28000,
+     "bitoSku": "12730",
+     "img": "ref/b938c3a642a1.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-82 green",
+     "price": 28000,
+     "bitoSku": "12726",
+     "img": "ref/d72d9c910374.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-82 purple",
+     "price": 28000,
+     "bitoSku": "12724",
+     "img": "ref/2047c6490a9d.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362848",
+   "photo_number": 482,
+   "file": "photo_482@22-07-2026_12-01-51.jpg",
+   "caption": "Z-82 green",
+   "caption_raw": "Z-82 green",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:01:51 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-82 green",
+     "price": 28000,
+     "bitoSku": "12726",
+     "img": "ref/d72d9c910374.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-82 dark",
+     "price": 28000,
+     "bitoSku": "12730",
+     "img": "ref/b938c3a642a1.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-82 pink",
+     "price": 28000,
+     "bitoSku": "12720",
+     "img": "ref/426fb53c4faa.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-82 purple",
+     "price": 28000,
+     "bitoSku": "12724",
+     "img": "ref/2047c6490a9d.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362849",
+   "photo_number": 483,
+   "file": "photo_483@22-07-2026_12-01-59.jpg",
+   "caption": "z-82 purple",
+   "caption_raw": "z-82 purple",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:01:59 UTC+03:00",
+   "dup_caption": true,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-82 purple",
+     "price": 28000,
+     "bitoSku": "12724",
+     "img": "ref/2047c6490a9d.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-82 dark",
+     "price": 28000,
+     "bitoSku": "12730",
+     "img": "ref/b938c3a642a1.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-82 green",
+     "price": 28000,
+     "bitoSku": "12726",
+     "img": "ref/d72d9c910374.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-82 pink",
+     "price": 28000,
+     "bitoSku": "12720",
+     "img": "ref/426fb53c4faa.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362850",
+   "photo_number": 484,
+   "file": "photo_484@22-07-2026_12-02-05.jpg",
+   "caption": "z-82 yellow",
+   "caption_raw": "z-82 yellow",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:02:05 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-82 yellow",
+     "price": 28000,
+     "bitoSku": "12728",
+     "img": "ref/ac82fd67ae98.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-82 dark",
+     "price": 28000,
+     "bitoSku": "12730",
+     "img": "ref/b938c3a642a1.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-82 green",
+     "price": 28000,
+     "bitoSku": "12726",
+     "img": "ref/d72d9c910374.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-82 pink",
+     "price": 28000,
+     "bitoSku": "12720",
+     "img": "ref/426fb53c4faa.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362851",
+   "photo_number": 485,
+   "file": "photo_485@22-07-2026_12-03-28.jpg",
+   "caption": "Z-83 champagne",
+   "caption_raw": "Z-83 champagne",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:03:28 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-83 champagne",
+     "price": 25000,
+     "bitoSku": "12804",
+     "img": "ref/93db8cb2223d.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-83 blue",
+     "price": 25000,
+     "bitoSku": "12736",
+     "img": "ref/b5ffca25e243.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-83 pink",
+     "price": 25000,
+     "bitoSku": "12738",
+     "img": "ref/4d2fc4896757.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-83 purple",
+     "price": 25000,
+     "bitoSku": "12734",
+     "img": "ref/b3792fd805db.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362852",
+   "photo_number": 486,
+   "file": "photo_486@22-07-2026_12-03-36.jpg",
+   "caption": "z-82 purple",
+   "caption_raw": "z-82 purple",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:03:36 UTC+03:00",
+   "dup_caption": true,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-82 purple",
+     "price": 28000,
+     "bitoSku": "12724",
+     "img": "ref/2047c6490a9d.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-82 dark",
+     "price": 28000,
+     "bitoSku": "12730",
+     "img": "ref/b938c3a642a1.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-82 green",
+     "price": 28000,
+     "bitoSku": "12726",
+     "img": "ref/d72d9c910374.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-82 pink",
+     "price": 28000,
+     "bitoSku": "12720",
+     "img": "ref/426fb53c4faa.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362853",
+   "photo_number": 487,
+   "file": "photo_487@22-07-2026_12-03-43.jpg",
+   "caption": "z-83 pink",
+   "caption_raw": "z-83 pink",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:03:43 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-83 pink",
+     "price": 25000,
+     "bitoSku": "12738",
+     "img": "ref/4d2fc4896757.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-83 blue",
+     "price": 25000,
+     "bitoSku": "12736",
+     "img": "ref/b5ffca25e243.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-83 champagne",
+     "price": 25000,
+     "bitoSku": "12804",
+     "img": "ref/93db8cb2223d.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-83 purple",
+     "price": 25000,
+     "bitoSku": "12734",
+     "img": "ref/b3792fd805db.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362854",
+   "photo_number": 488,
+   "file": "photo_488@22-07-2026_12-03-52.jpg",
+   "caption": "z-83 white",
+   "caption_raw": "z-83 white",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:03:52 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-83 white",
+     "price": 25000,
+     "bitoSku": "12732",
+     "img": "ref/88e42013b4b6.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-83 blue",
+     "price": 25000,
+     "bitoSku": "12736",
+     "img": "ref/b5ffca25e243.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-83 champagne",
+     "price": 25000,
+     "bitoSku": "12804",
+     "img": "ref/93db8cb2223d.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-83 pink",
+     "price": 25000,
+     "bitoSku": "12738",
+     "img": "ref/4d2fc4896757.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362855",
+   "photo_number": 489,
+   "file": "photo_489@22-07-2026_12-04-01.jpg",
+   "caption": "z-83 blue",
+   "caption_raw": "z-83 blue",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:04:01 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-83 blue",
+     "price": 25000,
+     "bitoSku": "12736",
+     "img": "ref/b5ffca25e243.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-83 champagne",
+     "price": 25000,
+     "bitoSku": "12804",
+     "img": "ref/93db8cb2223d.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-83 pink",
+     "price": 25000,
+     "bitoSku": "12738",
+     "img": "ref/4d2fc4896757.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-83 purple",
+     "price": 25000,
+     "bitoSku": "12734",
+     "img": "ref/b3792fd805db.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362856",
+   "photo_number": 490,
+   "file": "photo_490@22-07-2026_12-04-34.jpg",
+   "caption": "z-81 violet",
+   "caption_raw": "z-81 violet",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:04:34 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-81 violet",
+     "price": 20000,
+     "bitoSku": "12712",
+     "img": "ref/86cc2989ae3b.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-81 blue",
+     "price": 20000,
+     "bitoSku": "12714",
+     "img": "ref/78890e2d9204.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-81 light blue",
+     "price": 20000,
+     "bitoSku": "12718",
+     "img": "ref/3f8a4203a263.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-81 pink",
+     "price": 20000,
+     "bitoSku": "12716",
+     "img": "ref/d562cc58e7d4.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362857",
+   "photo_number": 491,
+   "file": "photo_491@22-07-2026_12-04-43.jpg",
+   "caption": "z-81 white",
+   "caption_raw": "z-81 white",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:04:43 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-81 white",
+     "price": 20000,
+     "bitoSku": "12708",
+     "img": "ref/8c2fc152e862.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-81 blue",
+     "price": 20000,
+     "bitoSku": "12714",
+     "img": "ref/78890e2d9204.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-81 light blue",
+     "price": 20000,
+     "bitoSku": "12718",
+     "img": "ref/3f8a4203a263.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-81 pink",
+     "price": 20000,
+     "bitoSku": "12716",
+     "img": "ref/d562cc58e7d4.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362858",
+   "photo_number": 492,
+   "file": "photo_492@22-07-2026_12-07-32.jpg",
+   "caption": "z-81 pink",
+   "caption_raw": "z-81 pink",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:07:32 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-81 pink",
+     "price": 20000,
+     "bitoSku": "12716",
+     "img": "ref/d562cc58e7d4.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-81 blue",
+     "price": 20000,
+     "bitoSku": "12714",
+     "img": "ref/78890e2d9204.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-81 light blue",
+     "price": 20000,
+     "bitoSku": "12718",
+     "img": "ref/3f8a4203a263.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-81 violet",
+     "price": 20000,
+     "bitoSku": "12712",
+     "img": "ref/86cc2989ae3b.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362859",
+   "photo_number": 493,
+   "file": "photo_493@22-07-2026_12-07-39.jpg",
+   "caption": "z-81 blue",
+   "caption_raw": "z-81 blue",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:07:39 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-81 blue",
+     "price": 20000,
+     "bitoSku": "12714",
+     "img": "ref/78890e2d9204.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-81 light blue",
+     "price": 20000,
+     "bitoSku": "12718",
+     "img": "ref/3f8a4203a263.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-81 pink",
+     "price": 20000,
+     "bitoSku": "12716",
+     "img": "ref/d562cc58e7d4.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-81 violet",
+     "price": 20000,
+     "bitoSku": "12712",
+     "img": "ref/86cc2989ae3b.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362861",
+   "photo_number": 494,
+   "file": "photo_494@22-07-2026_12-09-25.jpg",
+   "caption": "z-81 light blue",
+   "caption_raw": "z-81 light blue",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:09:25 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-81 light blue",
+     "price": 20000,
+     "bitoSku": "12718",
+     "img": "ref/3f8a4203a263.jpg",
+     "img_state": "raw",
+     "score": 0,
+     "why": "цвет совпал"
+    },
+    {
+     "code": "B-81 blue",
+     "price": 20000,
+     "bitoSku": "12714",
+     "img": "ref/78890e2d9204.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-81 pink",
+     "price": 20000,
+     "bitoSku": "12716",
+     "img": "ref/d562cc58e7d4.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-81 violet",
+     "price": 20000,
+     "bitoSku": "12712",
+     "img": "ref/86cc2989ae3b.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message362863",
+   "photo_number": 495,
+   "file": "photo_495@22-07-2026_12-13-27.jpg",
+   "caption": "b-10 white",
+   "caption_raw": "b-10 white",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:13:27 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "c061fbd5a1bf449488352c6af",
+    "code": "B-10-white",
+    "price": 15000,
+    "bitoSku": "6496",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://zafarovpolat.github.io/bito-cat/edited/6496-B-10-white-1.png",
+    "img_state": "edited",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362864",
+   "photo_number": 496,
+   "file": "photo_496@22-07-2026_12-13-33.jpg",
+   "caption": "b-10 blue",
+   "caption_raw": "b-10 blue",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:13:33 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cmkwqejio0032aa251ste0g4c",
+    "code": "B-10-blue",
+    "price": 15000,
+    "bitoSku": "6626",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://zafarovpolat.github.io/bito-cat/edited/6626-B-10-blue-1.png",
+    "img_state": "edited",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362865",
+   "photo_number": 497,
+   "file": "photo_497@22-07-2026_12-13-40.jpg",
+   "caption": "b-10 pink",
+   "caption_raw": "b-10 pink",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:13:40 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cda5364a57f7cb14e0aedec1b",
+    "code": "B-10-pink",
+    "price": 15000,
+    "bitoSku": "6624",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://zafarovpolat.github.io/bito-cat/edited/6624-B-10-pink-1.png",
+    "img_state": "edited",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362866",
+   "photo_number": 498,
+   "file": "photo_498@22-07-2026_12-14-16.jpg",
+   "caption": "b-86 light red",
+   "caption_raw": "b-86 light red",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:14:16 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "ck3iogdpj0kjz8mlxu72krj5j",
+    "code": "B-86 light red",
+    "price": 18000,
+    "bitoSku": "12759",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/0025855054eb.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362867",
+   "photo_number": 499,
+   "file": "photo_499@22-07-2026_12-14-29.jpg",
+   "caption": "b-86 blue",
+   "caption_raw": "b-86 blue",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:14:29 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cmvs61668zbx9lo6uurx959sz",
+    "code": "B-86 blue",
+    "price": 18000,
+    "bitoSku": "12755",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/5c6222d17d29.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362868",
+   "photo_number": 500,
+   "file": "photo_500@22-07-2026_12-17-20.jpg",
+   "caption": "b-86 violet",
+   "caption_raw": "b-86 violet",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:17:20 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cl8xtjhkbmatveliysjvb96cj",
+    "code": "B-86 violet",
+    "price": 18000,
+    "bitoSku": "12753",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/05e51dc7aa14.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362869",
+   "photo_number": 501,
+   "file": "photo_501@22-07-2026_12-17-28.jpg",
+   "caption": "b-86 purple",
+   "caption_raw": "b-86 purple",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:17:28 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "co45wbs376r562y279lgkl8gy",
+    "code": "B-86 purple",
+    "price": 18000,
+    "bitoSku": "12751",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/b8b258a77eab.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362870",
+   "photo_number": 502,
+   "file": "photo_502@22-07-2026_12-17-35.jpg",
+   "caption": "b-86 yellow",
+   "caption_raw": "b-86 yellow",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:17:35 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cgmm7m2t6ug0ajkghxaojgc2f",
+    "code": "B-86 yellow",
+    "price": 18000,
+    "bitoSku": "12757",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/cd3e3f4c9097.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362871",
+   "photo_number": 503,
+   "file": "photo_503@22-07-2026_12-18-30.jpg",
+   "caption": "b-2 white",
+   "caption_raw": "b-2 white",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:18:30 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "c0be1b0c8d0b84c379d860220",
+    "code": "B-2-white",
+    "price": 12000,
+    "bitoSku": "6440",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://zafarovpolat.github.io/bito-cat/edited/6440-B-2-white-1.png",
+    "img_state": "edited",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362872",
+   "photo_number": 504,
+   "file": "photo_504@22-07-2026_12-18-39.jpg",
+   "caption": "b-2 orange",
+   "caption_raw": "b-2 orange",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:18:39 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cpikutn2sukpy5ikq6ru51o78",
+    "code": "B-2 orange",
+    "price": 12000,
+    "bitoSku": "12690",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/26588fa20757.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362873",
+   "photo_number": 505,
+   "file": "photo_505@22-07-2026_12-18-50.jpg",
+   "caption": "b-2 green",
+   "caption_raw": "b-2 green",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:18:50 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "c49a2frgrkrh8vfrfaacli4a1",
+    "code": "B-2 green",
+    "price": 12000,
+    "bitoSku": "12693",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/86f2935dde17.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362874",
+   "photo_number": 506,
+   "file": "photo_506@22-07-2026_12-18-58.jpg",
+   "caption": "b-2 rose pink",
+   "caption_raw": "b-2 rose pink",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:18:58 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "ccjnyj3qdve9enqmqawwwd4vc",
+    "code": "B-2 rosepink",
+    "price": 12000,
+    "bitoSku": "12802",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/9870866c3172.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362875",
+   "photo_number": 507,
+   "file": "photo_507@22-07-2026_12-19-21.jpg",
+   "caption": "B-2 pink",
+   "caption_raw": "B-2 pink",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:19:21 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cc57e01ac147448b5a4df12d5",
+    "code": "B-2-pink",
+    "price": 12000,
+    "bitoSku": "6442",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://zafarovpolat.github.io/bito-cat/edited/6442-B-2-pink-1.png",
+    "img_state": "edited",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362876",
+   "photo_number": 508,
+   "file": "photo_508@22-07-2026_12-19-38.jpg",
+   "caption": "B-2 blue",
+   "caption_raw": "B-2 blue",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:19:38 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cmkv07tkh002qlqt99yoajbk0",
+    "code": "B-2-blue",
+    "price": 12000,
+    "bitoSku": "6438",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://zafarovpolat.github.io/bito-cat/edited/6438-B-2-blue-1.png",
+    "img_state": "edited",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362877",
+   "photo_number": 509,
+   "file": "photo_509@22-07-2026_12-20-23.jpg",
+   "caption": "B-88 green",
+   "caption_raw": "B-88 green",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:20:23 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cpbohamd7hvs4nvmtohicnh2l",
+    "code": "B-88 green",
+    "price": 14000,
+    "bitoSku": "12763",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/9a50cb3f0406.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362878",
+   "photo_number": 510,
+   "file": "photo_510@22-07-2026_12-21-07.jpg",
+   "caption": "B-88 red",
+   "caption_raw": "B-88 red",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:21:07 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "c4w64cmbfyj6x9fw3el0thx0h",
+    "code": "B-88 red",
+    "price": 14000,
+    "bitoSku": "12771",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/d9b50c07e9c8.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362879",
+   "photo_number": 511,
+   "file": "photo_511@22-07-2026_12-21-19.jpg",
+   "caption": "B-88 purple",
+   "caption_raw": "B-88 purple",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:21:19 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "c4k93i3qenhvcbu76zpnmpcbu",
+    "code": "B-88 purple",
+    "price": 14000,
+    "bitoSku": "12769",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/3499aa0aa9e3.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362880",
+   "photo_number": 512,
+   "file": "photo_512@22-07-2026_12-21-46.jpg",
+   "caption": "B-88 white",
+   "caption_raw": "B-88 white",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:21:46 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cisaz77kogi40d17htdhn22gb",
+    "code": "B-88 white",
+    "price": 14000,
+    "bitoSku": "12765",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/57c8c6df94f5.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362881",
+   "photo_number": 513,
+   "file": "photo_513@22-07-2026_12-24-22.jpg",
+   "caption": "b-80 white",
+   "caption_raw": "b-80 white",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:24:22 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "ck36l47gaifnio0sm5y8f0plw",
+    "code": "B-80 white",
+    "price": 28000,
+    "bitoSku": "12699",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/be709cc749ab.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362882",
+   "photo_number": 514,
+   "file": "photo_514@22-07-2026_12-24-30.jpg",
+   "caption": "b-80 purple",
+   "caption_raw": "b-80 purple",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:24:30 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "ckxjutvwwuqzwoc2nlrdhkqbl",
+    "code": "B-80 purple",
+    "price": 28000,
+    "bitoSku": "12701",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/33c38449ad61.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362883",
+   "photo_number": 515,
+   "file": "photo_515@22-07-2026_12-24-38.jpg",
+   "caption": "b-80 blue",
+   "caption_raw": "b-80 blue",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:24:38 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "c6g5i90g0idw5qe2bozh0ct1w",
+    "code": "B-80 blue",
+    "price": 28000,
+    "bitoSku": "12697",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/38974de578e8.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362884",
+   "photo_number": 516,
+   "file": "photo_516@22-07-2026_12-24-57.jpg",
+   "caption": "b-80 violet",
+   "caption_raw": "b-80 violet",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:24:57 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "ckveuum9z98yqk8ubv1jzvdjp",
+    "code": "B-80 violet",
+    "price": 28000,
+    "bitoSku": "12706",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/2ec45e7e0a47.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362885",
+   "photo_number": 517,
+   "file": "photo_517@22-07-2026_12-25-21.jpg",
+   "caption": "b-80 pink",
+   "caption_raw": "b-80 pink",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:25:21 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cl1kyuzyhw08z50xjianbtcaq",
+    "code": "B-80 pink",
+    "price": 28000,
+    "bitoSku": "12703",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/f86ddbc16ea6.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362886",
+   "photo_number": 518,
+   "file": "photo_518@22-07-2026_12-25-47.jpg",
+   "caption": "B-85 red",
+   "caption_raw": "B-85 red",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:25:47 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "c42ms9d5d75ue4wvwgsy4w5u6",
+    "code": "B-85 red",
+    "price": 14000,
+    "bitoSku": "12740",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/eee701e38dd1.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362887",
+   "photo_number": 519,
+   "file": "photo_519@22-07-2026_12-28-41.jpg",
+   "caption": "B-85 white",
+   "caption_raw": "B-85 white",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:28:41 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cx6bii74dyfoggy9wn6rqqzrr",
+    "code": "B-85 white",
+    "price": 14000,
+    "bitoSku": "12744",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/7ab14119110c.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362888",
+   "photo_number": 520,
+   "file": "photo_520@22-07-2026_12-38-43.jpg",
+   "caption": "B-85  yellow",
+   "caption_raw": "B-85  yellow",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:38:43 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cqk7cfr708h5oz6txrzvwwf6k",
+    "code": "B-85 yellow",
+    "price": 14000,
+    "bitoSku": "12746",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/05542d7a1440.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362889",
+   "photo_number": 521,
+   "file": "photo_521@22-07-2026_12-39-07.jpg",
+   "caption": "B-85 rose",
+   "caption_raw": "B-85 rose",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:39:07 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "ctq8ddl0tobh1igrcdz198gvn",
+    "code": "B-85 rose",
+    "price": 14000,
+    "bitoSku": "12749",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/e83de63d560d.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362890",
+   "photo_number": 522,
+   "file": "photo_522@22-07-2026_12-40-09.jpg",
+   "caption": "C-11 red",
+   "caption_raw": "C-11 red",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:40:09 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cvd8liyvy29s851id8finx9t6",
+    "code": "C-11 red",
+    "price": 35000,
+    "bitoSku": "12909",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/8aeb730e7d3b.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362891",
+   "photo_number": 523,
+   "file": "photo_523@22-07-2026_12-40-25.jpg",
+   "caption": "C-11 yellow",
+   "caption_raw": "C-11 yellow",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:40:25 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cczvf3n7ubwdxit60mg7tqnk4",
+    "code": "C-11 yellow",
+    "price": 35000,
+    "bitoSku": "12911",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/f674b9187b39.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362892",
+   "photo_number": 524,
+   "file": "photo_524@22-07-2026_12-40-43.jpg",
+   "caption": "C-11 white",
+   "caption_raw": "C-11 white",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:40:43 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "c42ruc2x2krel0s56t10p3fm1",
+    "code": "C-11 white",
+    "price": 35000,
+    "bitoSku": "12915",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/f1df6ba61cdf.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362893",
+   "photo_number": 525,
+   "file": "photo_525@22-07-2026_12-41-05.jpg",
+   "caption": "C-11 pink",
+   "caption_raw": "C-11 pink",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:41:05 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cyvsno11yuw1d3i0ijpn7dzlu",
+    "code": "C-11 pink",
+    "price": 35000,
+    "bitoSku": "12913",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/9815be95c66c.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362894",
+   "photo_number": 526,
+   "file": "photo_526@22-07-2026_12-41-26.jpg",
+   "caption": "C-15 pink",
+   "caption_raw": "C-15 pink",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:41:26 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "c26g40d7p6xuzpqmrvoaksouw",
+    "code": "C-15 pink",
+    "price": 38000,
+    "bitoSku": "12921",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/bb86474601f1.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362895",
+   "photo_number": 527,
+   "file": "photo_527@22-07-2026_12-41-43.jpg",
+   "caption": "C-15 darkpink",
+   "caption_raw": "C-15 darkpink",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:41:43 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cnuua900bnd1eilqtdm0ypain",
+    "code": "C-15 darkpink",
+    "price": 38000,
+    "bitoSku": "12919",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/8a187d6262ce.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362897",
+   "photo_number": 528,
+   "file": "photo_528@22-07-2026_12-42-01.jpg",
+   "caption": "C-15 blue",
+   "caption_raw": "C-15 blue",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:42:01 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cdfn65mjwq9dgymdnh1jk0zen",
+    "code": "C-15 blue",
+    "price": 38000,
+    "bitoSku": "12917",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/297efe5004c5.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message362902",
+   "photo_number": 529,
+   "file": "photo_529@22-07-2026_12-42-31.jpg",
+   "caption": "C-15 white",
+   "caption_raw": "C-15 white",
+   "caption_price": null,
+   "sent_at": "22.07.2026 12:42:31 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "clj7dpx4gusab44kznu63x49o",
+    "code": "C-15 white",
+    "price": 38000,
+    "bitoSku": "12924",
+    "isActive": true,
+    "inStock": true,
+    "img": "ref/7b6bb8184381.jpg",
+    "img_state": "raw",
+    "img_fixed": true
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message365201",
+   "photo_number": 530,
+   "file": "photo_530@30-07-2026_22-23-11.jpg",
+   "caption": "w-15",
+   "caption_raw": "Model: w-15Narxi: 25.000  📞+998 (99) 368-11-00👨‍💻@DekorHouseAdminB2B/Оптом 👇🏼  📞+998 (50) 101-88-88👨‍💻@DekorHouseBusiness",
+   "caption_price": "25.000",
+   "sent_at": "30.07.2026 22:23:11 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-15-pink",
+     "price": 15000,
+     "bitoSku": "8561",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/8561-B-15-pink-1.png",
+     "img_state": "edited",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-15-red",
+     "price": 15000,
+     "bitoSku": "8559",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/8559-B-15-red-1.png",
+     "img_state": "edited",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-15-violet",
+     "price": 15000,
+     "bitoSku": "8560",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/8560-B-15-violet-1.png",
+     "img_state": "edited",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "C-15 blue",
+     "price": 38000,
+     "bitoSku": "12917",
+     "img": "ref/297efe5004c5.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message365202",
+   "photo_number": 531,
+   "file": "photo_531@30-07-2026_22-23-11.jpg",
+   "caption": "w-14",
+   "caption_raw": "Model: w-14Narxi: 25.000  📞+998 (99) 368-11-00👨‍💻@DekorHouseAdminB2B/Оптом 👇🏼  📞+998 (50) 101-88-88👨‍💻@DekorHouseBusiness",
+   "caption_price": "25.000",
+   "sent_at": "30.07.2026 22:23:11 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "B-14-blue",
+     "price": 16000,
+     "bitoSku": "7399",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/7399-B-14-blue-1.png",
+     "img_state": "edited",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-14-pink",
+     "price": 16000,
+     "bitoSku": "7397",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/7397-B-14-pink-1.png",
+     "img_state": "edited",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-14-rose",
+     "price": 16000,
+     "bitoSku": "7395",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/7395-B-14-rose-1.png",
+     "img_state": "edited",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message365203",
+   "photo_number": 532,
+   "file": "photo_532@30-07-2026_22-23-11.jpg",
+   "caption": "w-29",
+   "caption_raw": "Model: w-29Narxi: 22.000  📞+998 (99) 368-11-00👨‍💻@DekorHouseAdminB2B/Оптом 👇🏼  📞+998 (50) 101-88-88👨‍💻@DekorHouseBusiness",
+   "caption_price": "22.000",
+   "sent_at": "30.07.2026 22:23:11 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "W-29-green",
+     "price": 22000,
+     "bitoSku": "6744",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/6744-W-29-green-1.jpg",
+     "img_state": "edited",
+     "score": 2,
+     "why": "та же серия"
+    },
+    {
+     "code": "W-29-red",
+     "price": 22000,
+     "bitoSku": "6743",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/6743-W-29-red-1.png",
+     "img_state": "edited",
+     "score": 2,
+     "why": "та же серия"
+    },
+    {
+     "code": "B-29 Darkpink",
+     "price": 8000,
+     "bitoSku": "7415",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/7415-B-29-darkpink-1.png",
+     "img_state": "edited",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-29 blue",
+     "price": 8000,
+     "bitoSku": "12695",
+     "img": "ref/f2df074e61e3.jpg",
+     "img_state": "raw",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message365204",
+   "photo_number": 533,
+   "file": "photo_533@30-07-2026_22-23-11.jpg",
+   "caption": "anor",
+   "caption_raw": "Model: anorNarxi: 30.000  📞+998 (99) 368-11-00👨‍💻@DekorHouseAdminB2B/Оптом 👇🏼  📞+998 (50) 101-88-88👨‍💻@DekorHouseBusiness",
+   "caption_price": "30.000",
+   "sent_at": "30.07.2026 22:23:11 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cmkwp3pjn0007aa25qozkljqq",
+    "code": "Anor",
+    "price": 30000,
+    "bitoSku": "4225",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://zafarovpolat.github.io/bito-cat/edited/4225-ANOR-1.png",
+    "img_state": "edited",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message365205",
+   "photo_number": 534,
+   "file": "photo_534@30-07-2026_22-23-11.jpg",
+   "caption": "z-31",
+   "caption_raw": "Model: z-31Narxi: 30.000  📞+998 (99) 368-11-00👨‍💻@DekorHouseAdminB2B/Оптом 👇🏼  📞+998 (50) 101-88-88👨‍💻@DekorHouseBusiness",
+   "caption_price": "30.000",
+   "sent_at": "30.07.2026 22:23:11 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cf0cef032009a420ca4c04d0c",
+    "code": "Z-31",
+    "price": 30000,
+    "bitoSku": "5618",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://zafarovpolat.github.io/bito-cat/edited/5618-Z-31-peach-1.png",
+    "img_state": "edited",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message365206",
+   "photo_number": 535,
+   "file": "photo_535@30-07-2026_22-23-11.jpg",
+   "caption": "z-32",
+   "caption_raw": "Model: z-32Narxi: 30.000  📞+998 (99) 368-11-00👨‍💻@DekorHouseAdminB2B/Оптом 👇🏼  📞+998 (50) 101-88-88👨‍💻@DekorHouseBusiness",
+   "caption_price": "30.000",
+   "sent_at": "30.07.2026 22:23:11 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "Z-32 lime",
+     "price": 30000,
+     "bitoSku": "5614",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/5614-Z-32-lime-1.png",
+     "img_state": "edited",
+     "score": 2,
+     "why": "та же серия"
+    },
+    {
+     "code": "B-32 Rosepink",
+     "price": 40000,
+     "bitoSku": "8491",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/8491-B-32-rosepink-1.png",
+     "img_state": "edited",
+     "score": 3,
+     "why": "то же число"
+    },
+    {
+     "code": "B-32-pink",
+     "price": 40000,
+     "bitoSku": "6520",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/6520-B-32-pink-1.png",
+     "img_state": "edited",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message365207",
+   "photo_number": 536,
+   "file": "photo_536@30-07-2026_22-23-11.jpg",
+   "caption": "z-33",
+   "caption_raw": "Model: z-33Narxi: 30.000  📞+998 (99) 368-11-00👨‍💻@DekorHouseAdminB2B/Оптом 👇🏼  📞+998 (50) 101-88-88👨‍💻@DekorHouseBusiness",
+   "caption_price": "30.000",
+   "sent_at": "30.07.2026 22:23:11 UTC+03:00",
+   "dup_caption": false,
+   "status": "unmatched",
+   "product": null,
+   "candidates": [
+    {
+     "code": "Z-33 Limon",
+     "price": 30000,
+     "bitoSku": "5616",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/5616-Z-33-limon-1.png",
+     "img_state": "edited",
+     "score": 2,
+     "why": "та же серия"
+    },
+    {
+     "code": "B-33",
+     "price": 20000,
+     "bitoSku": "6522",
+     "img": "https://zafarovpolat.github.io/bito-cat/edited/6522-B-33-eucalyptus-1.png",
+     "img_state": "edited",
+     "score": 3,
+     "why": "то же число"
+    }
+   ]
+  },
+  {
+   "message_id": "message365208",
+   "photo_number": 537,
+   "file": "photo_537@30-07-2026_22-23-11.jpg",
+   "caption": "z-30",
+   "caption_raw": "Model: z-30Narxi: 30.000  📞+998 (99) 368-11-00👨‍💻@DekorHouseAdminB2B/Оптом 👇🏼  📞+998 (50) 101-88-88👨‍💻@DekorHouseBusiness",
+   "caption_price": "30.000",
+   "sent_at": "30.07.2026 22:23:11 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "ce781240e88224e7f8722f9f3",
+    "code": "Z-30",
+    "price": 30000,
+    "bitoSku": "5620",
+    "isActive": false,
+    "inStock": true,
+    "img": "https://yjfyvedavmrdifmepvkh.supabase.co/storage/v1/object/public/products/products/bito-file-846e5fa9633fe1298e7b935505d24ec0.jpeg",
+    "img_state": "supabase",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message365209",
+   "photo_number": 538,
+   "file": "photo_538@30-07-2026_22-23-11.jpg",
+   "caption": "black olive",
+   "caption_raw": "Model: black oliveNarxi: 35.000  📞+998 (99) 368-11-00👨‍💻@DekorHouseAdminB2B/Оптом 👇🏼  📞+998 (50) 101-88-88👨‍💻@DekorHouseBusiness",
+   "caption_price": "35.000",
+   "sent_at": "30.07.2026 22:23:11 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cmkwp95cm000saa25ofpqalbf",
+    "code": "Black olive",
+    "price": 35000,
+    "bitoSku": "7650",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://zafarovpolat.github.io/bito-cat/edited/7650-Black-olive-1.png",
+    "img_state": "edited",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message365210",
+   "photo_number": 539,
+   "file": "photo_539@30-07-2026_22-23-11.jpg",
+   "caption": "olive",
+   "caption_raw": "Model: oliveNarxi: 20.000  📞+998 (99) 368-11-00👨‍💻@DekorHouseAdminB2B/Оптом 👇🏼  📞+998 (50) 101-88-88👨‍💻@DekorHouseBusiness",
+   "caption_price": "20.000",
+   "sent_at": "30.07.2026 22:23:11 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cmkwp7eud000maa25xtduy8nq",
+    "code": "Olive",
+    "price": 20000,
+    "bitoSku": "4227",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://yjfyvedavmrdifmepvkh.supabase.co/storage/v1/object/public/products/products/1783344487749-bdigf8.png",
+    "img_state": "supabase",
+    "img_fixed": false
+   },
+   "candidates": []
+  },
+  {
+   "message_id": "message365211",
+   "photo_number": 540,
+   "file": "photo_540@30-07-2026_22-23-11.jpg",
+   "caption": "olive no fruit",
+   "caption_raw": "Model: olive no fruitNarxi: 18.000  📞+998 (99) 368-11-00👨‍💻@DekorHouseAdminB2B/Оптом 👇🏼  📞+998 (50) 101-88-88👨‍💻@DekorHouseBusiness",
+   "caption_price": "18.000",
+   "sent_at": "30.07.2026 22:23:11 UTC+03:00",
+   "dup_caption": false,
+   "status": "matched",
+   "product": {
+    "id": "cmkwp6v0h000jaa258z616cl9",
+    "code": "Olive no fruit",
+    "price": 18000,
+    "bitoSku": "5612",
+    "isActive": true,
+    "inStock": true,
+    "img": "https://zafarovpolat.github.io/bito-cat/edited/5612-olive-no-fruit-1.png",
+    "img_state": "edited",
+    "img_fixed": false
+   },
+   "candidates": []
+  }
+ ],
+ "problem_products": [
+  {
+   "code": "B-87 purple",
+   "price": 14000,
+   "bitoSku": "12785",
+   "isActive": true,
+   "img_state": "none",
+   "img_in_db": null,
+   "img_working": null
+  },
+  {
+   "code": "Z-4 Rose (9)",
+   "price": 25000,
+   "bitoSku": "4563",
+   "isActive": false,
+   "img_state": "none",
+   "img_in_db": null,
+   "img_working": null
+  },
+  {
+   "code": "B-29 blue",
+   "price": 8000,
+   "bitoSku": "12695",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-ce808cfca372151e8f04038924e7e355.jpeg",
+   "img_working": "ref/f2df074e61e3.jpg"
+  },
+  {
+   "code": "B-81 blue",
+   "price": 20000,
+   "bitoSku": "12714",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-72955978f7a8cb1ba408443f2972f3cf.jpeg",
+   "img_working": "ref/78890e2d9204.jpg"
+  },
+  {
+   "code": "B-81 light blue",
+   "price": 20000,
+   "bitoSku": "12718",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-40d47286f9191de8ee6d71e2f3e9b61d.jpeg",
+   "img_working": "ref/3f8a4203a263.jpg"
+  },
+  {
+   "code": "B-81 pink",
+   "price": 20000,
+   "bitoSku": "12716",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-08e20541e3e48ea3d026a30e66f74a74.jpeg",
+   "img_working": "ref/d562cc58e7d4.jpg"
+  },
+  {
+   "code": "B-81 violet",
+   "price": 20000,
+   "bitoSku": "12712",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-ecc0d7127195865649b623d5f70a12bd.jpeg",
+   "img_working": "ref/86cc2989ae3b.jpg"
+  },
+  {
+   "code": "B-81 white",
+   "price": 20000,
+   "bitoSku": "12708",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-f9a9c146c244046365317f1f3a70610f.jpeg",
+   "img_working": "ref/8c2fc152e862.jpg"
+  },
+  {
+   "code": "B-82 dark",
+   "price": 28000,
+   "bitoSku": "12730",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-b5e66509c52a445e436b31644dde65b7.jpeg",
+   "img_working": "ref/b938c3a642a1.jpg"
+  },
+  {
+   "code": "B-82 green",
+   "price": 28000,
+   "bitoSku": "12726",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-2e23213c80bbe02502ab3d8504b30a81.jpeg",
+   "img_working": "ref/d72d9c910374.jpg"
+  },
+  {
+   "code": "B-82 pink",
+   "price": 28000,
+   "bitoSku": "12720",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-8c016def0da6247cacfa0053cc7376f2.jpeg",
+   "img_working": "ref/426fb53c4faa.jpg"
+  },
+  {
+   "code": "B-82 purple",
+   "price": 28000,
+   "bitoSku": "12724",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-8b4ba61698d2db4f109eb1d422aa4194.jpeg",
+   "img_working": "ref/2047c6490a9d.jpg"
+  },
+  {
+   "code": "B-82 violet",
+   "price": 28000,
+   "bitoSku": "12722",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-f5e43b918180cfbbb21992b7efd90f2a.jpeg",
+   "img_working": "ref/321d98b8864c.jpg"
+  },
+  {
+   "code": "B-82 yellow",
+   "price": 28000,
+   "bitoSku": "12728",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-1406bf8643b4001a5acc30bee70ab769.jpeg",
+   "img_working": "ref/ac82fd67ae98.jpg"
+  },
+  {
+   "code": "B-83 blue",
+   "price": 25000,
+   "bitoSku": "12736",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-42d737bbbf06349b881165577f0df5e0.jpeg",
+   "img_working": "ref/b5ffca25e243.jpg"
+  },
+  {
+   "code": "B-83 champagne",
+   "price": 25000,
+   "bitoSku": "12804",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-0bba924eac7ab03432003693c0c4442a.jpeg",
+   "img_working": "ref/93db8cb2223d.jpg"
+  },
+  {
+   "code": "B-83 pink",
+   "price": 25000,
+   "bitoSku": "12738",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-2ac29c336437fe0b6d13c909b9479b9b.jpeg",
+   "img_working": "ref/4d2fc4896757.jpg"
+  },
+  {
+   "code": "B-83 purple",
+   "price": 25000,
+   "bitoSku": "12734",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-7309fa92b5d40ed73578b974e77df79a.jpeg",
+   "img_working": "ref/b3792fd805db.jpg"
+  },
+  {
+   "code": "B-83 white",
+   "price": 25000,
+   "bitoSku": "12732",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-1cb8e3017b0327ab4a77d6161ac475f4.jpeg",
+   "img_working": "ref/88e42013b4b6.jpg"
+  },
+  {
+   "code": "B-84 blue",
+   "price": 20000,
+   "bitoSku": "12806",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-0f581485c96807d2e1c0281a669ec23d.jpeg",
+   "img_working": "ref/9568e1088ac5.jpg"
+  },
+  {
+   "code": "B-84 purple",
+   "price": 20000,
+   "bitoSku": "12808",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-df87c0fd5f53af69bdad3cc175019ca2.jpeg",
+   "img_working": "ref/db72c512ec07.jpg"
+  },
+  {
+   "code": "W-25-champagne",
+   "price": 25000,
+   "bitoSku": "6739",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-55c6ceede5c5181478caf8cac3e0a2b9.png",
+   "img_working": "ref/987d10285af8.jpg"
+  },
+  {
+   "code": "Z-20 dark pink",
+   "price": 14000,
+   "bitoSku": "12075",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-62ded3e4d3c7c98d6d181780eda9180f.png",
+   "img_working": "ref/54137f63a556.jpg"
+  },
+  {
+   "code": "Z-20 green",
+   "price": 14000,
+   "bitoSku": "12073",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-cf8d6ae4bae697d76cc8c8bc79c33e26.png",
+   "img_working": "ref/57a29a98b038.jpg"
+  },
+  {
+   "code": "Z-20 red",
+   "price": 14000,
+   "bitoSku": "12079",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-0f0823ce6a8cd7e109eb4cbd5037a22f.png",
+   "img_working": "ref/ede265fb67d9.jpg"
+  },
+  {
+   "code": "Z-20 rose pink",
+   "price": 14000,
+   "bitoSku": "12077",
+   "isActive": true,
+   "img_state": "raw",
+   "img_in_db": "https://cdn.bito.uz/uploads/file-021023b31baf37d36426f379b216d83b.png",
+   "img_working": "ref/adbbc53c8015.jpg"
+  }
+ ]
+}

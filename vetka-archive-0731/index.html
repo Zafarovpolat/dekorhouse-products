@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Сверка фото · ветка · 31.07.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#eef1ef; --card:#fff; --ink:#15201a; --dim:#6b7a70; --line:#dde4de;
+  --ok:#1a7f42; --ok-bg:#e3f5e9; --warn:#a35b00; --warn-bg:#fdefd8;
+  --bad:#a32218; --bad-bg:#fde5e2; --info:#1d5b8f; --info-bg:#e2effa;
+  --shot:#fafafa;
+}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink);
+     line-height:1.45;-webkit-font-smoothing:antialiased}
+a{color:var(--info)}
+
+/* ---- шапка ---- */
+.top{position:sticky;top:0;z-index:20;background:#12301f;color:#fff;padding:14px 3vw 12px;
+     box-shadow:0 2px 14px rgba(0,0,0,.22)}
+.top h1{font-size:19px;font-weight:700;letter-spacing:-.01em}
+.top .sub{font-size:12px;opacity:.72;margin-top:2px}
+.tallies{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
+.tally{background:rgba(255,255,255,.11);border-radius:7px;padding:5px 10px;font-size:11.5px;font-weight:600}
+.tally b{font-size:14px;margin-right:4px}
+.tools{margin-top:11px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tools input{padding:8px 11px;border:0;border-radius:7px;width:min(340px,100%);font:inherit;font-size:13px}
+.tools button{padding:8px 12px;border:0;border-radius:7px;background:rgba(255,255,255,.16);color:#fff;
+              font:inherit;font-size:12px;font-weight:600;cursor:pointer}
+.tools button:hover{background:rgba(255,255,255,.27)}
+.tools button.on{background:#fff;color:#12301f}
+
+main{padding:20px 3vw 60px;max-width:1800px;margin:0 auto}
+
+/* ---- секции ---- */
+section{margin-bottom:34px}
+.shead{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.shead h2{font-size:22px;font-weight:700;letter-spacing:-.015em}
+.shead .cnt{font-size:12px;font-weight:700;color:var(--dim)}
+.snote{font-size:13px;color:var(--dim);margin-bottom:14px;max-width:none}
+.snote b{color:var(--ink)}
+
+/* ---- карточка ---- */
+.cards{display:grid;gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px 14px 14px;
+      box-shadow:0 1px 3px rgba(20,40,28,.05)}
+.card.att{border-color:#e8c98d;box-shadow:0 1px 3px rgba(163,91,0,.1)}
+.card.prob{border-color:#eeb3ac}
+.chead{display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+       border-bottom:1px solid var(--line);padding-bottom:9px;margin-bottom:11px}
+.pn{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;font-weight:700;
+    background:#12301f;color:#fff;padding:3px 7px;border-radius:5px}
+.cap{font-size:17px;font-weight:700;letter-spacing:-.01em}
+.cap .quiet{font-weight:500;color:var(--dim)}
+.badge{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;
+       padding:4px 8px;border-radius:20px;white-space:nowrap}
+.b-ok{background:var(--ok-bg);color:var(--ok)}
+.b-warn{background:var(--warn-bg);color:var(--warn)}
+.b-bad{background:var(--bad-bg);color:var(--bad)}
+.b-info{background:var(--info-bg);color:var(--info)}
+.meta{margin-left:auto;display:flex;gap:14px;font-size:12px;color:var(--dim);flex-wrap:wrap}
+.meta b{color:var(--ink);font-weight:700}
+
+/* ---- пары картинок: фиксированная ширина, чтобы сравнивать в один ряд ---- */
+.pair{display:flex;flex-wrap:wrap;gap:11px;align-items:flex-start}
+.pane{width:264px;flex:none;border:1px solid var(--line);border-radius:10px;overflow:hidden;
+      background:var(--shot);display:flex;flex-direction:column}
+.pane.arch{border:2px solid #2f7d4f;box-shadow:0 0 0 3px rgba(47,125,79,.12)}
+.pane.best{border:2px solid #c98a2e;box-shadow:0 0 0 3px rgba(201,138,46,.13)}
+.sep{width:1px;align-self:stretch;background:var(--line);margin:0 5px}
+.vs{align-self:center;font-size:10px;font-weight:800;color:var(--dim);letter-spacing:.08em;
+    writing-mode:vertical-rl;text-orientation:mixed;padding:2px}
+.pane .lbl{font-size:9.5px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;
+           padding:5px 8px;background:#f2f5f2;color:var(--dim);border-bottom:1px solid var(--line);
+           display:flex;justify-content:space-between;gap:6px;align-items:center}
+.pane.arch .lbl{background:#2f7d4f;color:#fff;border-color:#2f7d4f}
+.pane img{width:100%;height:330px;object-fit:contain;background:var(--shot);display:block}
+.pane .cf{padding:7px 8px;font-size:12px;border-top:1px solid var(--line);background:#fff}
+.pane .cf .cd{font-weight:700}
+.pane .cf .pr{color:#b5651d;font-weight:700}
+.pane .none{height:330px;display:flex;align-items:center;justify-content:center;
+            color:#a8b3ab;font-size:12.5px;font-weight:600;text-align:center;padding:14px}
+.cands{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;
+       color:var(--warn);margin:12px 0 7px}
+.warn{background:var(--warn-bg);color:var(--warn);border-radius:7px;padding:8px 10px;
+      font-size:12.5px;margin-bottom:10px;font-weight:600}
+.urlnote{font-size:10.5px;color:var(--dim);margin-top:5px;word-break:break-all;font-family:ui-monospace,monospace}
+.empty{color:var(--dim);font-size:13px;padding:14px;background:#fff;border-radius:10px;border:1px solid var(--line)}
+.hidden{display:none!important}
+footer{padding:22px 3vw;color:var(--dim);font-size:12px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <h1>Сверка фото из архива · категория «Искусственные декоративные ветки»</h1>
+  <div class="sub">Архив чата от 31.07.2026 · 67 фото · база Supabase, категория c5dbafbf74f984746b64e8644 · товары в наличии (inStock)</div>
+  <div class="tallies"><span class="tally"><b>67</b>фото в архиве</span><span class="tally"><b>47</b>привязались точно</span><span class="tally"><b>20</b>не нашлись в базе</span><span class="tally"><b>250</b>товаров в наличии</span><span class="tally"><b>47</b>получат новое фото</span><span class="tally"><b>26</b>проблемных товаров</span></div>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Поиск по коду или подписи…">
+    <button data-f="all" class="on">Все</button>
+    <button data-f="unmatched">Не нашлись</button>
+    <button data-f="matched">Нашлись</button>
+    <button data-f="problem">Проблемные</button>
+  </div>
+</div>
+
+<main>
+  <section>
+    <div class="snote" style="background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px 15px;font-size:13.5px">
+      <b>Что это за страница.</b> Здесь показаны все 67 фото из архива чата и то, что сейчас
+      лежит в базе по этим товарам. Скрипт ничего не решает сам: где код совпал — привязка показана,
+      где нет — показаны похожие товары как кандидаты, но привязки нет.
+      Цены и коды берутся из Supabase.
+      <br><br>
+      <b>Что нужно от вас.</b> Пройти по секциям сверху вниз и сказать, какие привязки верные.
+      Начните с блока Z-81/82/83 — от него зависит больше всего. После вашего подтверждения
+      собираю PDF: фото из архива в приоритете, остальным товарам остаются их текущие картинки.
+    </div>
+  </section>
+  <section id="z8">
+          <div class="shead"><h2>Подписи Z-81 / Z-82 / Z-83</h2><span class="cnt">15 фото</span></div>
+          <div class="snote">Эти фото подписаны <b>Z-81 / Z-82 / Z-83</b>, но таких кодов в базе нет — есть <b>B-81 / B-82 / B-83</b> с точно такими же цветами. Привязку я не делал. Слева фото из архива, справа то, что сейчас лежит в базе под кодом B-8x — сравните и скажите, одни это ветки или разные. Важно: именно у этих B-8x сейчас битые сырые фото, так что если это одно и то же, архив закрывает главную дыру в каталоге.</div>
+          <div class="cards "><div class="card att" data-s="unmatched" data-q="z-82 dark b-82 dark b-82 green b-82 pink b-82 purple">
+      <div class="chead">
+        <span class="pn">#480</span>
+        <span class="cap">Z-82 dark</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#480</span></div>
+        <img src="photos/photo_480@22-07-2026_12-01-29.jpg" alt="Z-82 dark" loading="lazy">
+        <div class="cf"><span class="cd">Z-82 dark</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/b938c3a642a1.jpg" alt="B-82 dark" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 dark</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12730</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/d72d9c910374.jpg" alt="B-82 green" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 green</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12726</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/426fb53c4faa.jpg" alt="B-82 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 pink</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12720</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/2047c6490a9d.jpg" alt="B-82 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 purple</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12724</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-82 pink b-82 pink b-82 dark b-82 green b-82 purple">
+      <div class="chead">
+        <span class="pn">#481</span>
+        <span class="cap">Z-82 pink</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#481</span></div>
+        <img src="photos/photo_481@22-07-2026_12-01-44.jpg" alt="Z-82 pink" loading="lazy">
+        <div class="cf"><span class="cd">Z-82 pink</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/426fb53c4faa.jpg" alt="B-82 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 pink</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12720</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/b938c3a642a1.jpg" alt="B-82 dark" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 dark</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12730</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/d72d9c910374.jpg" alt="B-82 green" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 green</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12726</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/2047c6490a9d.jpg" alt="B-82 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 purple</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12724</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-82 green b-82 green b-82 dark b-82 pink b-82 purple">
+      <div class="chead">
+        <span class="pn">#482</span>
+        <span class="cap">Z-82 green</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#482</span></div>
+        <img src="photos/photo_482@22-07-2026_12-01-51.jpg" alt="Z-82 green" loading="lazy">
+        <div class="cf"><span class="cd">Z-82 green</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/d72d9c910374.jpg" alt="B-82 green" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 green</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12726</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/b938c3a642a1.jpg" alt="B-82 dark" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 dark</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12730</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/426fb53c4faa.jpg" alt="B-82 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 pink</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12720</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/2047c6490a9d.jpg" alt="B-82 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 purple</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12724</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-82 purple b-82 purple b-82 dark b-82 green b-82 pink">
+      <div class="chead">
+        <span class="pn">#483</span>
+        <span class="cap">z-82 purple</span>
+        <span class="badge b-warn">в базе не нашлось</span><span class="badge b-bad">дубль подписи</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#483</span></div>
+        <img src="photos/photo_483@22-07-2026_12-01-59.jpg" alt="z-82 purple" loading="lazy">
+        <div class="cf"><span class="cd">z-82 purple</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/2047c6490a9d.jpg" alt="B-82 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 purple</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12724</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/b938c3a642a1.jpg" alt="B-82 dark" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 dark</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12730</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/d72d9c910374.jpg" alt="B-82 green" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 green</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12726</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/426fb53c4faa.jpg" alt="B-82 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 pink</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12720</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-82 yellow b-82 yellow b-82 dark b-82 green b-82 pink">
+      <div class="chead">
+        <span class="pn">#484</span>
+        <span class="cap">z-82 yellow</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#484</span></div>
+        <img src="photos/photo_484@22-07-2026_12-02-05.jpg" alt="z-82 yellow" loading="lazy">
+        <div class="cf"><span class="cd">z-82 yellow</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/ac82fd67ae98.jpg" alt="B-82 yellow" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 yellow</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12728</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/b938c3a642a1.jpg" alt="B-82 dark" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 dark</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12730</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/d72d9c910374.jpg" alt="B-82 green" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 green</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12726</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/426fb53c4faa.jpg" alt="B-82 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 pink</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12720</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-83 champagne b-83 champagne b-83 blue b-83 pink b-83 purple">
+      <div class="chead">
+        <span class="pn">#485</span>
+        <span class="cap">Z-83 champagne</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#485</span></div>
+        <img src="photos/photo_485@22-07-2026_12-03-28.jpg" alt="Z-83 champagne" loading="lazy">
+        <div class="cf"><span class="cd">Z-83 champagne</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/93db8cb2223d.jpg" alt="B-83 champagne" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 champagne</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12804</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/b5ffca25e243.jpg" alt="B-83 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 blue</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12736</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/4d2fc4896757.jpg" alt="B-83 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 pink</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12738</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/b3792fd805db.jpg" alt="B-83 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 purple</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12734</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-82 purple b-82 purple b-82 dark b-82 green b-82 pink">
+      <div class="chead">
+        <span class="pn">#486</span>
+        <span class="cap">z-82 purple</span>
+        <span class="badge b-warn">в базе не нашлось</span><span class="badge b-bad">дубль подписи</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#486</span></div>
+        <img src="photos/photo_486@22-07-2026_12-03-36.jpg" alt="z-82 purple" loading="lazy">
+        <div class="cf"><span class="cd">z-82 purple</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/2047c6490a9d.jpg" alt="B-82 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 purple</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12724</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/b938c3a642a1.jpg" alt="B-82 dark" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 dark</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12730</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/d72d9c910374.jpg" alt="B-82 green" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 green</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12726</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/426fb53c4faa.jpg" alt="B-82 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 pink</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12720</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-83 pink b-83 pink b-83 blue b-83 champagne b-83 purple">
+      <div class="chead">
+        <span class="pn">#487</span>
+        <span class="cap">z-83 pink</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#487</span></div>
+        <img src="photos/photo_487@22-07-2026_12-03-43.jpg" alt="z-83 pink" loading="lazy">
+        <div class="cf"><span class="cd">z-83 pink</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/4d2fc4896757.jpg" alt="B-83 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 pink</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12738</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/b5ffca25e243.jpg" alt="B-83 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 blue</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12736</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/93db8cb2223d.jpg" alt="B-83 champagne" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 champagne</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12804</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/b3792fd805db.jpg" alt="B-83 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 purple</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12734</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-83 white b-83 white b-83 blue b-83 champagne b-83 pink">
+      <div class="chead">
+        <span class="pn">#488</span>
+        <span class="cap">z-83 white</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#488</span></div>
+        <img src="photos/photo_488@22-07-2026_12-03-52.jpg" alt="z-83 white" loading="lazy">
+        <div class="cf"><span class="cd">z-83 white</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/88e42013b4b6.jpg" alt="B-83 white" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 white</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12732</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/b5ffca25e243.jpg" alt="B-83 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 blue</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12736</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/93db8cb2223d.jpg" alt="B-83 champagne" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 champagne</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12804</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/4d2fc4896757.jpg" alt="B-83 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 pink</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12738</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-83 blue b-83 blue b-83 champagne b-83 pink b-83 purple">
+      <div class="chead">
+        <span class="pn">#489</span>
+        <span class="cap">z-83 blue</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#489</span></div>
+        <img src="photos/photo_489@22-07-2026_12-04-01.jpg" alt="z-83 blue" loading="lazy">
+        <div class="cf"><span class="cd">z-83 blue</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/b5ffca25e243.jpg" alt="B-83 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 blue</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12736</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/93db8cb2223d.jpg" alt="B-83 champagne" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 champagne</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12804</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/4d2fc4896757.jpg" alt="B-83 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 pink</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12738</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/b3792fd805db.jpg" alt="B-83 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 purple</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12734</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-81 violet b-81 violet b-81 blue b-81 light blue b-81 pink">
+      <div class="chead">
+        <span class="pn">#490</span>
+        <span class="cap">z-81 violet</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#490</span></div>
+        <img src="photos/photo_490@22-07-2026_12-04-34.jpg" alt="z-81 violet" loading="lazy">
+        <div class="cf"><span class="cd">z-81 violet</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/86cc2989ae3b.jpg" alt="B-81 violet" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 violet</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12712</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/78890e2d9204.jpg" alt="B-81 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12714</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/3f8a4203a263.jpg" alt="B-81 light blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 light blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12718</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/d562cc58e7d4.jpg" alt="B-81 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 pink</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12716</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-81 white b-81 white b-81 blue b-81 light blue b-81 pink">
+      <div class="chead">
+        <span class="pn">#491</span>
+        <span class="cap">z-81 white</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#491</span></div>
+        <img src="photos/photo_491@22-07-2026_12-04-43.jpg" alt="z-81 white" loading="lazy">
+        <div class="cf"><span class="cd">z-81 white</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/8c2fc152e862.jpg" alt="B-81 white" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 white</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12708</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/78890e2d9204.jpg" alt="B-81 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12714</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/3f8a4203a263.jpg" alt="B-81 light blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 light blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12718</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/d562cc58e7d4.jpg" alt="B-81 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 pink</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12716</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-81 pink b-81 pink b-81 blue b-81 light blue b-81 violet">
+      <div class="chead">
+        <span class="pn">#492</span>
+        <span class="cap">z-81 pink</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#492</span></div>
+        <img src="photos/photo_492@22-07-2026_12-07-32.jpg" alt="z-81 pink" loading="lazy">
+        <div class="cf"><span class="cd">z-81 pink</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/d562cc58e7d4.jpg" alt="B-81 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 pink</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12716</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/78890e2d9204.jpg" alt="B-81 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12714</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/3f8a4203a263.jpg" alt="B-81 light blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 light blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12718</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/86cc2989ae3b.jpg" alt="B-81 violet" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 violet</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12712</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-81 blue b-81 blue b-81 light blue b-81 pink b-81 violet">
+      <div class="chead">
+        <span class="pn">#493</span>
+        <span class="cap">z-81 blue</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#493</span></div>
+        <img src="photos/photo_493@22-07-2026_12-07-39.jpg" alt="z-81 blue" loading="lazy">
+        <div class="cf"><span class="cd">z-81 blue</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/78890e2d9204.jpg" alt="B-81 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12714</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/3f8a4203a263.jpg" alt="B-81 light blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 light blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12718</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/d562cc58e7d4.jpg" alt="B-81 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 pink</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12716</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/86cc2989ae3b.jpg" alt="B-81 violet" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 violet</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12712</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-81 light blue b-81 light blue b-81 blue b-81 pink b-81 violet">
+      <div class="chead">
+        <span class="pn">#494</span>
+        <span class="cap">z-81 light blue</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цены в подписи нет</span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#494</span></div>
+        <img src="photos/photo_494@22-07-2026_12-09-25.jpg" alt="z-81 light blue" loading="lazy">
+        <div class="cf"><span class="cd">z-81 light blue</span>
+        </div>
+      </div><div class="sep"></div><div class="pane best">
+        <div class="lbl"><span>Кандидат · цвет совпал</span><span>Сырая с bito</span></div>
+        <img src="ref/3f8a4203a263.jpg" alt="B-81 light blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 light blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12718</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/78890e2d9204.jpg" alt="B-81 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12714</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/d562cc58e7d4.jpg" alt="B-81 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 pink</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12716</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/86cc2989ae3b.jpg" alt="B-81 violet" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 violet</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12712</span>
+        </div>
+      </div></div>
+    </div></div>
+        </section><section id="other">
+          <div class="shead"><h2>Прочие ненайденные подписи</h2><span class="cnt">5 фото</span></div>
+          <div class="snote">Подписи, для которых точного кода в базе нет. Рядом показаны похожие товары, если они нашлись. Привязку не делал.</div>
+          <div class="cards "><div class="card att" data-s="unmatched" data-q="w-15 b-15-pink b-15-red b-15-violet c-15 blue">
+      <div class="chead">
+        <span class="pn">#530</span>
+        <span class="cap">w-15</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цена в подписи <b>25.000</b></span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#530</span></div>
+        <img src="photos/photo_530@30-07-2026_22-23-11.jpg" alt="w-15" loading="lazy">
+        <div class="cf"><span class="cd">w-15</span>
+        <span class="pr"> · из подписи 25.000</span></div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/8561-B-15-pink-1.png" alt="B-15-pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-15-pink</span>
+          <span class="pr"> · 15 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 8561</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/8559-B-15-red-1.png" alt="B-15-red" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-15-red</span>
+          <span class="pr"> · 15 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 8559</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/8560-B-15-violet-1.png" alt="B-15-violet" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-15-violet</span>
+          <span class="pr"> · 15 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 8560</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/297efe5004c5.jpg" alt="C-15 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">C-15 blue</span>
+          <span class="pr"> · 38 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12917</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="w-14 b-14-blue b-14-pink b-14-rose">
+      <div class="chead">
+        <span class="pn">#531</span>
+        <span class="cap">w-14</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цена в подписи <b>25.000</b></span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 3 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#531</span></div>
+        <img src="photos/photo_531@30-07-2026_22-23-11.jpg" alt="w-14" loading="lazy">
+        <div class="cf"><span class="cd">w-14</span>
+        <span class="pr"> · из подписи 25.000</span></div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/7399-B-14-blue-1.png" alt="B-14-blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-14-blue</span>
+          <span class="pr"> · 16 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 7399</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/7397-B-14-pink-1.png" alt="B-14-pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-14-pink</span>
+          <span class="pr"> · 16 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 7397</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/7395-B-14-rose-1.png" alt="B-14-rose" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-14-rose</span>
+          <span class="pr"> · 16 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 7395</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="w-29 w-29-green w-29-red b-29 darkpink b-29 blue">
+      <div class="chead">
+        <span class="pn">#532</span>
+        <span class="cap">w-29</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цена в подписи <b>22.000</b></span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 4 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#532</span></div>
+        <img src="photos/photo_532@30-07-2026_22-23-11.jpg" alt="w-29" loading="lazy">
+        <div class="cf"><span class="cd">w-29</span>
+        <span class="pr"> · из подписи 22.000</span></div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Кандидат · та же серия</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/6744-W-29-green-1.jpg" alt="W-29-green" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">W-29-green</span>
+          <span class="pr"> · 22 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 6744</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · та же серия</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/6743-W-29-red-1.png" alt="W-29-red" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">W-29-red</span>
+          <span class="pr"> · 22 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 6743</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/7415-B-29-darkpink-1.png" alt="B-29 Darkpink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-29 Darkpink</span>
+          <span class="pr"> · 8 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 7415</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Сырая с bito</span></div>
+        <img src="ref/f2df074e61e3.jpg" alt="B-29 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-29 blue</span>
+          <span class="pr"> · 8 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12695</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-32 z-32 lime b-32 rosepink b-32-pink">
+      <div class="chead">
+        <span class="pn">#535</span>
+        <span class="cap">z-32</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цена в подписи <b>30.000</b></span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 3 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#535</span></div>
+        <img src="photos/photo_535@30-07-2026_22-23-11.jpg" alt="z-32" loading="lazy">
+        <div class="cf"><span class="cd">z-32</span>
+        <span class="pr"> · из подписи 30.000</span></div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Кандидат · та же серия</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/5614-Z-32-lime-1.png" alt="Z-32 lime" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Z-32 lime</span>
+          <span class="pr"> · 30 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 5614</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/8491-B-32-rosepink-1.png" alt="B-32 Rosepink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-32 Rosepink</span>
+          <span class="pr"> · 40 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 8491</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/6520-B-32-pink-1.png" alt="B-32-pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-32-pink</span>
+          <span class="pr"> · 40 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 6520</span>
+        </div>
+      </div></div>
+    </div><div class="card att" data-s="unmatched" data-q="z-33 z-33 limon b-33">
+      <div class="chead">
+        <span class="pn">#536</span>
+        <span class="cap">z-33</span>
+        <span class="badge b-warn">в базе не нашлось</span>
+        <span class="meta"><span>цена в подписи <b>30.000</b></span></span>
+      </div>
+      <div class="cands">← фото из архива · справа 2 похожих товара из базы. Сравните и скажите, привязывать ли:</div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#536</span></div>
+        <img src="photos/photo_536@30-07-2026_22-23-11.jpg" alt="z-33" loading="lazy">
+        <div class="cf"><span class="cd">z-33</span>
+        <span class="pr"> · из подписи 30.000</span></div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Кандидат · та же серия</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/5616-Z-33-limon-1.png" alt="Z-33 Limon" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Z-33 Limon</span>
+          <span class="pr"> · 30 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 5616</span>
+        </div>
+      </div><div class="pane">
+        <div class="lbl"><span>Кандидат · то же число</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/6522-B-33-eucalyptus-1.png" alt="B-33" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-33</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 6522</span>
+        </div>
+      </div></div>
+    </div></div>
+        </section><section id="matched">
+          <div class="shead"><h2>Привязались точно</h2><span class="cnt">47 фото</span></div>
+          <div class="snote">Код из подписи совпал с кодом товара в базе. Слева фото из архива, справа текущая картинка товара. Цена и код — из Supabase. Проверьте, что это действительно один товар.</div>
+          <div class="cards "><div class="card" data-s="matched" data-q="d-1 mix rose d-1 mix rose">
+      <div class="chead">
+        <span class="pn">#474</span>
+        <span class="cap">D-1 mix rose</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>D-1 mix rose</b></span>
+          <span>цена <b>30 000 сўм</b></span>
+          <span>SKU <b>12781</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#474</span></div>
+        <img src="photos/photo_474@22-07-2026_11-58-57.jpg" alt="D-1 mix rose" loading="lazy">
+        <div class="cf"><span class="cd">D-1 mix rose</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/f363b4595e47.jpg" alt="D-1 mix rose" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">D-1 mix rose</span>
+          <span class="pr"> · 30 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12781</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="d-1 violet d-1 violet">
+      <div class="chead">
+        <span class="pn">#475</span>
+        <span class="cap">D-1 violet</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>D-1 violet</b></span>
+          <span>цена <b>30 000 сўм</b></span>
+          <span>SKU <b>12773</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#475</span></div>
+        <img src="photos/photo_475@22-07-2026_11-59-04.jpg" alt="D-1 violet" loading="lazy">
+        <div class="cf"><span class="cd">D-1 violet</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/31386ef5c680.jpg" alt="D-1 violet" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">D-1 violet</span>
+          <span class="pr"> · 30 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12773</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="d-1 green d-1 green">
+      <div class="chead">
+        <span class="pn">#476</span>
+        <span class="cap">D-1 green</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>D-1 green</b></span>
+          <span>цена <b>30 000 сўм</b></span>
+          <span>SKU <b>12777</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#476</span></div>
+        <img src="photos/photo_476@22-07-2026_11-59-11.jpg" alt="D-1 green" loading="lazy">
+        <div class="cf"><span class="cd">D-1 green</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/2ab8311ba717.jpg" alt="D-1 green" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">D-1 green</span>
+          <span class="pr"> · 30 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12777</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="d-1 blue d-1 blue">
+      <div class="chead">
+        <span class="pn">#477</span>
+        <span class="cap">D-1 blue</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>D-1 blue</b></span>
+          <span>цена <b>30 000 сўм</b></span>
+          <span>SKU <b>12779</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#477</span></div>
+        <img src="photos/photo_477@22-07-2026_11-59-18.jpg" alt="D-1 blue" loading="lazy">
+        <div class="cf"><span class="cd">D-1 blue</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/58f2264c19da.jpg" alt="D-1 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">D-1 blue</span>
+          <span class="pr"> · 30 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12779</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="z-21 red z-21-red">
+      <div class="chead">
+        <span class="pn">#478</span>
+        <span class="cap">Z-21 red</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>Z-21-red</b></span>
+          <span>цена <b>15 000 сўм</b></span>
+          <span>SKU <b>4577</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#478</span></div>
+        <img src="photos/photo_478@22-07-2026_12-00-00.jpg" alt="Z-21 red" loading="lazy">
+        <div class="cf"><span class="cd">Z-21 red</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/4577-Z-21-red-1.png" alt="Z-21-red" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Z-21-red</span>
+          <span class="pr"> · 15 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 4577</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="z-21 white z-21-white">
+      <div class="chead">
+        <span class="pn">#479</span>
+        <span class="cap">Z-21 white</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>Z-21-white</b></span>
+          <span>цена <b>15 000 сўм</b></span>
+          <span>SKU <b>4271</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#479</span></div>
+        <img src="photos/photo_479@22-07-2026_12-00-06.jpg" alt="Z-21 white" loading="lazy">
+        <div class="cf"><span class="cd">Z-21 white</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/4271-Z-21-white-1.png" alt="Z-21-white" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Z-21-white</span>
+          <span class="pr"> · 15 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 4271</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-10 white b-10-white">
+      <div class="chead">
+        <span class="pn">#495</span>
+        <span class="cap">b-10 white</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>B-10-white</b></span>
+          <span>цена <b>15 000 сўм</b></span>
+          <span>SKU <b>6496</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#495</span></div>
+        <img src="photos/photo_495@22-07-2026_12-13-27.jpg" alt="b-10 white" loading="lazy">
+        <div class="cf"><span class="cd">b-10 white</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/6496-B-10-white-1.png" alt="B-10-white" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-10-white</span>
+          <span class="pr"> · 15 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 6496</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-10 blue b-10-blue">
+      <div class="chead">
+        <span class="pn">#496</span>
+        <span class="cap">b-10 blue</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>B-10-blue</b></span>
+          <span>цена <b>15 000 сўм</b></span>
+          <span>SKU <b>6626</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#496</span></div>
+        <img src="photos/photo_496@22-07-2026_12-13-33.jpg" alt="b-10 blue" loading="lazy">
+        <div class="cf"><span class="cd">b-10 blue</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/6626-B-10-blue-1.png" alt="B-10-blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-10-blue</span>
+          <span class="pr"> · 15 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 6626</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-10 pink b-10-pink">
+      <div class="chead">
+        <span class="pn">#497</span>
+        <span class="cap">b-10 pink</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>B-10-pink</b></span>
+          <span>цена <b>15 000 сўм</b></span>
+          <span>SKU <b>6624</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#497</span></div>
+        <img src="photos/photo_497@22-07-2026_12-13-40.jpg" alt="b-10 pink" loading="lazy">
+        <div class="cf"><span class="cd">b-10 pink</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/6624-B-10-pink-1.png" alt="B-10-pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-10-pink</span>
+          <span class="pr"> · 15 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 6624</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-86 light red b-86 light red">
+      <div class="chead">
+        <span class="pn">#498</span>
+        <span class="cap">b-86 light red</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-86 light red</b></span>
+          <span>цена <b>18 000 сўм</b></span>
+          <span>SKU <b>12759</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#498</span></div>
+        <img src="photos/photo_498@22-07-2026_12-14-16.jpg" alt="b-86 light red" loading="lazy">
+        <div class="cf"><span class="cd">b-86 light red</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/0025855054eb.jpg" alt="B-86 light red" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-86 light red</span>
+          <span class="pr"> · 18 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12759</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-86 blue b-86 blue">
+      <div class="chead">
+        <span class="pn">#499</span>
+        <span class="cap">b-86 blue</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-86 blue</b></span>
+          <span>цена <b>18 000 сўм</b></span>
+          <span>SKU <b>12755</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#499</span></div>
+        <img src="photos/photo_499@22-07-2026_12-14-29.jpg" alt="b-86 blue" loading="lazy">
+        <div class="cf"><span class="cd">b-86 blue</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/5c6222d17d29.jpg" alt="B-86 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-86 blue</span>
+          <span class="pr"> · 18 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12755</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-86 violet b-86 violet">
+      <div class="chead">
+        <span class="pn">#500</span>
+        <span class="cap">b-86 violet</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-86 violet</b></span>
+          <span>цена <b>18 000 сўм</b></span>
+          <span>SKU <b>12753</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#500</span></div>
+        <img src="photos/photo_500@22-07-2026_12-17-20.jpg" alt="b-86 violet" loading="lazy">
+        <div class="cf"><span class="cd">b-86 violet</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/05e51dc7aa14.jpg" alt="B-86 violet" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-86 violet</span>
+          <span class="pr"> · 18 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12753</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-86 purple b-86 purple">
+      <div class="chead">
+        <span class="pn">#501</span>
+        <span class="cap">b-86 purple</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-86 purple</b></span>
+          <span>цена <b>18 000 сўм</b></span>
+          <span>SKU <b>12751</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#501</span></div>
+        <img src="photos/photo_501@22-07-2026_12-17-28.jpg" alt="b-86 purple" loading="lazy">
+        <div class="cf"><span class="cd">b-86 purple</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/b8b258a77eab.jpg" alt="B-86 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-86 purple</span>
+          <span class="pr"> · 18 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12751</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-86 yellow b-86 yellow">
+      <div class="chead">
+        <span class="pn">#502</span>
+        <span class="cap">b-86 yellow</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-86 yellow</b></span>
+          <span>цена <b>18 000 сўм</b></span>
+          <span>SKU <b>12757</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#502</span></div>
+        <img src="photos/photo_502@22-07-2026_12-17-35.jpg" alt="b-86 yellow" loading="lazy">
+        <div class="cf"><span class="cd">b-86 yellow</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/cd3e3f4c9097.jpg" alt="B-86 yellow" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-86 yellow</span>
+          <span class="pr"> · 18 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12757</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-2 white b-2-white">
+      <div class="chead">
+        <span class="pn">#503</span>
+        <span class="cap">b-2 white</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>B-2-white</b></span>
+          <span>цена <b>12 000 сўм</b></span>
+          <span>SKU <b>6440</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#503</span></div>
+        <img src="photos/photo_503@22-07-2026_12-18-30.jpg" alt="b-2 white" loading="lazy">
+        <div class="cf"><span class="cd">b-2 white</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/6440-B-2-white-1.png" alt="B-2-white" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-2-white</span>
+          <span class="pr"> · 12 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 6440</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-2 orange b-2 orange">
+      <div class="chead">
+        <span class="pn">#504</span>
+        <span class="cap">b-2 orange</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-2 orange</b></span>
+          <span>цена <b>12 000 сўм</b></span>
+          <span>SKU <b>12690</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#504</span></div>
+        <img src="photos/photo_504@22-07-2026_12-18-39.jpg" alt="b-2 orange" loading="lazy">
+        <div class="cf"><span class="cd">b-2 orange</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/26588fa20757.jpg" alt="B-2 orange" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-2 orange</span>
+          <span class="pr"> · 12 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12690</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-2 green b-2 green">
+      <div class="chead">
+        <span class="pn">#505</span>
+        <span class="cap">b-2 green</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-2 green</b></span>
+          <span>цена <b>12 000 сўм</b></span>
+          <span>SKU <b>12693</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#505</span></div>
+        <img src="photos/photo_505@22-07-2026_12-18-50.jpg" alt="b-2 green" loading="lazy">
+        <div class="cf"><span class="cd">b-2 green</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/86f2935dde17.jpg" alt="B-2 green" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-2 green</span>
+          <span class="pr"> · 12 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12693</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-2 rose pink b-2 rosepink">
+      <div class="chead">
+        <span class="pn">#506</span>
+        <span class="cap">b-2 rose pink</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-2 rosepink</b></span>
+          <span>цена <b>12 000 сўм</b></span>
+          <span>SKU <b>12802</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#506</span></div>
+        <img src="photos/photo_506@22-07-2026_12-18-58.jpg" alt="b-2 rose pink" loading="lazy">
+        <div class="cf"><span class="cd">b-2 rose pink</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/9870866c3172.jpg" alt="B-2 rosepink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-2 rosepink</span>
+          <span class="pr"> · 12 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12802</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-2 pink b-2-pink">
+      <div class="chead">
+        <span class="pn">#507</span>
+        <span class="cap">B-2 pink</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>B-2-pink</b></span>
+          <span>цена <b>12 000 сўм</b></span>
+          <span>SKU <b>6442</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#507</span></div>
+        <img src="photos/photo_507@22-07-2026_12-19-21.jpg" alt="B-2 pink" loading="lazy">
+        <div class="cf"><span class="cd">B-2 pink</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/6442-B-2-pink-1.png" alt="B-2-pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-2-pink</span>
+          <span class="pr"> · 12 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 6442</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-2 blue b-2-blue">
+      <div class="chead">
+        <span class="pn">#508</span>
+        <span class="cap">B-2 blue</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>B-2-blue</b></span>
+          <span>цена <b>12 000 сўм</b></span>
+          <span>SKU <b>6438</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#508</span></div>
+        <img src="photos/photo_508@22-07-2026_12-19-38.jpg" alt="B-2 blue" loading="lazy">
+        <div class="cf"><span class="cd">B-2 blue</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/6438-B-2-blue-1.png" alt="B-2-blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-2-blue</span>
+          <span class="pr"> · 12 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 6438</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-88 green b-88 green">
+      <div class="chead">
+        <span class="pn">#509</span>
+        <span class="cap">B-88 green</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-88 green</b></span>
+          <span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12763</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#509</span></div>
+        <img src="photos/photo_509@22-07-2026_12-20-23.jpg" alt="B-88 green" loading="lazy">
+        <div class="cf"><span class="cd">B-88 green</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/9a50cb3f0406.jpg" alt="B-88 green" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-88 green</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12763</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-88 red b-88 red">
+      <div class="chead">
+        <span class="pn">#510</span>
+        <span class="cap">B-88 red</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-88 red</b></span>
+          <span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12771</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#510</span></div>
+        <img src="photos/photo_510@22-07-2026_12-21-07.jpg" alt="B-88 red" loading="lazy">
+        <div class="cf"><span class="cd">B-88 red</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/d9b50c07e9c8.jpg" alt="B-88 red" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-88 red</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12771</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-88 purple b-88 purple">
+      <div class="chead">
+        <span class="pn">#511</span>
+        <span class="cap">B-88 purple</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-88 purple</b></span>
+          <span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12769</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#511</span></div>
+        <img src="photos/photo_511@22-07-2026_12-21-19.jpg" alt="B-88 purple" loading="lazy">
+        <div class="cf"><span class="cd">B-88 purple</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/3499aa0aa9e3.jpg" alt="B-88 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-88 purple</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12769</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-88 white b-88 white">
+      <div class="chead">
+        <span class="pn">#512</span>
+        <span class="cap">B-88 white</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-88 white</b></span>
+          <span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12765</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#512</span></div>
+        <img src="photos/photo_512@22-07-2026_12-21-46.jpg" alt="B-88 white" loading="lazy">
+        <div class="cf"><span class="cd">B-88 white</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/57c8c6df94f5.jpg" alt="B-88 white" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-88 white</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12765</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-80 white b-80 white">
+      <div class="chead">
+        <span class="pn">#513</span>
+        <span class="cap">b-80 white</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-80 white</b></span>
+          <span>цена <b>28 000 сўм</b></span>
+          <span>SKU <b>12699</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#513</span></div>
+        <img src="photos/photo_513@22-07-2026_12-24-22.jpg" alt="b-80 white" loading="lazy">
+        <div class="cf"><span class="cd">b-80 white</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/be709cc749ab.jpg" alt="B-80 white" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-80 white</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12699</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-80 purple b-80 purple">
+      <div class="chead">
+        <span class="pn">#514</span>
+        <span class="cap">b-80 purple</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-80 purple</b></span>
+          <span>цена <b>28 000 сўм</b></span>
+          <span>SKU <b>12701</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#514</span></div>
+        <img src="photos/photo_514@22-07-2026_12-24-30.jpg" alt="b-80 purple" loading="lazy">
+        <div class="cf"><span class="cd">b-80 purple</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/33c38449ad61.jpg" alt="B-80 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-80 purple</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12701</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-80 blue b-80 blue">
+      <div class="chead">
+        <span class="pn">#515</span>
+        <span class="cap">b-80 blue</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-80 blue</b></span>
+          <span>цена <b>28 000 сўм</b></span>
+          <span>SKU <b>12697</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#515</span></div>
+        <img src="photos/photo_515@22-07-2026_12-24-38.jpg" alt="b-80 blue" loading="lazy">
+        <div class="cf"><span class="cd">b-80 blue</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/38974de578e8.jpg" alt="B-80 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-80 blue</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12697</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-80 violet b-80 violet">
+      <div class="chead">
+        <span class="pn">#516</span>
+        <span class="cap">b-80 violet</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-80 violet</b></span>
+          <span>цена <b>28 000 сўм</b></span>
+          <span>SKU <b>12706</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#516</span></div>
+        <img src="photos/photo_516@22-07-2026_12-24-57.jpg" alt="b-80 violet" loading="lazy">
+        <div class="cf"><span class="cd">b-80 violet</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/2ec45e7e0a47.jpg" alt="B-80 violet" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-80 violet</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12706</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-80 pink b-80 pink">
+      <div class="chead">
+        <span class="pn">#517</span>
+        <span class="cap">b-80 pink</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-80 pink</b></span>
+          <span>цена <b>28 000 сўм</b></span>
+          <span>SKU <b>12703</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#517</span></div>
+        <img src="photos/photo_517@22-07-2026_12-25-21.jpg" alt="b-80 pink" loading="lazy">
+        <div class="cf"><span class="cd">b-80 pink</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/f86ddbc16ea6.jpg" alt="B-80 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-80 pink</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12703</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-85 red b-85 red">
+      <div class="chead">
+        <span class="pn">#518</span>
+        <span class="cap">B-85 red</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-85 red</b></span>
+          <span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12740</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#518</span></div>
+        <img src="photos/photo_518@22-07-2026_12-25-47.jpg" alt="B-85 red" loading="lazy">
+        <div class="cf"><span class="cd">B-85 red</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/eee701e38dd1.jpg" alt="B-85 red" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-85 red</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12740</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-85 white b-85 white">
+      <div class="chead">
+        <span class="pn">#519</span>
+        <span class="cap">B-85 white</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-85 white</b></span>
+          <span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12744</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#519</span></div>
+        <img src="photos/photo_519@22-07-2026_12-28-41.jpg" alt="B-85 white" loading="lazy">
+        <div class="cf"><span class="cd">B-85 white</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/7ab14119110c.jpg" alt="B-85 white" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-85 white</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12744</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-85  yellow b-85 yellow">
+      <div class="chead">
+        <span class="pn">#520</span>
+        <span class="cap">B-85  yellow</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-85 yellow</b></span>
+          <span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12746</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#520</span></div>
+        <img src="photos/photo_520@22-07-2026_12-38-43.jpg" alt="B-85  yellow" loading="lazy">
+        <div class="cf"><span class="cd">B-85  yellow</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/05542d7a1440.jpg" alt="B-85 yellow" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-85 yellow</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12746</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="b-85 rose b-85 rose">
+      <div class="chead">
+        <span class="pn">#521</span>
+        <span class="cap">B-85 rose</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>B-85 rose</b></span>
+          <span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12749</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#521</span></div>
+        <img src="photos/photo_521@22-07-2026_12-39-07.jpg" alt="B-85 rose" loading="lazy">
+        <div class="cf"><span class="cd">B-85 rose</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/e83de63d560d.jpg" alt="B-85 rose" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-85 rose</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12749</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="c-11 red c-11 red">
+      <div class="chead">
+        <span class="pn">#522</span>
+        <span class="cap">C-11 red</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>C-11 red</b></span>
+          <span>цена <b>35 000 сўм</b></span>
+          <span>SKU <b>12909</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#522</span></div>
+        <img src="photos/photo_522@22-07-2026_12-40-09.jpg" alt="C-11 red" loading="lazy">
+        <div class="cf"><span class="cd">C-11 red</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/8aeb730e7d3b.jpg" alt="C-11 red" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">C-11 red</span>
+          <span class="pr"> · 35 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12909</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="c-11 yellow c-11 yellow">
+      <div class="chead">
+        <span class="pn">#523</span>
+        <span class="cap">C-11 yellow</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>C-11 yellow</b></span>
+          <span>цена <b>35 000 сўм</b></span>
+          <span>SKU <b>12911</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#523</span></div>
+        <img src="photos/photo_523@22-07-2026_12-40-25.jpg" alt="C-11 yellow" loading="lazy">
+        <div class="cf"><span class="cd">C-11 yellow</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/f674b9187b39.jpg" alt="C-11 yellow" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">C-11 yellow</span>
+          <span class="pr"> · 35 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12911</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="c-11 white c-11 white">
+      <div class="chead">
+        <span class="pn">#524</span>
+        <span class="cap">C-11 white</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>C-11 white</b></span>
+          <span>цена <b>35 000 сўм</b></span>
+          <span>SKU <b>12915</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#524</span></div>
+        <img src="photos/photo_524@22-07-2026_12-40-43.jpg" alt="C-11 white" loading="lazy">
+        <div class="cf"><span class="cd">C-11 white</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/f1df6ba61cdf.jpg" alt="C-11 white" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">C-11 white</span>
+          <span class="pr"> · 35 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12915</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="c-11 pink c-11 pink">
+      <div class="chead">
+        <span class="pn">#525</span>
+        <span class="cap">C-11 pink</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>C-11 pink</b></span>
+          <span>цена <b>35 000 сўм</b></span>
+          <span>SKU <b>12913</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#525</span></div>
+        <img src="photos/photo_525@22-07-2026_12-41-05.jpg" alt="C-11 pink" loading="lazy">
+        <div class="cf"><span class="cd">C-11 pink</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/9815be95c66c.jpg" alt="C-11 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">C-11 pink</span>
+          <span class="pr"> · 35 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12913</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="c-15 pink c-15 pink">
+      <div class="chead">
+        <span class="pn">#526</span>
+        <span class="cap">C-15 pink</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>C-15 pink</b></span>
+          <span>цена <b>38 000 сўм</b></span>
+          <span>SKU <b>12921</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#526</span></div>
+        <img src="photos/photo_526@22-07-2026_12-41-26.jpg" alt="C-15 pink" loading="lazy">
+        <div class="cf"><span class="cd">C-15 pink</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/bb86474601f1.jpg" alt="C-15 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">C-15 pink</span>
+          <span class="pr"> · 38 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12921</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="c-15 darkpink c-15 darkpink">
+      <div class="chead">
+        <span class="pn">#527</span>
+        <span class="cap">C-15 darkpink</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>C-15 darkpink</b></span>
+          <span>цена <b>38 000 сўм</b></span>
+          <span>SKU <b>12919</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#527</span></div>
+        <img src="photos/photo_527@22-07-2026_12-41-43.jpg" alt="C-15 darkpink" loading="lazy">
+        <div class="cf"><span class="cd">C-15 darkpink</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/8a187d6262ce.jpg" alt="C-15 darkpink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">C-15 darkpink</span>
+          <span class="pr"> · 38 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12919</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="c-15 blue c-15 blue">
+      <div class="chead">
+        <span class="pn">#528</span>
+        <span class="cap">C-15 blue</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>C-15 blue</b></span>
+          <span>цена <b>38 000 сўм</b></span>
+          <span>SKU <b>12917</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#528</span></div>
+        <img src="photos/photo_528@22-07-2026_12-42-01.jpg" alt="C-15 blue" loading="lazy">
+        <div class="cf"><span class="cd">C-15 blue</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/297efe5004c5.jpg" alt="C-15 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">C-15 blue</span>
+          <span class="pr"> · 38 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12917</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="c-15 white c-15 white">
+      <div class="chead">
+        <span class="pn">#529</span>
+        <span class="cap">C-15 white</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-warn">ссылка была битая</span>
+        <span class="meta"><span>код <b>C-15 white</b></span>
+          <span>цена <b>38 000 сўм</b></span>
+          <span>SKU <b>12924</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#529</span></div>
+        <img src="photos/photo_529@22-07-2026_12-42-31.jpg" alt="C-15 white" loading="lazy">
+        <div class="cf"><span class="cd">C-15 white</span>
+        </div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/7b6bb8184381.jpg" alt="C-15 white" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">C-15 white</span>
+          <span class="pr"> · 38 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12924</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="anor anor">
+      <div class="chead">
+        <span class="pn">#533</span>
+        <span class="cap">anor</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>Anor</b></span>
+          <span>цена <b>30 000 сўм</b></span>
+          <span>SKU <b>4225</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#533</span></div>
+        <img src="photos/photo_533@30-07-2026_22-23-11.jpg" alt="anor" loading="lazy">
+        <div class="cf"><span class="cd">anor</span>
+        <span class="pr"> · из подписи 30.000</span></div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/4225-ANOR-1.png" alt="Anor" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Anor</span>
+          <span class="pr"> · 30 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 4225</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="z-31 z-31">
+      <div class="chead">
+        <span class="pn">#534</span>
+        <span class="cap">z-31</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>Z-31</b></span>
+          <span>цена <b>30 000 сўм</b></span>
+          <span>SKU <b>5618</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#534</span></div>
+        <img src="photos/photo_534@30-07-2026_22-23-11.jpg" alt="z-31" loading="lazy">
+        <div class="cf"><span class="cd">z-31</span>
+        <span class="pr"> · из подписи 30.000</span></div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/5618-Z-31-peach-1.png" alt="Z-31" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Z-31</span>
+          <span class="pr"> · 30 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 5618</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="z-30 z-30">
+      <div class="chead">
+        <span class="pn">#537</span>
+        <span class="cap">z-30</span>
+        <span class="badge b-ok">нашлось точно</span><span class="badge b-info">не активен</span>
+        <span class="meta"><span>код <b>Z-30</b></span>
+          <span>цена <b>30 000 сўм</b></span>
+          <span>SKU <b>5620</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#537</span></div>
+        <img src="photos/photo_537@30-07-2026_22-23-11.jpg" alt="z-30" loading="lazy">
+        <div class="cf"><span class="cd">z-30</span>
+        <span class="pr"> · из подписи 30.000</span></div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Supabase</span></div>
+        <img src="https://yjfyvedavmrdifmepvkh.supabase.co/storage/v1/object/public/products/products/bito-file-846e5fa9633fe1298e7b935505d24ec0.jpeg" alt="Z-30" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Z-30</span>
+          <span class="pr"> · 30 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 5620</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="black olive black olive">
+      <div class="chead">
+        <span class="pn">#538</span>
+        <span class="cap">black olive</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>Black olive</b></span>
+          <span>цена <b>35 000 сўм</b></span>
+          <span>SKU <b>7650</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#538</span></div>
+        <img src="photos/photo_538@30-07-2026_22-23-11.jpg" alt="black olive" loading="lazy">
+        <div class="cf"><span class="cd">black olive</span>
+        <span class="pr"> · из подписи 35.000</span></div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/7650-Black-olive-1.png" alt="Black olive" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Black olive</span>
+          <span class="pr"> · 35 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 7650</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="olive olive">
+      <div class="chead">
+        <span class="pn">#539</span>
+        <span class="cap">olive</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>Olive</b></span>
+          <span>цена <b>20 000 сўм</b></span>
+          <span>SKU <b>4227</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#539</span></div>
+        <img src="photos/photo_539@30-07-2026_22-23-11.jpg" alt="olive" loading="lazy">
+        <div class="cf"><span class="cd">olive</span>
+        <span class="pr"> · из подписи 20.000</span></div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Supabase</span></div>
+        <img src="https://yjfyvedavmrdifmepvkh.supabase.co/storage/v1/object/public/products/products/1783344487749-bdigf8.png" alt="Olive" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Olive</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 4227</span>
+        </div>
+      </div></div>
+    </div><div class="card" data-s="matched" data-q="olive no fruit olive no fruit">
+      <div class="chead">
+        <span class="pn">#540</span>
+        <span class="cap">olive no fruit</span>
+        <span class="badge b-ok">нашлось точно</span>
+        <span class="meta"><span>код <b>Olive no fruit</b></span>
+          <span>цена <b>18 000 сўм</b></span>
+          <span>SKU <b>5612</b></span></span>
+      </div>
+      <div class="pair"><div class="pane arch">
+        <div class="lbl"><span>Фото из архива</span><span>#540</span></div>
+        <img src="photos/photo_540@30-07-2026_22-23-11.jpg" alt="olive no fruit" loading="lazy">
+        <div class="cf"><span class="cd">olive no fruit</span>
+        <span class="pr"> · из подписи 18.000</span></div>
+      </div><div class="sep"></div><div class="pane">
+        <div class="lbl"><span>Сейчас в базе</span><span>Обработанная</span></div>
+        <img src="https://zafarovpolat.github.io/bito-cat/edited/5612-olive-no-fruit-1.png" alt="Olive no fruit" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Olive no fruit</span>
+          <span class="pr"> · 18 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 5612</span>
+        </div>
+      </div></div>
+    </div></div>
+        </section><section id="problem">
+          <div class="shead"><h2>Проблемные товары без нового фото</h2><span class="cnt">26 товаров</span></div>
+          <div class="snote">Товары в наличии, которым фото из архива не досталось и при этом с картинкой беда: либо её нет вообще, либо в базе стоит сырое фото со ссылкой на <b>cdn.bito.uz</b>, который отдаёт HTML вместо картинки. Ниже они показаны через рабочий хост <b>api.bito.uz</b>, поэтому здесь видны — но в самой базе ссылка нерабочая. У остальных товаров категории картинки в порядке, они тут не показаны.</div>
+          <div class="cards "><div class="card prob" data-s="problem" data-q="b-87 purple">
+      <div class="chead">
+        <span class="cap">B-87 purple</span>
+        <span class="badge b-bad">нет картинки вообще</span>
+        
+        <span class="meta"><span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12785</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Нет картинки</span></div>
+        <div class="none">в базе картинки нет</div>
+        <div class="cf"><span class="cd">B-87 purple</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12785</span>
+        </div>
+      </div></div>
+      
+    </div><div class="card prob" data-s="problem" data-q="z-4 rose (9)">
+      <div class="chead">
+        <span class="cap">Z-4 Rose (9)</span>
+        <span class="badge b-bad">нет картинки вообще</span>
+        <span class="badge b-info">не активен</span>
+        <span class="meta"><span>цена <b>25 000 сўм</b></span>
+          <span>SKU <b>4563</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Нет картинки</span></div>
+        <div class="none">в базе картинки нет</div>
+        <div class="cf"><span class="cd">Z-4 Rose (9)</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 4563</span>
+        </div>
+      </div></div>
+      
+    </div><div class="card prob" data-s="problem" data-q="b-29 blue">
+      <div class="chead">
+        <span class="cap">B-29 blue</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>8 000 сўм</b></span>
+          <span>SKU <b>12695</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/f2df074e61e3.jpg" alt="B-29 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-29 blue</span>
+          <span class="pr"> · 8 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12695</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-ce808cfca372151e8f04038924e7e355.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-81 blue">
+      <div class="chead">
+        <span class="cap">B-81 blue</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>20 000 сўм</b></span>
+          <span>SKU <b>12714</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/78890e2d9204.jpg" alt="B-81 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12714</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-72955978f7a8cb1ba408443f2972f3cf.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-81 light blue">
+      <div class="chead">
+        <span class="cap">B-81 light blue</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>20 000 сўм</b></span>
+          <span>SKU <b>12718</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/3f8a4203a263.jpg" alt="B-81 light blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 light blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12718</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-40d47286f9191de8ee6d71e2f3e9b61d.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-81 pink">
+      <div class="chead">
+        <span class="cap">B-81 pink</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>20 000 сўм</b></span>
+          <span>SKU <b>12716</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/d562cc58e7d4.jpg" alt="B-81 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 pink</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12716</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-08e20541e3e48ea3d026a30e66f74a74.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-81 violet">
+      <div class="chead">
+        <span class="cap">B-81 violet</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>20 000 сўм</b></span>
+          <span>SKU <b>12712</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/86cc2989ae3b.jpg" alt="B-81 violet" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 violet</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12712</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-ecc0d7127195865649b623d5f70a12bd.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-81 white">
+      <div class="chead">
+        <span class="cap">B-81 white</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>20 000 сўм</b></span>
+          <span>SKU <b>12708</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/8c2fc152e862.jpg" alt="B-81 white" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-81 white</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12708</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-f9a9c146c244046365317f1f3a70610f.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-82 dark">
+      <div class="chead">
+        <span class="cap">B-82 dark</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>28 000 сўм</b></span>
+          <span>SKU <b>12730</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/b938c3a642a1.jpg" alt="B-82 dark" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 dark</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12730</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-b5e66509c52a445e436b31644dde65b7.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-82 green">
+      <div class="chead">
+        <span class="cap">B-82 green</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>28 000 сўм</b></span>
+          <span>SKU <b>12726</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/d72d9c910374.jpg" alt="B-82 green" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 green</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12726</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-2e23213c80bbe02502ab3d8504b30a81.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-82 pink">
+      <div class="chead">
+        <span class="cap">B-82 pink</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>28 000 сўм</b></span>
+          <span>SKU <b>12720</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/426fb53c4faa.jpg" alt="B-82 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 pink</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12720</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-8c016def0da6247cacfa0053cc7376f2.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-82 purple">
+      <div class="chead">
+        <span class="cap">B-82 purple</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>28 000 сўм</b></span>
+          <span>SKU <b>12724</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/2047c6490a9d.jpg" alt="B-82 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 purple</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12724</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-8b4ba61698d2db4f109eb1d422aa4194.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-82 violet">
+      <div class="chead">
+        <span class="cap">B-82 violet</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>28 000 сўм</b></span>
+          <span>SKU <b>12722</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/321d98b8864c.jpg" alt="B-82 violet" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 violet</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12722</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-f5e43b918180cfbbb21992b7efd90f2a.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-82 yellow">
+      <div class="chead">
+        <span class="cap">B-82 yellow</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>28 000 сўм</b></span>
+          <span>SKU <b>12728</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/ac82fd67ae98.jpg" alt="B-82 yellow" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-82 yellow</span>
+          <span class="pr"> · 28 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12728</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-1406bf8643b4001a5acc30bee70ab769.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-83 blue">
+      <div class="chead">
+        <span class="cap">B-83 blue</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>25 000 сўм</b></span>
+          <span>SKU <b>12736</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/b5ffca25e243.jpg" alt="B-83 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 blue</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12736</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-42d737bbbf06349b881165577f0df5e0.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-83 champagne">
+      <div class="chead">
+        <span class="cap">B-83 champagne</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>25 000 сўм</b></span>
+          <span>SKU <b>12804</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/93db8cb2223d.jpg" alt="B-83 champagne" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 champagne</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12804</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-0bba924eac7ab03432003693c0c4442a.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-83 pink">
+      <div class="chead">
+        <span class="cap">B-83 pink</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>25 000 сўм</b></span>
+          <span>SKU <b>12738</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/4d2fc4896757.jpg" alt="B-83 pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 pink</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12738</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-2ac29c336437fe0b6d13c909b9479b9b.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-83 purple">
+      <div class="chead">
+        <span class="cap">B-83 purple</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>25 000 сўм</b></span>
+          <span>SKU <b>12734</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/b3792fd805db.jpg" alt="B-83 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 purple</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12734</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-7309fa92b5d40ed73578b974e77df79a.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-83 white">
+      <div class="chead">
+        <span class="cap">B-83 white</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>25 000 сўм</b></span>
+          <span>SKU <b>12732</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/88e42013b4b6.jpg" alt="B-83 white" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-83 white</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12732</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-1cb8e3017b0327ab4a77d6161ac475f4.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-84 blue">
+      <div class="chead">
+        <span class="cap">B-84 blue</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>20 000 сўм</b></span>
+          <span>SKU <b>12806</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/9568e1088ac5.jpg" alt="B-84 blue" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-84 blue</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12806</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-0f581485c96807d2e1c0281a669ec23d.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="b-84 purple">
+      <div class="chead">
+        <span class="cap">B-84 purple</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>20 000 сўм</b></span>
+          <span>SKU <b>12808</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/db72c512ec07.jpg" alt="B-84 purple" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">B-84 purple</span>
+          <span class="pr"> · 20 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12808</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-df87c0fd5f53af69bdad3cc175019ca2.jpeg</div>
+    </div><div class="card prob" data-s="problem" data-q="w-25-champagne">
+      <div class="chead">
+        <span class="cap">W-25-champagne</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>25 000 сўм</b></span>
+          <span>SKU <b>6739</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/987d10285af8.jpg" alt="W-25-champagne" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">W-25-champagne</span>
+          <span class="pr"> · 25 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 6739</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-55c6ceede5c5181478caf8cac3e0a2b9.png</div>
+    </div><div class="card prob" data-s="problem" data-q="z-20 dark pink">
+      <div class="chead">
+        <span class="cap">Z-20 dark pink</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12075</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/54137f63a556.jpg" alt="Z-20 dark pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Z-20 dark pink</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12075</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-62ded3e4d3c7c98d6d181780eda9180f.png</div>
+    </div><div class="card prob" data-s="problem" data-q="z-20 green">
+      <div class="chead">
+        <span class="cap">Z-20 green</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12073</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/57a29a98b038.jpg" alt="Z-20 green" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Z-20 green</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12073</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-cf8d6ae4bae697d76cc8c8bc79c33e26.png</div>
+    </div><div class="card prob" data-s="problem" data-q="z-20 red">
+      <div class="chead">
+        <span class="cap">Z-20 red</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12079</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/ede265fb67d9.jpg" alt="Z-20 red" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Z-20 red</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12079</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-0f0823ce6a8cd7e109eb4cbd5037a22f.png</div>
+    </div><div class="card prob" data-s="problem" data-q="z-20 rose pink">
+      <div class="chead">
+        <span class="cap">Z-20 rose pink</span>
+        <span class="badge b-warn">сырое фото, ссылка в базе битая</span>
+        
+        <span class="meta"><span>цена <b>14 000 сўм</b></span>
+          <span>SKU <b>12077</b></span></span>
+      </div>
+      <div class="pair"><div class="pane">
+        <div class="lbl"><span>Что сейчас в базе</span><span>Сырая с bito</span></div>
+        <img src="ref/adbbc53c8015.jpg" alt="Z-20 rose pink" loading="lazy" onerror="this.outerHTML='<div class=&quot;none&quot;>картинка не загрузилась</div>'">
+        <div class="cf"><span class="cd">Z-20 rose pink</span>
+          <span class="pr"> · 14 000 сўм</span>
+          <span style="color:#6b7a70"> · SKU 12077</span>
+        </div>
+      </div></div>
+      <div class="urlnote">в базе: https://cdn.bito.uz/uploads/file-021023b31baf37d36426f379b216d83b.png</div>
+    </div></div>
+        </section>
+</main>
+
+<footer>
+  Сгенерировано автоматически из <code>messages.html</code> и выгрузки Supabase.
+  Машинный разбор — в <code>manifest.json</code> рядом.
+  Фото лежат в <code>photos/</code> как есть из архива, без обработки.
+</footer>
+
+<script>
+  const q = document.getElementById('q');
+  const btns = [...document.querySelectorAll('.tools button')];
+  let filter = 'all';
+  function apply(){
+    const term = q.value.trim().toLowerCase();
+    document.querySelectorAll('.card').forEach(c => {
+      const okF = filter === 'all' || c.dataset.s === filter;
+      const okQ = !term || (c.dataset.q || '').includes(term);
+      c.classList.toggle('hidden', !(okF && okQ));
+    });
+    document.querySelectorAll('section').forEach(s => {
+      const cards = s.querySelectorAll('.card');
+      if(!cards.length) return;
+      const vis = [...cards].some(c => !c.classList.contains('hidden'));
+      s.classList.toggle('hidden', !vis);
+    });
+  }
+  q.addEventListener('input', apply);
+  btns.forEach(b => b.addEventListener('click', () => {
+    filter = b.dataset.f;
+    btns.forEach(x => x.classList.toggle('on', x === b));
+    apply();
+  }));
+</script>
+</body>
+</html>
