@@ -20,6 +20,26 @@
     "img": "img/b-10-white.jpg"
   },
   {
+    "code": "B-19-blue",
+    "price": 20000,
+    "img": "img/b-19-blue.jpg"
+  },
+  {
+    "code": "B-19-pink",
+    "price": 20000,
+    "img": "img/b-19-pink.jpg"
+  },
+  {
+    "code": "B-19-red",
+    "price": 20000,
+    "img": "img/b-19-red.jpg"
+  },
+  {
+    "code": "B-19-white",
+    "price": 20000,
+    "img": "img/b-19-white.jpg"
+  },
+  {
     "code": "B-2 green",
     "price": 12000,
     "img": "img/b-2-green.jpg"
@@ -45,9 +65,144 @@
     "img": "img/b-2-pink.jpg"
   },
   {
+    "code": "B-2-rose",
+    "price": 12000,
+    "img": "img/b-2-rose.jpg"
+  },
+  {
     "code": "B-2-white",
     "price": 12000,
     "img": "img/b-2-white.jpg"
+  },
+  {
+    "code": "B-23 Rosepink",
+    "price": 13000,
+    "img": "img/b-23-rosepink.jpg"
+  },
+  {
+    "code": "B-23-blue",
+    "price": 13000,
+    "img": "img/b-23-blue.jpg"
+  },
+  {
+    "code": "B-23-white",
+    "price": 13000,
+    "img": "img/b-23-white.jpg"
+  },
+  {
+    "code": "B-25-blue",
+    "price": 15000,
+    "img": "img/b-25-blue.jpg"
+  },
+  {
+    "code": "B-25-red",
+    "price": 15000,
+    "img": "img/b-25-red.jpg"
+  },
+  {
+    "code": "B-25-white",
+    "price": 15000,
+    "img": "img/b-25-white.jpg"
+  },
+  {
+    "code": "B-26 Whitepink",
+    "price": 20000,
+    "img": "img/b-26-whitepink.jpg"
+  },
+  {
+    "code": "B-26-blue",
+    "price": 20000,
+    "img": "img/b-26-blue.jpg"
+  },
+  {
+    "code": "B-26-orange",
+    "price": 20000,
+    "img": "img/b-26-orange.jpg"
+  },
+  {
+    "code": "B-26-red",
+    "price": 20000,
+    "img": "img/b-26-red.jpg"
+  },
+  {
+    "code": "B-28-light-red",
+    "price": 55000,
+    "img": "img/b-28-light-red.jpg"
+  },
+  {
+    "code": "B-28-pink",
+    "price": 55000,
+    "img": "img/b-28-pink.jpg"
+  },
+  {
+    "code": "B-28-white",
+    "price": 55000,
+    "img": "img/b-28-white.jpg"
+  },
+  {
+    "code": "B-28-yellow",
+    "price": 55000,
+    "img": "img/b-28-yellow.jpg"
+  },
+  {
+    "code": "B-29 Darkpink",
+    "price": 8000,
+    "img": "img/b-29-darkpink.jpg"
+  },
+  {
+    "code": "B-29-green",
+    "price": 8000,
+    "img": "img/b-29-green.jpg"
+  },
+  {
+    "code": "B-29-orange",
+    "price": 8000,
+    "img": "img/b-29-orange.jpg"
+  },
+  {
+    "code": "B-29-pink",
+    "price": 8000,
+    "img": "img/b-29-pink.jpg"
+  },
+  {
+    "code": "B-34-blue",
+    "price": 35000,
+    "img": "img/b-34-blue.jpg"
+  },
+  {
+    "code": "B-34-pink",
+    "price": 35000,
+    "img": "img/b-34-pink.jpg"
+  },
+  {
+    "code": "B-34-red",
+    "price": 35000,
+    "img": "img/b-34-red.jpg"
+  },
+  {
+    "code": "B-34-white",
+    "price": 35000,
+    "img": "img/b-34-white.jpg"
+  },
+  {
+    "code": "B-35-pink",
+    "price": 55000,
+    "img": "img/b-35-pink.jpg"
+  },
+  {
+    "code": "B-35-red",
+    "price": 55000,
+    "img": "img/b-35-red.jpg"
+  },
+  {
+    "code": "B-35-white",
+    "price": 55000,
+    "img": "img/b-35-white.jpg"
+  },
+  {
+    "code": "B-35-yellow",
+    "price": 55000,
+    "img": "img/b-35-yellow.jpg"
   },
   {
     "code": "B-80 blue",

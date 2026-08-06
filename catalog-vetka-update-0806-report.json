@@ -1,0 +1,408 @@
+{
+  "price_changes": [
+    {
+      "code": "B-28-light-red",
+      "old": 40000,
+      "new": 55000,
+      "sku": "6690"
+    },
+    {
+      "code": "B-28-pink",
+      "old": 40000,
+      "new": 55000,
+      "sku": "6692"
+    },
+    {
+      "code": "B-28-white",
+      "old": 40000,
+      "new": 55000,
+      "sku": "6688"
+    },
+    {
+      "code": "B-28-yellow",
+      "old": 40000,
+      "new": 55000,
+      "sku": "6518"
+    },
+    {
+      "code": "B-34-blue",
+      "old": 25000,
+      "new": 35000,
+      "sku": "8499"
+    },
+    {
+      "code": "B-34-pink",
+      "old": 25000,
+      "new": 35000,
+      "sku": "8497"
+    },
+    {
+      "code": "B-34-red",
+      "old": 25000,
+      "new": 35000,
+      "sku": "6526"
+    },
+    {
+      "code": "B-34-white",
+      "old": 25000,
+      "new": 35000,
+      "sku": "8501"
+    },
+    {
+      "code": "C-5-champagne",
+      "old": 30000,
+      "new": 43000,
+      "sku": "8301"
+    },
+    {
+      "code": "C-5-dark-pink",
+      "old": 30000,
+      "new": 43000,
+      "sku": "8295"
+    },
+    {
+      "code": "C-5-pink",
+      "old": 30000,
+      "new": 43000,
+      "sku": "8297"
+    },
+    {
+      "code": "C-5-red",
+      "old": 30000,
+      "new": 43000,
+      "sku": "8299"
+    },
+    {
+      "code": "C-5-white",
+      "old": 30000,
+      "new": 43000,
+      "sku": "8248"
+    },
+    {
+      "code": "C-6-dark-pink",
+      "old": 30000,
+      "new": 43000,
+      "sku": "8307"
+    },
+    {
+      "code": "C-6-light-pink",
+      "old": 30000,
+      "new": 43000,
+      "sku": "8311"
+    },
+    {
+      "code": "C-6-orange",
+      "old": 30000,
+      "new": 43000,
+      "sku": "8408"
+    },
+    {
+      "code": "C-6-pink",
+      "old": 30000,
+      "new": 43000,
+      "sku": "8305"
+    },
+    {
+      "code": "C-6-white",
+      "old": 30000,
+      "new": 43000,
+      "sku": "8250"
+    },
+    {
+      "code": "C-6-yellow",
+      "old": 30000,
+      "new": 43000,
+      "sku": "8309"
+    },
+    {
+      "code": "C-7-blue",
+      "old": 28000,
+      "new": 38000,
+      "sku": "8317"
+    },
+    {
+      "code": "C-7-dark-pink",
+      "old": 28000,
+      "new": 38000,
+      "sku": "8321"
+    },
+    {
+      "code": "C-7-pink",
+      "old": 28000,
+      "new": 38000,
+      "sku": "8315"
+    },
+    {
+      "code": "C-7-red",
+      "old": 28000,
+      "new": 38000,
+      "sku": "8252"
+    },
+    {
+      "code": "C-7-white",
+      "old": 28000,
+      "new": 38000,
+      "sku": "8319"
+    }
+  ],
+  "new_stock_mapping": [
+    {
+      "photo_number": 545,
+      "source_file": "photo_545@03-08-2026_16-38-01.jpg",
+      "product_code": "B-23-blue",
+      "price": 13000,
+      "catalog_image": "img/b-23-blue.jpg",
+      "mapping_note": "caption generic; blue inferred visually"
+    },
+    {
+      "photo_number": 546,
+      "source_file": "photo_546@03-08-2026_16-38-01.jpg",
+      "product_code": "B-23-white",
+      "price": 13000,
+      "catalog_image": "img/b-23-white.jpg",
+      "mapping_note": "caption generic; white inferred visually"
+    },
+    {
+      "photo_number": 547,
+      "source_file": "photo_547@03-08-2026_16-38-01.jpg",
+      "product_code": "B-23 Rosepink",
+      "price": 13000,
+      "catalog_image": "img/b-23-rosepink.jpg",
+      "mapping_note": "caption generic; rosepink inferred visually"
+    },
+    {
+      "photo_number": 548,
+      "source_file": "photo_548@03-08-2026_16-38-01.jpg",
+      "product_code": "B-25-white",
+      "price": 15000,
+      "catalog_image": "img/b-25-white.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 549,
+      "source_file": "photo_549@03-08-2026_16-38-01.jpg",
+      "product_code": "B-25-red",
+      "price": 15000,
+      "catalog_image": "img/b-25-red.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 550,
+      "source_file": "photo_550@03-08-2026_16-38-01.jpg",
+      "product_code": "B-25-blue",
+      "price": 15000,
+      "catalog_image": "img/b-25-blue.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 551,
+      "source_file": "photo_551@03-08-2026_16-38-01.jpg",
+      "product_code": "B-26-blue",
+      "price": 20000,
+      "catalog_image": "img/b-26-blue.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 552,
+      "source_file": "photo_552@03-08-2026_16-38-01.jpg",
+      "product_code": "B-26-red",
+      "price": 20000,
+      "catalog_image": "img/b-26-red.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 553,
+      "source_file": "photo_553@03-08-2026_16-38-01.jpg",
+      "product_code": "B-26 Whitepink",
+      "price": 20000,
+      "catalog_image": "img/b-26-whitepink.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 554,
+      "source_file": "photo_554@03-08-2026_16-38-01.jpg",
+      "product_code": "B-26-orange",
+      "price": 20000,
+      "catalog_image": "img/b-26-orange.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 555,
+      "source_file": "photo_555@03-08-2026_16-38-01.jpg",
+      "product_code": "B-29-green",
+      "price": 8000,
+      "catalog_image": "img/b-29-green.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 556,
+      "source_file": "photo_556@03-08-2026_16-38-01.jpg",
+      "product_code": "B-29 Darkpink",
+      "price": 8000,
+      "catalog_image": "img/b-29-darkpink.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 557,
+      "source_file": "photo_557@03-08-2026_16-38-01.jpg",
+      "product_code": "B-29-pink",
+      "price": 8000,
+      "catalog_image": "img/b-29-pink.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 558,
+      "source_file": "photo_558@03-08-2026_16-38-01.jpg",
+      "product_code": "B-29-orange",
+      "price": 8000,
+      "catalog_image": "img/b-29-orange.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 559,
+      "source_file": "photo_559@03-08-2026_16-38-01.jpg",
+      "product_code": "B-34-red",
+      "price": 35000,
+      "catalog_image": "img/b-34-red.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 560,
+      "source_file": "photo_560@03-08-2026_16-38-01.jpg",
+      "product_code": "B-34-pink",
+      "price": 35000,
+      "catalog_image": "img/b-34-pink.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 561,
+      "source_file": "photo_561@03-08-2026_16-38-01.jpg",
+      "product_code": "B-34-blue",
+      "price": 35000,
+      "catalog_image": "img/b-34-blue.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 562,
+      "source_file": "photo_562@03-08-2026_16-38-01.jpg",
+      "product_code": "B-34-white",
+      "price": 35000,
+      "catalog_image": "img/b-34-white.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 563,
+      "source_file": "photo_563@03-08-2026_16-38-01.jpg",
+      "product_code": "B-28-light-red",
+      "price": 55000,
+      "catalog_image": "img/b-28-light-red.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 564,
+      "source_file": "photo_564@03-08-2026_16-38-01.jpg",
+      "product_code": "B-28-white",
+      "price": 55000,
+      "catalog_image": "img/b-28-white.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 565,
+      "source_file": "photo_565@03-08-2026_16-38-03.jpg",
+      "product_code": "B-28-yellow",
+      "price": 55000,
+      "catalog_image": "img/b-28-yellow.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 570,
+      "source_file": "photo_570@03-08-2026_16-44-46.jpg",
+      "product_code": "B-28-pink",
+      "price": 55000,
+      "catalog_image": "img/b-28-pink.jpg",
+      "mapping_note": "caption text appeared separately; pink inferred visually"
+    },
+    {
+      "photo_number": 566,
+      "source_file": "photo_566@03-08-2026_16-38-03.jpg",
+      "product_code": "B-35-yellow",
+      "price": 55000,
+      "catalog_image": "img/b-35-yellow.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 567,
+      "source_file": "photo_567@03-08-2026_16-38-03.jpg",
+      "product_code": "B-35-red",
+      "price": 55000,
+      "catalog_image": "img/b-35-red.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 568,
+      "source_file": "photo_568@03-08-2026_16-38-03.jpg",
+      "product_code": "B-35-pink",
+      "price": 55000,
+      "catalog_image": "img/b-35-pink.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 569,
+      "source_file": "photo_569@03-08-2026_16-38-03.jpg",
+      "product_code": "B-35-white",
+      "price": 55000,
+      "catalog_image": "img/b-35-white.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 571,
+      "source_file": "photo_571@03-08-2026_18-02-42.jpg",
+      "product_code": "B-19-white",
+      "price": 20000,
+      "catalog_image": "img/b-19-white.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 572,
+      "source_file": "photo_572@03-08-2026_18-02-42.jpg",
+      "product_code": "B-19-pink",
+      "price": 20000,
+      "catalog_image": "img/b-19-pink.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 573,
+      "source_file": "photo_573@03-08-2026_18-02-42.jpg",
+      "product_code": "B-19-red",
+      "price": 20000,
+      "catalog_image": "img/b-19-red.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 574,
+      "source_file": "photo_574@03-08-2026_18-02-42.jpg",
+      "product_code": "B-19-blue",
+      "price": 20000,
+      "catalog_image": "img/b-19-blue.jpg",
+      "mapping_note": "exact"
+    },
+    {
+      "photo_number": 575,
+      "source_file": "photo_575@03-08-2026_18-02-42.jpg",
+      "product_code": "B-2-rose",
+      "price": 12000,
+      "catalog_image": "img/b-2-rose.jpg",
+      "mapping_note": "exact"
+    }
+  ],
+  "full_products": 248,
+  "archive_products": 92,
+  "manual_exclusions": [
+    "Limon-01",
+    "limon_china"
+  ],
+  "skip_no_image": [
+    "B-87 purple",
+    "Z-4 Rose (9)"
+  ]
+}

@@ -1,0 +1,32 @@
+﻿photo_number,source_file,product_code,price,catalog_image,mapping_note
+545,photo_545@03-08-2026_16-38-01.jpg,B-23-blue,13000,img/b-23-blue.jpg,caption generic; blue inferred visually
+546,photo_546@03-08-2026_16-38-01.jpg,B-23-white,13000,img/b-23-white.jpg,caption generic; white inferred visually
+547,photo_547@03-08-2026_16-38-01.jpg,B-23 Rosepink,13000,img/b-23-rosepink.jpg,caption generic; rosepink inferred visually
+548,photo_548@03-08-2026_16-38-01.jpg,B-25-white,15000,img/b-25-white.jpg,exact
+549,photo_549@03-08-2026_16-38-01.jpg,B-25-red,15000,img/b-25-red.jpg,exact
+550,photo_550@03-08-2026_16-38-01.jpg,B-25-blue,15000,img/b-25-blue.jpg,exact
+551,photo_551@03-08-2026_16-38-01.jpg,B-26-blue,20000,img/b-26-blue.jpg,exact
+552,photo_552@03-08-2026_16-38-01.jpg,B-26-red,20000,img/b-26-red.jpg,exact
+553,photo_553@03-08-2026_16-38-01.jpg,B-26 Whitepink,20000,img/b-26-whitepink.jpg,exact
+554,photo_554@03-08-2026_16-38-01.jpg,B-26-orange,20000,img/b-26-orange.jpg,exact
+555,photo_555@03-08-2026_16-38-01.jpg,B-29-green,8000,img/b-29-green.jpg,exact
+556,photo_556@03-08-2026_16-38-01.jpg,B-29 Darkpink,8000,img/b-29-darkpink.jpg,exact
+557,photo_557@03-08-2026_16-38-01.jpg,B-29-pink,8000,img/b-29-pink.jpg,exact
+558,photo_558@03-08-2026_16-38-01.jpg,B-29-orange,8000,img/b-29-orange.jpg,exact
+559,photo_559@03-08-2026_16-38-01.jpg,B-34-red,35000,img/b-34-red.jpg,exact
+560,photo_560@03-08-2026_16-38-01.jpg,B-34-pink,35000,img/b-34-pink.jpg,exact
+561,photo_561@03-08-2026_16-38-01.jpg,B-34-blue,35000,img/b-34-blue.jpg,exact
+562,photo_562@03-08-2026_16-38-01.jpg,B-34-white,35000,img/b-34-white.jpg,exact
+563,photo_563@03-08-2026_16-38-01.jpg,B-28-light-red,55000,img/b-28-light-red.jpg,exact
+564,photo_564@03-08-2026_16-38-01.jpg,B-28-white,55000,img/b-28-white.jpg,exact
+565,photo_565@03-08-2026_16-38-03.jpg,B-28-yellow,55000,img/b-28-yellow.jpg,exact
+570,photo_570@03-08-2026_16-44-46.jpg,B-28-pink,55000,img/b-28-pink.jpg,caption text appeared separately; pink inferred visually
+566,photo_566@03-08-2026_16-38-03.jpg,B-35-yellow,55000,img/b-35-yellow.jpg,exact
+567,photo_567@03-08-2026_16-38-03.jpg,B-35-red,55000,img/b-35-red.jpg,exact
+568,photo_568@03-08-2026_16-38-03.jpg,B-35-pink,55000,img/b-35-pink.jpg,exact
+569,photo_569@03-08-2026_16-38-03.jpg,B-35-white,55000,img/b-35-white.jpg,exact
+571,photo_571@03-08-2026_18-02-42.jpg,B-19-white,20000,img/b-19-white.jpg,exact
+572,photo_572@03-08-2026_18-02-42.jpg,B-19-pink,20000,img/b-19-pink.jpg,exact
+573,photo_573@03-08-2026_18-02-42.jpg,B-19-red,20000,img/b-19-red.jpg,exact
+574,photo_574@03-08-2026_18-02-42.jpg,B-19-blue,20000,img/b-19-blue.jpg,exact
+575,photo_575@03-08-2026_18-02-42.jpg,B-2-rose,12000,img/b-2-rose.jpg,exact

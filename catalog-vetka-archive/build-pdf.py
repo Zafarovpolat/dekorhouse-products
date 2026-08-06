@@ -26,7 +26,7 @@ from playwright.async_api import async_playwright
 from pypdf import PdfWriter, PdfReader
 
 OUT_DEFAULT = "catalog-vetka-archive.pdf"
-PORT = 8123
+PORT = 8124
 CHUNK = 8   # страниц за один запуск браузера (~200 МБ ОЗУ на chunk)
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(HERE)
