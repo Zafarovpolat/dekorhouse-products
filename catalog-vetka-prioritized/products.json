@@ -1,0 +1,1237 @@
+[
+  {
+    "code": "Anor",
+    "price": 30000,
+    "img": "img/anor.jpg"
+  },
+  {
+    "code": "B-1-blue",
+    "price": 15000,
+    "img": "img/b-1-blue.jpg"
+  },
+  {
+    "code": "B-1-pink",
+    "price": 15000,
+    "img": "img/b-1-pink.jpg"
+  },
+  {
+    "code": "B-1-white",
+    "price": 15000,
+    "img": "img/b-1-white.jpg"
+  },
+  {
+    "code": "B-10-blue",
+    "price": 15000,
+    "img": "img/b-10-blue.jpg"
+  },
+  {
+    "code": "B-10-pink",
+    "price": 15000,
+    "img": "img/b-10-pink.jpg"
+  },
+  {
+    "code": "B-10-white",
+    "price": 15000,
+    "img": "img/b-10-white.jpg"
+  },
+  {
+    "code": "B-11-blue",
+    "price": 25000,
+    "img": "img/b-11-blue.jpg"
+  },
+  {
+    "code": "B-11-red",
+    "price": 25000,
+    "img": "img/b-11-red.jpg"
+  },
+  {
+    "code": "B-12 mix",
+    "price": 16000,
+    "img": "img/b-12-mix.jpg"
+  },
+  {
+    "code": "B-13-blue",
+    "price": 25000,
+    "img": "img/b-13-blue.jpg"
+  },
+  {
+    "code": "B-13-orange",
+    "price": 25000,
+    "img": "img/b-13-orange.jpg"
+  },
+  {
+    "code": "B-13-pink",
+    "price": 25000,
+    "img": "img/b-13-pink.jpg"
+  },
+  {
+    "code": "B-13-white",
+    "price": 25000,
+    "img": "img/b-13-white.jpg"
+  },
+  {
+    "code": "B-14-blue",
+    "price": 16000,
+    "img": "img/b-14-blue.jpg"
+  },
+  {
+    "code": "B-14-pink",
+    "price": 16000,
+    "img": "img/b-14-pink.jpg"
+  },
+  {
+    "code": "B-14-rose",
+    "price": 16000,
+    "img": "img/b-14-rose.jpg"
+  },
+  {
+    "code": "B-15-pink",
+    "price": 15000,
+    "img": "img/b-15-pink.jpg"
+  },
+  {
+    "code": "B-15-red",
+    "price": 15000,
+    "img": "img/b-15-red.jpg"
+  },
+  {
+    "code": "B-15-violet",
+    "price": 15000,
+    "img": "img/b-15-violet.jpg"
+  },
+  {
+    "code": "B-16 Darkpink",
+    "price": 12000,
+    "img": "img/b-16-darkpink.jpg"
+  },
+  {
+    "code": "B-16-blue",
+    "price": 12000,
+    "img": "img/b-16-blue.jpg"
+  },
+  {
+    "code": "B-19-blue",
+    "price": 20000,
+    "img": "img/b-19-blue.jpg"
+  },
+  {
+    "code": "B-19-pink",
+    "price": 20000,
+    "img": "img/b-19-pink.jpg"
+  },
+  {
+    "code": "B-19-red",
+    "price": 20000,
+    "img": "img/b-19-red.jpg"
+  },
+  {
+    "code": "B-19-white",
+    "price": 20000,
+    "img": "img/b-19-white.jpg"
+  },
+  {
+    "code": "B-2 green",
+    "price": 12000,
+    "img": "img/b-2-green.jpg"
+  },
+  {
+    "code": "B-2 orange",
+    "price": 12000,
+    "img": "img/b-2-orange.jpg"
+  },
+  {
+    "code": "B-2 rosepink",
+    "price": 12000,
+    "img": "img/b-2-rosepink.jpg"
+  },
+  {
+    "code": "B-2-blue",
+    "price": 12000,
+    "img": "img/b-2-blue.jpg"
+  },
+  {
+    "code": "B-2-pink",
+    "price": 12000,
+    "img": "img/b-2-pink.jpg"
+  },
+  {
+    "code": "B-2-rose",
+    "price": 12000,
+    "img": "img/b-2-rose.jpg"
+  },
+  {
+    "code": "B-2-white",
+    "price": 12000,
+    "img": "img/b-2-white.jpg"
+  },
+  {
+    "code": "B-20-blue",
+    "price": 15000,
+    "img": "img/b-20-blue.jpg"
+  },
+  {
+    "code": "B-20-pink",
+    "price": 15000,
+    "img": "img/b-20-pink.jpg"
+  },
+  {
+    "code": "B-21 mix",
+    "price": 24000,
+    "img": "img/b-21-mix.jpg"
+  },
+  {
+    "code": "B-23 Rosepink",
+    "price": 13000,
+    "img": "img/b-23-rosepink.jpg"
+  },
+  {
+    "code": "B-23-blue",
+    "price": 13000,
+    "img": "img/b-23-blue.jpg"
+  },
+  {
+    "code": "B-23-green",
+    "price": 13000,
+    "img": "img/b-23-green.jpg"
+  },
+  {
+    "code": "B-23-white",
+    "price": 13000,
+    "img": "img/b-23-white.jpg"
+  },
+  {
+    "code": "B-24",
+    "price": 25000,
+    "img": "img/b-24.jpg"
+  },
+  {
+    "code": "B-24 Rosepink",
+    "price": 25000,
+    "img": "img/b-24-rosepink.jpg"
+  },
+  {
+    "code": "B-25-blue",
+    "price": 15000,
+    "img": "img/b-25-blue.jpg"
+  },
+  {
+    "code": "B-25-red",
+    "price": 15000,
+    "img": "img/b-25-red.jpg"
+  },
+  {
+    "code": "B-25-violet",
+    "price": 15000,
+    "img": "img/b-25-violet.jpg"
+  },
+  {
+    "code": "B-25-white",
+    "price": 15000,
+    "img": "img/b-25-white.jpg"
+  },
+  {
+    "code": "B-26 Whitepink",
+    "price": 20000,
+    "img": "img/b-26-whitepink.jpg"
+  },
+  {
+    "code": "B-26-blue",
+    "price": 20000,
+    "img": "img/b-26-blue.jpg"
+  },
+  {
+    "code": "B-26-orange",
+    "price": 20000,
+    "img": "img/b-26-orange.jpg"
+  },
+  {
+    "code": "B-26-red",
+    "price": 20000,
+    "img": "img/b-26-red.jpg"
+  },
+  {
+    "code": "B-27 Rosepink",
+    "price": 25000,
+    "img": "img/b-27-rosepink.jpg"
+  },
+  {
+    "code": "B-27-pink",
+    "price": 25000,
+    "img": "img/b-27-pink.jpg"
+  },
+  {
+    "code": "B-27-white",
+    "price": 25000,
+    "img": "img/b-27-white.jpg"
+  },
+  {
+    "code": "B-28-light-red",
+    "price": 55000,
+    "img": "img/b-28-light-red.jpg"
+  },
+  {
+    "code": "B-28-pink",
+    "price": 55000,
+    "img": "img/b-28-pink.jpg"
+  },
+  {
+    "code": "B-28-white",
+    "price": 55000,
+    "img": "img/b-28-white.jpg"
+  },
+  {
+    "code": "B-28-yellow",
+    "price": 55000,
+    "img": "img/b-28-yellow.jpg"
+  },
+  {
+    "code": "B-29 blue",
+    "price": 8000,
+    "img": "img/b-29-blue.jpg"
+  },
+  {
+    "code": "B-29 Darkpink",
+    "price": 8000,
+    "img": "img/b-29-darkpink.jpg"
+  },
+  {
+    "code": "B-29-green",
+    "price": 8000,
+    "img": "img/b-29-green.jpg"
+  },
+  {
+    "code": "B-29-orange",
+    "price": 8000,
+    "img": "img/b-29-orange.jpg"
+  },
+  {
+    "code": "B-29-pink",
+    "price": 8000,
+    "img": "img/b-29-pink.jpg"
+  },
+  {
+    "code": "B-3-pink",
+    "price": 40000,
+    "img": "img/b-3-pink.jpg"
+  },
+  {
+    "code": "B-32 Rosepink",
+    "price": 40000,
+    "img": "img/b-32-rosepink.jpg"
+  },
+  {
+    "code": "B-32-pink",
+    "price": 40000,
+    "img": "img/b-32-pink.jpg"
+  },
+  {
+    "code": "B-33",
+    "price": 20000,
+    "img": "img/b-33.jpg"
+  },
+  {
+    "code": "B-34-blue",
+    "price": 35000,
+    "img": "img/b-34-blue.jpg"
+  },
+  {
+    "code": "B-34-pink",
+    "price": 35000,
+    "img": "img/b-34-pink.jpg"
+  },
+  {
+    "code": "B-34-red",
+    "price": 35000,
+    "img": "img/b-34-red.jpg"
+  },
+  {
+    "code": "B-34-white",
+    "price": 35000,
+    "img": "img/b-34-white.jpg"
+  },
+  {
+    "code": "B-35-orange",
+    "price": 55000,
+    "img": "img/b-35-orange.jpg"
+  },
+  {
+    "code": "B-35-pink",
+    "price": 55000,
+    "img": "img/b-35-pink.jpg"
+  },
+  {
+    "code": "B-35-red",
+    "price": 55000,
+    "img": "img/b-35-red.jpg"
+  },
+  {
+    "code": "B-35-white",
+    "price": 55000,
+    "img": "img/b-35-white.jpg"
+  },
+  {
+    "code": "B-35-yellow",
+    "price": 55000,
+    "img": "img/b-35-yellow.jpg"
+  },
+  {
+    "code": "B-36",
+    "price": 25000,
+    "img": "img/b-36.jpg"
+  },
+  {
+    "code": "B-4-dark-pink",
+    "price": 75000,
+    "img": "img/b-4-dark-pink.jpg"
+  },
+  {
+    "code": "B-4-pink",
+    "price": 75000,
+    "img": "img/b-4-pink.jpg"
+  },
+  {
+    "code": "B-4-rose-pink",
+    "price": 75000,
+    "img": "img/b-4-rose-pink.jpg"
+  },
+  {
+    "code": "B-4-white",
+    "price": 75000,
+    "img": "img/b-4-white.jpg"
+  },
+  {
+    "code": "B-6-pink",
+    "price": 35000,
+    "img": "img/b-6-pink.jpg"
+  },
+  {
+    "code": "B-6-rose",
+    "price": 35000,
+    "img": "img/b-6-rose.jpg"
+  },
+  {
+    "code": "B-6-white",
+    "price": 35000,
+    "img": "img/b-6-white.jpg"
+  },
+  {
+    "code": "B-8-blue",
+    "price": 18000,
+    "img": "img/b-8-blue.jpg"
+  },
+  {
+    "code": "B-8-pink",
+    "price": 18000,
+    "img": "img/b-8-pink.jpg"
+  },
+  {
+    "code": "B-8-red",
+    "price": 18000,
+    "img": "img/b-8-red.jpg"
+  },
+  {
+    "code": "B-8-rose-pink",
+    "price": 18000,
+    "img": "img/b-8-rose-pink.jpg"
+  },
+  {
+    "code": "B-80 blue",
+    "price": 28000,
+    "img": "img/b-80-blue.jpg"
+  },
+  {
+    "code": "B-80 pink",
+    "price": 28000,
+    "img": "img/b-80-pink.jpg"
+  },
+  {
+    "code": "B-80 purple",
+    "price": 28000,
+    "img": "img/b-80-purple.jpg"
+  },
+  {
+    "code": "B-80 violet",
+    "price": 28000,
+    "img": "img/b-80-violet.jpg"
+  },
+  {
+    "code": "B-80 white",
+    "price": 28000,
+    "img": "img/b-80-white.jpg"
+  },
+  {
+    "code": "B-81 blue",
+    "price": 20000,
+    "img": "img/b-81-blue.jpg"
+  },
+  {
+    "code": "B-81 light blue",
+    "price": 20000,
+    "img": "img/b-81-light-blue.jpg"
+  },
+  {
+    "code": "B-81 pink",
+    "price": 20000,
+    "img": "img/b-81-pink.jpg"
+  },
+  {
+    "code": "B-81 violet",
+    "price": 20000,
+    "img": "img/b-81-violet.jpg"
+  },
+  {
+    "code": "B-81 white",
+    "price": 20000,
+    "img": "img/b-81-white.jpg"
+  },
+  {
+    "code": "B-82 dark",
+    "price": 28000,
+    "img": "img/b-82-dark.jpg"
+  },
+  {
+    "code": "B-82 green",
+    "price": 28000,
+    "img": "img/b-82-green.jpg"
+  },
+  {
+    "code": "B-82 pink",
+    "price": 28000,
+    "img": "img/b-82-pink.jpg"
+  },
+  {
+    "code": "B-82 purple",
+    "price": 28000,
+    "img": "img/b-82-purple.jpg"
+  },
+  {
+    "code": "B-82 violet",
+    "price": 28000,
+    "img": "img/b-82-violet.jpg"
+  },
+  {
+    "code": "B-82 yellow",
+    "price": 28000,
+    "img": "img/b-82-yellow.jpg"
+  },
+  {
+    "code": "B-83 blue",
+    "price": 25000,
+    "img": "img/b-83-blue.jpg"
+  },
+  {
+    "code": "B-83 champagne",
+    "price": 25000,
+    "img": "img/b-83-champagne.jpg"
+  },
+  {
+    "code": "B-83 pink",
+    "price": 25000,
+    "img": "img/b-83-pink.jpg"
+  },
+  {
+    "code": "B-83 purple",
+    "price": 25000,
+    "img": "img/b-83-purple.jpg"
+  },
+  {
+    "code": "B-83 white",
+    "price": 25000,
+    "img": "img/b-83-white.jpg"
+  },
+  {
+    "code": "B-84 blue",
+    "price": 20000,
+    "img": "img/b-84-blue.jpg"
+  },
+  {
+    "code": "B-84 purple",
+    "price": 20000,
+    "img": "img/b-84-purple.jpg"
+  },
+  {
+    "code": "B-85 red",
+    "price": 14000,
+    "img": "img/b-85-red.jpg"
+  },
+  {
+    "code": "B-85 rose",
+    "price": 14000,
+    "img": "img/b-85-rose.jpg"
+  },
+  {
+    "code": "B-85 white",
+    "price": 14000,
+    "img": "img/b-85-white.jpg"
+  },
+  {
+    "code": "B-85 yellow",
+    "price": 14000,
+    "img": "img/b-85-yellow.jpg"
+  },
+  {
+    "code": "B-86 blue",
+    "price": 18000,
+    "img": "img/b-86-blue.jpg"
+  },
+  {
+    "code": "B-86 light red",
+    "price": 18000,
+    "img": "img/b-86-light-red.jpg"
+  },
+  {
+    "code": "B-86 purple",
+    "price": 18000,
+    "img": "img/b-86-purple.jpg"
+  },
+  {
+    "code": "B-86 violet",
+    "price": 18000,
+    "img": "img/b-86-violet.jpg"
+  },
+  {
+    "code": "B-86 yellow",
+    "price": 18000,
+    "img": "img/b-86-yellow.jpg"
+  },
+  {
+    "code": "B-87 purple",
+    "price": 14000,
+    "img": ""
+  },
+  {
+    "code": "B-88 green",
+    "price": 14000,
+    "img": "img/b-88-green.jpg"
+  },
+  {
+    "code": "B-88 purple",
+    "price": 14000,
+    "img": "img/b-88-purple.jpg"
+  },
+  {
+    "code": "B-88 red",
+    "price": 14000,
+    "img": "img/b-88-red.jpg"
+  },
+  {
+    "code": "B-88 white",
+    "price": 14000,
+    "img": "img/b-88-white.jpg"
+  },
+  {
+    "code": "B-9-pink",
+    "price": 30000,
+    "img": "img/b-9-pink.jpg"
+  },
+  {
+    "code": "B-9-red",
+    "price": 30000,
+    "img": "img/b-9-red.jpg"
+  },
+  {
+    "code": "B-9-yellow",
+    "price": 30000,
+    "img": "img/b-9-yellow.jpg"
+  },
+  {
+    "code": "Black olive",
+    "price": 35000,
+    "img": "img/black-olive.jpg"
+  },
+  {
+    "code": "Black olive mini",
+    "price": 15000,
+    "img": "img/black-olive-mini.jpg"
+  },
+  {
+    "code": "Bonsai-01",
+    "price": 18000,
+    "img": "img/bonsai-01.jpg"
+  },
+  {
+    "code": "Bonsai-02",
+    "price": 18000,
+    "img": "img/bonsai-02.jpg"
+  },
+  {
+    "code": "Bonsai-03",
+    "price": 18000,
+    "img": "img/bonsai-03.jpg"
+  },
+  {
+    "code": "Bonsai-04",
+    "price": 18000,
+    "img": "img/bonsai-04.jpg"
+  },
+  {
+    "code": "C-1 (Yellow)",
+    "price": 7000,
+    "img": "img/c-1-yellow.jpg"
+  },
+  {
+    "code": "C-1-light-yellow",
+    "price": 7000,
+    "img": "img/c-1-light-yellow.jpg"
+  },
+  {
+    "code": "C-1-pink",
+    "price": 7000,
+    "img": "img/c-1-pink.jpg"
+  },
+  {
+    "code": "C-1-red",
+    "price": 7000,
+    "img": "img/c-1-red.jpg"
+  },
+  {
+    "code": "C-1-rose-red",
+    "price": 7000,
+    "img": "img/c-1-rose-red.jpg"
+  },
+  {
+    "code": "C-1-white",
+    "price": 7000,
+    "img": "img/c-1-white.jpg"
+  },
+  {
+    "code": "C-10-dark-pink",
+    "price": 8500,
+    "img": "img/c-10-dark-pink.jpg"
+  },
+  {
+    "code": "C-10-pink",
+    "price": 8500,
+    "img": "img/c-10-pink.jpg"
+  },
+  {
+    "code": "C-10-rose-pink",
+    "price": 8500,
+    "img": "img/c-10-rose-pink.jpg"
+  },
+  {
+    "code": "C-10-white",
+    "price": 8500,
+    "img": "img/c-10-white.jpg"
+  },
+  {
+    "code": "C-11 pink",
+    "price": 35000,
+    "img": "img/c-11-pink.jpg"
+  },
+  {
+    "code": "C-11 red",
+    "price": 35000,
+    "img": "img/c-11-red.jpg"
+  },
+  {
+    "code": "C-11 white",
+    "price": 35000,
+    "img": "img/c-11-white.jpg"
+  },
+  {
+    "code": "C-11 yellow",
+    "price": 35000,
+    "img": "img/c-11-yellow.jpg"
+  },
+  {
+    "code": "C-15 blue",
+    "price": 38000,
+    "img": "img/c-15-blue.jpg"
+  },
+  {
+    "code": "C-15 darkpink",
+    "price": 38000,
+    "img": "img/c-15-darkpink.jpg"
+  },
+  {
+    "code": "C-15 pink",
+    "price": 38000,
+    "img": "img/c-15-pink.jpg"
+  },
+  {
+    "code": "C-15 white",
+    "price": 38000,
+    "img": "img/c-15-white.jpg"
+  },
+  {
+    "code": "C-2",
+    "price": 7000,
+    "img": "img/c-2.jpg"
+  },
+  {
+    "code": "C-3-dark-pink",
+    "price": 8000,
+    "img": "img/c-3-dark-pink.jpg"
+  },
+  {
+    "code": "C-3-pink",
+    "price": 8000,
+    "img": "img/c-3-pink.jpg"
+  },
+  {
+    "code": "C-3-red",
+    "price": 8000,
+    "img": "img/c-3-red.jpg"
+  },
+  {
+    "code": "C-3-white",
+    "price": 8000,
+    "img": "img/c-3-white.jpg"
+  },
+  {
+    "code": "C-5-champagne",
+    "price": 43000,
+    "img": "img/c-5-champagne.jpg"
+  },
+  {
+    "code": "C-5-dark-pink",
+    "price": 43000,
+    "img": "img/c-5-dark-pink.jpg"
+  },
+  {
+    "code": "C-5-pink",
+    "price": 43000,
+    "img": "img/c-5-pink.jpg"
+  },
+  {
+    "code": "C-5-red",
+    "price": 43000,
+    "img": "img/c-5-red.jpg"
+  },
+  {
+    "code": "C-5-white",
+    "price": 43000,
+    "img": "img/c-5-white.jpg"
+  },
+  {
+    "code": "C-6-dark-pink",
+    "price": 43000,
+    "img": "img/c-6-dark-pink.jpg"
+  },
+  {
+    "code": "C-6-light-pink",
+    "price": 43000,
+    "img": "img/c-6-light-pink.jpg"
+  },
+  {
+    "code": "C-6-orange",
+    "price": 43000,
+    "img": "img/c-6-orange.jpg"
+  },
+  {
+    "code": "C-6-pink",
+    "price": 43000,
+    "img": "img/c-6-pink.jpg"
+  },
+  {
+    "code": "C-6-white",
+    "price": 43000,
+    "img": "img/c-6-white.jpg"
+  },
+  {
+    "code": "C-6-yellow",
+    "price": 43000,
+    "img": "img/c-6-yellow.jpg"
+  },
+  {
+    "code": "C-7-blue",
+    "price": 38000,
+    "img": "img/c-7-blue.jpg"
+  },
+  {
+    "code": "C-7-dark-pink",
+    "price": 38000,
+    "img": "img/c-7-dark-pink.jpg"
+  },
+  {
+    "code": "C-7-pink",
+    "price": 38000,
+    "img": "img/c-7-pink.jpg"
+  },
+  {
+    "code": "C-7-red",
+    "price": 38000,
+    "img": "img/c-7-red.jpg"
+  },
+  {
+    "code": "C-7-white",
+    "price": 38000,
+    "img": "img/c-7-white.jpg"
+  },
+  {
+    "code": "C-8 Darkpink",
+    "price": 15000,
+    "img": "img/c-8-darkpink.jpg"
+  },
+  {
+    "code": "C-8 Rosepink",
+    "price": 15000,
+    "img": "img/c-8-rosepink.jpg"
+  },
+  {
+    "code": "C-8-champagne",
+    "price": 15000,
+    "img": "img/c-8-champagne.jpg"
+  },
+  {
+    "code": "C-8-red",
+    "price": 15000,
+    "img": "img/c-8-red.jpg"
+  },
+  {
+    "code": "C-9-champagne",
+    "price": 11000,
+    "img": "img/c-9-champagne.jpg"
+  },
+  {
+    "code": "C-9-rose-pink",
+    "price": 11000,
+    "img": "img/c-9-rose-pink.jpg"
+  },
+  {
+    "code": "C-9-white",
+    "price": 11000,
+    "img": "img/c-9-white.jpg"
+  },
+  {
+    "code": "D-1 blue",
+    "price": 30000,
+    "img": "img/d-1-blue.jpg"
+  },
+  {
+    "code": "D-1 green",
+    "price": 30000,
+    "img": "img/d-1-green.jpg"
+  },
+  {
+    "code": "D-1 mix rose",
+    "price": 30000,
+    "img": "img/d-1-mix-rose.jpg"
+  },
+  {
+    "code": "D-1 violet",
+    "price": 30000,
+    "img": "img/d-1-violet.jpg"
+  },
+  {
+    "code": "M-70",
+    "price": 55000,
+    "img": "img/m-70.jpg"
+  },
+  {
+    "code": "Olive",
+    "price": 20000,
+    "img": "img/olive.jpg"
+  },
+  {
+    "code": "Olive Mini",
+    "price": 14000,
+    "img": "img/olive-mini.jpg"
+  },
+  {
+    "code": "Olive no fruit",
+    "price": 18000,
+    "img": "img/olive-no-fruit.jpg"
+  },
+  {
+    "code": "S-23",
+    "price": 16000,
+    "img": "img/s-23.jpg"
+  },
+  {
+    "code": "S-24",
+    "price": 25000,
+    "img": "img/s-24.jpg"
+  },
+  {
+    "code": "W-25 Rosepink",
+    "price": 25000,
+    "img": "img/w-25-rosepink.jpg"
+  },
+  {
+    "code": "W-25-champagne",
+    "price": 25000,
+    "img": "img/w-25-champagne.jpg"
+  },
+  {
+    "code": "W-25-pink",
+    "price": 25000,
+    "img": "img/w-25-pink.jpg"
+  },
+  {
+    "code": "W-25-white",
+    "price": 25000,
+    "img": "img/w-25-white.jpg"
+  },
+  {
+    "code": "W-28",
+    "price": 30000,
+    "img": "img/w-28.jpg"
+  },
+  {
+    "code": "W-29-green",
+    "price": 22000,
+    "img": "img/w-29-green.jpg"
+  },
+  {
+    "code": "W-29-red",
+    "price": 22000,
+    "img": "img/w-29-red.jpg"
+  },
+  {
+    "code": "W-30",
+    "price": 20000,
+    "img": "img/w-30.jpg"
+  },
+  {
+    "code": "W-6",
+    "price": 40000,
+    "img": "img/w-6.jpg"
+  },
+  {
+    "code": "W-7",
+    "price": 40000,
+    "img": "img/w-7.jpg"
+  },
+  {
+    "code": "W-8",
+    "price": 40000,
+    "img": "img/w-8.jpg"
+  },
+  {
+    "code": "W-9",
+    "price": 40000,
+    "img": "img/w-9.jpg"
+  },
+  {
+    "code": "Z-11",
+    "price": 25000,
+    "img": "img/z-11.jpg"
+  },
+  {
+    "code": "Z-12-champagne",
+    "price": 59000,
+    "img": "img/z-12-champagne.jpg"
+  },
+  {
+    "code": "Z-12-pink",
+    "price": 59000,
+    "img": "img/z-12-pink.jpg"
+  },
+  {
+    "code": "Z-12-rose-pink",
+    "price": 59000,
+    "img": "img/z-12-rose-pink.jpg"
+  },
+  {
+    "code": "Z-12-white",
+    "price": 59000,
+    "img": "img/z-12-white.jpg"
+  },
+  {
+    "code": "Z-20 dark pink",
+    "price": 14000,
+    "img": "img/z-20-dark-pink.jpg"
+  },
+  {
+    "code": "Z-20 green",
+    "price": 14000,
+    "img": "img/z-20-green.jpg"
+  },
+  {
+    "code": "Z-20 red",
+    "price": 14000,
+    "img": "img/z-20-red.jpg"
+  },
+  {
+    "code": "Z-20 rose pink",
+    "price": 14000,
+    "img": "img/z-20-rose-pink.jpg"
+  },
+  {
+    "code": "Z-20-Pink",
+    "price": 14000,
+    "img": "img/z-20-pink.jpg"
+  },
+  {
+    "code": "Z-20-white",
+    "price": 14000,
+    "img": "img/z-20-white.jpg"
+  },
+  {
+    "code": "Z-21-pink",
+    "price": 18000,
+    "img": "img/z-21-pink.jpg"
+  },
+  {
+    "code": "Z-21-red",
+    "price": 15000,
+    "img": "img/z-21-red.jpg"
+  },
+  {
+    "code": "Z-21-white",
+    "price": 15000,
+    "img": "img/z-21-white.jpg"
+  },
+  {
+    "code": "Z-22 (Dark Pink)",
+    "price": 28000,
+    "img": "img/z-22-dark-pink.jpg"
+  },
+  {
+    "code": "Z-22 (Rose Pink)",
+    "price": 28000,
+    "img": "img/z-22-rose-pink.jpg"
+  },
+  {
+    "code": "Z-22 (White)",
+    "price": 28000,
+    "img": "img/z-22-white.jpg"
+  },
+  {
+    "code": "Z-22-pink-2",
+    "price": 28000,
+    "img": "img/z-22-pink-2.jpg"
+  },
+  {
+    "code": "Z-23-pink",
+    "price": 15000,
+    "img": "img/z-23-pink.jpg"
+  },
+  {
+    "code": "Z-23-red",
+    "price": 15000,
+    "img": "img/z-23-red.jpg"
+  },
+  {
+    "code": "Z-23-white",
+    "price": 15000,
+    "img": "img/z-23-white.jpg"
+  },
+  {
+    "code": "Z-30",
+    "price": 30000,
+    "img": "img/z-30.jpg"
+  },
+  {
+    "code": "Z-31",
+    "price": 30000,
+    "img": "img/z-31.jpg"
+  },
+  {
+    "code": "Z-32 lime",
+    "price": 30000,
+    "img": "img/z-32-lime.jpg"
+  },
+  {
+    "code": "Z-35-5918",
+    "price": 45000,
+    "img": "img/z-35-5918.jpg"
+  },
+  {
+    "code": "Z-4 Rose (9)",
+    "price": 25000,
+    "img": ""
+  },
+  {
+    "code": "Z-4 white(28)",
+    "price": 22000,
+    "img": "img/z-4-white-28.jpg"
+  },
+  {
+    "code": "Z-4-blue",
+    "price": 22000,
+    "img": "img/z-4-blue.jpg"
+  },
+  {
+    "code": "Z-4-dark-red",
+    "price": 22000,
+    "img": "img/z-4-dark-red.jpg"
+  },
+  {
+    "code": "Z-4-light-pink",
+    "price": 22000,
+    "img": "img/z-4-light-pink.jpg"
+  },
+  {
+    "code": "Z-4-light-red",
+    "price": 22000,
+    "img": "img/z-4-light-red.jpg"
+  },
+  {
+    "code": "Z-4-orange",
+    "price": 22000,
+    "img": "img/z-4-orange.jpg"
+  },
+  {
+    "code": "Z-4-yellow",
+    "price": 22000,
+    "img": "img/z-4-yellow.jpg"
+  },
+  {
+    "code": "Z-6-blue",
+    "price": 15000,
+    "img": "img/z-6-blue.jpg"
+  },
+  {
+    "code": "Z-6-pink",
+    "price": 15000,
+    "img": "img/z-6-pink.jpg"
+  },
+  {
+    "code": "Z-6-rose",
+    "price": 15000,
+    "img": "img/z-6-rose.jpg"
+  },
+  {
+    "code": "Z-6-white",
+    "price": 15000,
+    "img": "img/z-6-white.jpg"
+  },
+  {
+    "code": "Z-7-blue",
+    "price": 16500,
+    "img": "img/z-7-blue.jpg"
+  },
+  {
+    "code": "Z-7-dark-pink",
+    "price": 16500,
+    "img": "img/z-7-dark-pink.jpg"
+  },
+  {
+    "code": "Z-7-pink",
+    "price": 16500,
+    "img": "img/z-7-pink.jpg"
+  },
+  {
+    "code": "Z-7-violet",
+    "price": 16500,
+    "img": "img/z-7-violet.jpg"
+  },
+  {
+    "code": "Z-7-white",
+    "price": 16500,
+    "img": "img/z-7-white.jpg"
+  },
+  {
+    "code": "Z-8 Blue Gortenziya",
+    "price": 16000,
+    "img": "img/z-8-blue-gortenziya.jpg"
+  },
+  {
+    "code": "Z-8 Light Pink Gortenziya",
+    "price": 16000,
+    "img": "img/z-8-light-pink-gortenziya.jpg"
+  },
+  {
+    "code": "Z-8 Orange Gortenziya",
+    "price": 16000,
+    "img": "img/z-8-orange-gortenziya.jpg"
+  },
+  {
+    "code": "Z-9",
+    "price": 35000,
+    "img": "img/z-9.jpg"
+  }
+]
