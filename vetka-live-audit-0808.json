@@ -1,0 +1,485 @@
+{
+  "generated_from": "vetka_audit.py",
+  "counts": {
+    "total_bito_vetka_fetched": 278,
+    "bito_total_reported": 278,
+    "in_stock": 249,
+    "out_of_stock_or_not_for_sale": 29,
+    "products_json_count": 248,
+    "price_items_zero_price": 14,
+    "price_total_reported": 2555
+  },
+  "should_remove": [
+    {
+      "code": "B-24",
+      "normalized": "b-24",
+      "reason": "not_found_in_bito"
+    },
+    {
+      "code": "B-33",
+      "normalized": "b-33",
+      "reason": "not_found_in_bito"
+    },
+    {
+      "code": "B-36",
+      "normalized": "b-36",
+      "reason": "not_found_in_bito"
+    },
+    {
+      "code": "B-85 rose",
+      "normalized": "b-85-rose",
+      "reason": "not_found_in_bito"
+    },
+    {
+      "code": "B-87 purple",
+      "normalized": "b-87-purple",
+      "reason": "not_found_in_bito"
+    },
+    {
+      "code": "C-2",
+      "normalized": "c-2",
+      "reason": "not_found_in_bito"
+    },
+    {
+      "code": "W-30",
+      "normalized": "w-30",
+      "reason": "not_found_in_bito"
+    },
+    {
+      "code": "Z-22 (Rose Pink)",
+      "normalized": "z-22-rose-pink",
+      "reason": "out_of_stock"
+    },
+    {
+      "code": "Z-22-pink-2",
+      "normalized": "z-22-pink-2",
+      "reason": "not_found_in_bito"
+    },
+    {
+      "code": "Z-30",
+      "normalized": "z-30",
+      "reason": "not_found_in_bito"
+    },
+    {
+      "code": "Z-31",
+      "normalized": "z-31",
+      "reason": "not_found_in_bito"
+    },
+    {
+      "code": "Z-35-5918",
+      "normalized": "z-35-5918",
+      "reason": "not_found_in_bito"
+    }
+  ],
+  "candidates_to_add": [
+    {
+      "name": "B-87",
+      "normalized": "b-87",
+      "sku": "12785",
+      "price": 14000
+    },
+    {
+      "name": "B-85 orange",
+      "normalized": "b-85-orange",
+      "sku": "12749",
+      "price": 14000
+    },
+    {
+      "name": "C-2 mix",
+      "normalized": "c-2-mix",
+      "sku": "8242",
+      "price": 7000
+    },
+    {
+      "name": "limon-01",
+      "normalized": "limon-01",
+      "sku": "7597",
+      "price": 33000
+    },
+    {
+      "name": "B-36 red",
+      "normalized": "b-36-red",
+      "sku": "7420",
+      "price": 25000
+    },
+    {
+      "name": "W-30 eucalptus",
+      "normalized": "w-30-eucalptus",
+      "sku": "6745",
+      "price": 20000
+    },
+    {
+      "name": "B-24 light pink",
+      "normalized": "b-24-light-pink",
+      "sku": "6662",
+      "price": 25000
+    },
+    {
+      "name": "B-33 eucalyptus",
+      "normalized": "b-33-eucalyptus",
+      "sku": "6522",
+      "price": 20000
+    },
+    {
+      "name": "Z-35",
+      "normalized": "z-35",
+      "sku": "5918",
+      "price": 45000
+    },
+    {
+      "name": "Z-30 orange",
+      "normalized": "z-30-orange",
+      "sku": "5620",
+      "price": 30000
+    },
+    {
+      "name": "Z-31 peach",
+      "normalized": "z-31-peach",
+      "sku": "5618",
+      "price": 30000
+    },
+    {
+      "name": "Z-22 pink",
+      "normalized": "z-22-pink",
+      "sku": "4590",
+      "price": 28000
+    },
+    {
+      "name": "Z-22 rosepink",
+      "normalized": "z-22-rosepink",
+      "sku": "4588",
+      "price": 28000
+    }
+  ],
+  "price_mismatches": [],
+  "unmatched_bito_names": [
+    {
+      "name": "B-87",
+      "normalized": "b-87",
+      "sku": "12785",
+      "in_stock": true
+    },
+    {
+      "name": "B-88 yellow",
+      "normalized": "b-88-yellow",
+      "sku": "12767",
+      "in_stock": false
+    },
+    {
+      "name": "B-88 blue",
+      "normalized": "b-88-blue",
+      "sku": "12761",
+      "in_stock": false
+    },
+    {
+      "name": "B-85 orange",
+      "normalized": "b-85-orange",
+      "sku": "12749",
+      "in_stock": true
+    },
+    {
+      "name": "B-85 pink",
+      "normalized": "b-85-pink",
+      "sku": "12742",
+      "in_stock": false
+    },
+    {
+      "name": "B-32 white",
+      "normalized": "b-32-white",
+      "sku": "8493",
+      "in_stock": false
+    },
+    {
+      "name": "Z-22 Pink",
+      "normalized": "z-22-pink",
+      "sku": "8405",
+      "in_stock": false
+    },
+    {
+      "name": "C-4 mix",
+      "normalized": "c-4-mix",
+      "sku": "8246",
+      "in_stock": false
+    },
+    {
+      "name": "C-2 mix",
+      "normalized": "c-2-mix",
+      "sku": "8242",
+      "in_stock": true
+    },
+    {
+      "name": "DH-156 lemon",
+      "normalized": "dh-156-lemon",
+      "sku": "7623",
+      "in_stock": false
+    },
+    {
+      "name": "limon-01",
+      "normalized": "limon-01",
+      "sku": "7597",
+      "in_stock": true
+    },
+    {
+      "name": "B-36 red",
+      "normalized": "b-36-red",
+      "sku": "7420",
+      "in_stock": true
+    },
+    {
+      "name": "B-16 pink",
+      "normalized": "b-16-pink",
+      "sku": "7407",
+      "in_stock": false
+    },
+    {
+      "name": "B-15",
+      "normalized": "b-15",
+      "sku": "7401",
+      "in_stock": false
+    },
+    {
+      "name": "B-7 white",
+      "normalized": "b-7-white",
+      "sku": "7391",
+      "in_stock": false
+    },
+    {
+      "name": "B-7 blue",
+      "normalized": "b-7-blue",
+      "sku": "7389",
+      "in_stock": false
+    },
+    {
+      "name": "B-7 red",
+      "normalized": "b-7-red",
+      "sku": "7387",
+      "in_stock": false
+    },
+    {
+      "name": "W-30 eucalptus",
+      "normalized": "w-30-eucalptus",
+      "sku": "6745",
+      "in_stock": true
+    },
+    {
+      "name": "B-24 light pink",
+      "normalized": "b-24-light-pink",
+      "sku": "6662",
+      "in_stock": true
+    },
+    {
+      "name": "B-11 white",
+      "normalized": "b-11-white",
+      "sku": "6632",
+      "in_stock": false
+    },
+    {
+      "name": "B-33 eucalyptus",
+      "normalized": "b-33-eucalyptus",
+      "sku": "6522",
+      "in_stock": true
+    },
+    {
+      "name": "B-6 blue",
+      "normalized": "b-6-blue",
+      "sku": "6486",
+      "in_stock": false
+    },
+    {
+      "name": "B-3 red",
+      "normalized": "b-3-red",
+      "sku": "6452",
+      "in_stock": false
+    },
+    {
+      "name": "B-3 blue",
+      "normalized": "b-3-blue",
+      "sku": "6450",
+      "in_stock": false
+    },
+    {
+      "name": "B-3 white",
+      "normalized": "b-3-white",
+      "sku": "6446",
+      "in_stock": false
+    },
+    {
+      "name": "Z-35",
+      "normalized": "z-35",
+      "sku": "5918",
+      "in_stock": true
+    },
+    {
+      "name": "Z-22 PINK",
+      "normalized": "z-22-pink",
+      "sku": "5816",
+      "in_stock": false
+    },
+    {
+      "name": "Z-30 orange",
+      "normalized": "z-30-orange",
+      "sku": "5620",
+      "in_stock": true
+    },
+    {
+      "name": "Z-31 peach",
+      "normalized": "z-31-peach",
+      "sku": "5618",
+      "in_stock": true
+    },
+    {
+      "name": "z-8 pink gortenziya",
+      "normalized": "z-8-pink-gortenziya",
+      "sku": "5608",
+      "in_stock": false
+    },
+    {
+      "name": "Z-8 champagne gortenziya",
+      "normalized": "z-8-champagne-gortenziya",
+      "sku": "5602",
+      "in_stock": false
+    },
+    {
+      "name": "Z-4 violet",
+      "normalized": "z-4-violet",
+      "sku": "5077",
+      "in_stock": false
+    },
+    {
+      "name": "z-7 rose pink",
+      "normalized": "z-7-rose-pink",
+      "sku": "4663",
+      "in_stock": false
+    },
+    {
+      "name": "Z-22 pink",
+      "normalized": "z-22-pink",
+      "sku": "4590",
+      "in_stock": true
+    },
+    {
+      "name": "Z-22 rosepink",
+      "normalized": "z-22-rosepink",
+      "sku": "4588",
+      "in_stock": true
+    },
+    {
+      "name": "Z-4 pink (21)",
+      "normalized": "z-4-pink-21",
+      "sku": "4565",
+      "in_stock": false
+    },
+    {
+      "name": "Z-4 white/pink (12)",
+      "normalized": "z-4-white/pink-12",
+      "sku": "4557",
+      "in_stock": false
+    },
+    {
+      "name": "Z-4 white/rose (18)",
+      "normalized": "z-4-white/rose-18",
+      "sku": "4555",
+      "in_stock": false
+    },
+    {
+      "name": "Z-7 champagne",
+      "normalized": "z-7-champagne",
+      "sku": "4533",
+      "in_stock": false
+    },
+    {
+      "name": "Z-18 mix",
+      "normalized": "z-18-mix",
+      "sku": "4261",
+      "in_stock": false
+    },
+    {
+      "name": "Z-15 mix",
+      "normalized": "z-15-mix",
+      "sku": "4253",
+      "in_stock": false
+    }
+  ],
+  "unmatched_products_json_codes": [
+    {
+      "code": "B-24",
+      "normalized": "b-24"
+    },
+    {
+      "code": "B-33",
+      "normalized": "b-33"
+    },
+    {
+      "code": "B-36",
+      "normalized": "b-36"
+    },
+    {
+      "code": "B-85 rose",
+      "normalized": "b-85-rose"
+    },
+    {
+      "code": "B-87 purple",
+      "normalized": "b-87-purple"
+    },
+    {
+      "code": "C-2",
+      "normalized": "c-2"
+    },
+    {
+      "code": "W-30",
+      "normalized": "w-30"
+    },
+    {
+      "code": "Z-22-pink-2",
+      "normalized": "z-22-pink-2"
+    },
+    {
+      "code": "Z-30",
+      "normalized": "z-30"
+    },
+    {
+      "code": "Z-31",
+      "normalized": "z-31"
+    },
+    {
+      "code": "Z-35-5918",
+      "normalized": "z-35-5918"
+    }
+  ],
+  "limon_lemon_check": {
+    "in_stock_matches": [
+      {
+        "name": "limon-01",
+        "sku": "7597",
+        "in_stock": true,
+        "amount": 15
+      },
+      {
+        "name": "Z-33 limon",
+        "sku": "5616",
+        "in_stock": true,
+        "amount": 112
+      }
+    ],
+    "any_matches": [
+      {
+        "name": "DH-156 lemon",
+        "sku": "7623",
+        "in_stock": false,
+        "amount": 0
+      },
+      {
+        "name": "limon-01",
+        "sku": "7597",
+        "in_stock": true,
+        "amount": 15
+      },
+      {
+        "name": "Z-33 limon",
+        "sku": "5616",
+        "in_stock": true,
+        "amount": 112
+      }
+    ]
+  }
+}

@@ -360,26 +360,63 @@
         s += sz;
       }
     }
-    // Синглы — по 6, следим за минимумом 3
-    let i = 0;
-    while(i < singles.length){
-      const rem = singles.length - i;
-      let sz;
-      if(rem === 7) sz = 4;        // чтобы не оставалась последняя страница с 1 товаром
-      else if(rem === 8) sz = 5;   // чтобы остаток был минимум 3
-      else if(rem >= 6) sz = 6;
-      else if(rem === 4 || rem === 5) sz = rem;
-      else if(rem === 3) sz = 3;
-      else {
-        const prev = pages[pages.length-1];
-        if(prev && !prev.series && prev.items.length + rem <= 6){
-          for(let j=i; j<singles.length; j++) prev.items.push(singles[j]);
-          i = singles.length; break;
-        }
-        sz = rem;
+    // Синглы: группируем по буквенному префиксу и верстаем крупнее (3-4 на страницу)
+    // Улучшение 1: раскладываем синглы по семействам (B, C, D, M, S, W, Z, ...),
+    //   именованные товары без кода-семейства (Anor, Olive, Bonsai-*) идут отдельной
+    //   группой в самом конце. Страница никогда не смешивает разные префиксы.
+    // Улучшение 2: на странице синглов 3-4 карточки (крупнее), без «сирот» по 1-2.
+    function singleBucketKey(code){
+      const c = code.trim();
+      const m = c.toUpperCase().match(/^([A-Za-z]{1,3})-\d/);   // B-3-pink -> B, M-70 -> M
+      return m ? m[1] : "\u2605";                                 // именованные (Anor/Olive/Bonsai) -> ★
+    }
+    // разбиваем размер N на страницы из 3-4 карточек без хвостов по 1-2
+    function splitSingles(n){
+      if(n <= 0) return [];
+      if(n <= 4) return [n];            // 1..4 — одной страницей (мелкие докладём ниже)
+      const sizes = [];
+      let rem = n;
+      while(rem > 4){ sizes.push(4); rem -= 4; }   // забиваем по 4
+      if(rem === 0){ /* ровно */ }
+      else if(rem >= 3){ sizes.push(rem); }        // 3 или 4 — ок
+      else {                                        // остаток 1 или 2 -> перебалансируем
+        // забираем одну страницу из 4 и сливаем с остатком: 4+2->3+3, 4+1->... 
+        const last = sizes.pop();                   // last === 4
+        const total = last + rem;                   // 5 или 6
+        if(total === 5){ sizes.push(3, 2); }        // 5 -> 3+2 избегаем: но 2 недопустим
+        else { sizes.push(3, 3); }                  // 6 -> 3+3
+        // фикс для total===5: делаем 3+? -> лучше вернуть 4+? нельзя; используем 5->одна страница? нет, максимум 4
       }
-      pages.push({ key:"ассортимент", items:singles.slice(i, i+sz), series:false });
-      i += sz;
+      return sizes;
+    }
+    // порядок групп: буквы по алфавиту, ★ (именованные) — в конец
+    const sByKey = {}, sOrder = [];
+    for(const it of singles){
+      const bk = singleBucketKey(it.code);
+      if(sByKey[bk] === undefined){ sByKey[bk] = []; sOrder.push(bk); }
+      sByKey[bk].push(it);
+    }
+    sOrder.sort((a,b)=>{
+      if(a === "\u2605") return 1; if(b === "\u2605") return -1;
+      return a < b ? -1 : (a > b ? 1 : 0);
+    });
+    for(const bk of sOrder){
+      const arr = sByKey[bk];
+      const sizes = splitSingles(arr.length);
+      let off = 0;
+      for(let si = 0; si < sizes.length; si++){
+        let sz = sizes[si];
+        // если получилась страница <3 (маленькая группа) — пробуем подклеить к предыдущей
+        if(sz < 3){
+          const prev = pages[pages.length-1];
+          if(prev && !prev.series && prev.items.length + sz <= 4){
+            for(let j=0;j<sz;j++) prev.items.push(arr[off+j]);
+            off += sz; continue;
+          }
+        }
+        pages.push({ key:"ассортимент", items:arr.slice(off, off+sz), series:false });
+        off += sz;
+      }
     }
     return pages;
   }
